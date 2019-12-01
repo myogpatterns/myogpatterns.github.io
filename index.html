@@ -5,8 +5,40 @@
 <html>
     <head>
         <title>MYOG Patterns</title>
+        <script 
+            src="https://code.jquery.com/jquery-3.4.1.min.js" 
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+            crossorigin="anonymous">
+        </script>
+        
+        <script>
+            $('document').ready(function () {
+
+                var version = "v0.1";
+                $('.version').html(version);
+
+                $('.dimension').change(function () {
+                    var vol = 1;
+                    $.each($('input[class=dimension]'), function () {
+                        var curr_val = $(this).val();
+                        if (curr_val != "") {
+                            vol = vol * curr_val;
+                            $('.patternSize').html(tot);
+                        }
+                    });
+                });
+            })
+        </script>
     </head>
+
     <body>
-        <H1>Hello World</H1>
+        <H2>Zip Sack</H2>
+        <p class="version"></p>
+
+        <p>Zip sack dimensions:</p>
+        <p>Length: <input type="number" class="dimension" id="length"></p>
+        <p>Width: <input type="number" class="dimension" id="width"></p>
+        <p>Height: <input type="number" class="dimension" id="height"></p>
+        <p>Pattern size: <span class="patternSize">Volume</span></p>
     </body>
 </html>
