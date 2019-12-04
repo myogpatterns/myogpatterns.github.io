@@ -10,25 +10,6 @@
             integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
             crossorigin="anonymous">
         </script>
-        
-        <script>
-            $('document').ready(function () {
-
-                var version = "v0.1";
-                $('.version').html(version);
-
-                $('.dimension').change(function () {
-                    var vol = 1;
-                    $.each($('input[class=dimension]'), function () {
-                        var curr_val = $(this).val();
-                        if (curr_val != "") {
-                            vol = vol * curr_val;
-                            $('.patternSize').html(vol);
-                        }
-                    });
-                });
-            })
-        </script>
     </head>
 
     <body>
@@ -39,6 +20,59 @@
         <p>Length: <input type="number" class="dimension" id="length"></p>
         <p>Width: <input type="number" class="dimension" id="width"></p>
         <p>Height: <input type="number" class="dimension" id="height"></p>
-        <p>Pattern size: <span class="patternSize">Volume</span></p>
+        <p>Zip Sack Volume: <span class="volumeCuIn">Cubic Inches</span> cubic inches and <span class="volumeLiters">Liters</span> liters.</p>
+        <p>Pattern size: <span class="patternWidth">Width of Fabric</span> wide by <span class="patternHeight">Height of Fabric</span> high. Double check these!</p>
     </body>
+
+    <script>
+        //Pattern Size Calculator
+        //
+        //
+        function patternSize(l,w,h) {
+            var zsA = 0.5;      // zipper seam allowance
+            var sA = 0.375;     // general seam allowance
+            if (l,w,h > 0) {
+                var fabricH = 2*w + 2*l + (2*zsA);   //double check l,w,h match geometry
+                var fabricW = 1*l + 1*h + (2*sA);
+                return [fabricH, fabricW];
+            }
+        }
+
+        $('document').ready(function () {
+
+            var version = "v0.1";
+            $('.version').html(version);
+
+            $('.dimension').change(function () {   //when any .dimension changes (input loses focus), function runs
+                var vol = 1;
+                $.each($('input[class=dimension]'), function () {
+                    var curr_val = $(this).val();
+                    if (curr_val != "") {
+                        //console.log($(this).attr('id')+" is "+curr_val);
+                        vol = vol * curr_val;    //volume cu in
+                    }
+                });
+
+                var length = $('#length').val();
+                var width = $('#width').val();
+                var height = $('#height').val();
+                
+                if (length, width, height != "") {
+                    var scrap = patternSize(length,width,height);
+                    //console.log(scrap);
+                    var fabricH = scrap[0];
+                    var fabricW = scrap[1];
+                
+                    var volLiters = (vol * 0.0163871).toFixed(1);
+                    $('.volumeCuIn').html(vol);  //set all .volume to vol
+                    $('.volumeLiters').html(volLiters);
+                    $('.patternWidth').html(fabricW);
+                    $('.patternHeight').html(fabricH);
+
+                }
+           });
+        });
+    </script>
+
 </html>
+
