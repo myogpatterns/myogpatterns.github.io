@@ -17,11 +17,21 @@
         <p class="version"></p>
 
         <p>Zip sack dimensions:</p>
+        
         <p>Length: <input type="number" class="dimension" id="length"></p>
         <p>Width: <input type="number" class="dimension" id="width"></p>
         <p>Height: <input type="number" class="dimension" id="height"></p>
-        <p>Zip Sack Volume: <span class="volumeCuIn">Cubic Inches</span> cubic inches and <span class="volumeLiters">Liters</span> liters.</p>
-        <p>Pattern size: <span class="patternWidth">Width of Fabric</span> wide by <span class="patternHeight">Height of Fabric</span> high. Double check these!</p>
+        <p>Zip Sack Volume: <span class="volumeCuIn"></span> cubic inches and <span class="volumeLiters"></span> liters.</p>
+        <p>Pattern size: 
+            <ul>
+                <li>Fabric Width: <span class="patternWidth"></span>"</li>
+                <li>Fabric Height: <span class="patternHeight"></span>"</li> 
+        </ul>
+        <p>3/8" Seam Allowance and 1/2" Zipper Allowance</p>
+        </br>
+        <img src="\images\zipSackPlan.jpg" alt="Planned Zip Sack" width="400px">
+        <img src="\images\zipSackPattern.jpg" alt="Zip Sack Pattern" width="400px">
+        <img src="\images\zipSackCompleted.jpg" alt="Completed Zip Sack" width="400px">
     </body>
 
     <script>
@@ -32,7 +42,7 @@
             var zsA = 0.5;      // zipper seam allowance
             var sA = 0.375;     // general seam allowance
             if (l,w,h > 0) {
-                var fabricH = 2*w + 2*l + (2*zsA);   //double check l,w,h match geometry
+                var fabricH = 2*w + 2*h + (2*zsA);
                 var fabricW = 1*l + 1*h + (2*sA);
                 return [fabricH, fabricW];
             }
@@ -40,7 +50,7 @@
 
         $('document').ready(function () {
 
-            var version = "v0.1";
+            var version = "v0.2";
             $('.version').html(version);
 
             $('.dimension').change(function () {   //when any .dimension changes (input loses focus), function runs
