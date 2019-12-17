@@ -1,3 +1,3 @@
 # Welcome to MYOG Patterns
 
-Site under construction. Project for reddit.com/r/MYOG by u/g8trtim
+A collection of patterning calculators and open source sewing patterns for outdoor enthusiasts within the Make Your Own Gear (r/MYOG) community. Created by u/g8trtim
