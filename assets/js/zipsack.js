@@ -45,8 +45,8 @@ $('document').ready(function () {
             //html id returns
             $('#volumeCuIn').html(vol);     
             $('#volumeLiters').html(volLiters);
-            $('#patternHeight').html(fabricH);
-            $('#patternWidth').html(fabricW);
+            $('.patternHeight').html(fabricH + '"');
+            $('.patternWidth').html(fabricW + '"');
 
         }
     });
