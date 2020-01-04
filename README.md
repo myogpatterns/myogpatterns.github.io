@@ -1,3 +1,3 @@
-# Welcome to MYOG Patterns
+# Source files for MYOG Patterns hosted at LearnMYOG.com
 
-A collection of patterning calculators and open source sewing patterns for outdoor enthusiasts within the Make Your Own Gear (r/MYOG) community. Created by u/g8trtim
+A collection of sewing patterns and pattern generators for outdoor enthusiasts within the Make Your Own Gear (r/MYOG) community. Created by u/g8trtim
