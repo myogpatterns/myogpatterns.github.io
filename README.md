@@ -13,3 +13,11 @@ A collection of sewing patterns and pattern generators for outdoor enthusiasts w
 * Layout and presentation tweaks
 
 ## January 2020 Site Updates
+
+* New! Every Day Fanny Pack including detailed free pattern released
+* Added gallery ribbon to Every Day Fanny Pack build article
+* Overall improvements to home page
+* Moved zip sack and stuff sack generators into "items" section
+* Feedback and bug reports appreciated.
+
+## February 2020 Site Updates
