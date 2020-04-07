@@ -1,4 +1,5 @@
 @import url(fontawesome-all.min.css);
+@import url(video.css);
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i");
 
 /*
@@ -4015,7 +4016,7 @@ input, select, textarea {
 /* Banner (style4) */
 
 	.banner.style4 {
-		padding: 7rem 7rem 5rem 7rem ;
+		padding: 3.75rem 3.75rem 3rem 3.75rem ;
 		-moz-align-items: center;
 		-webkit-align-items: center;
 		-ms-align-items: center;
@@ -4110,6 +4111,35 @@ input, select, textarea {
 		@media screen and (max-width: 1680px) {
 
 			.banner.style4 {
+				padding: 2.5rem 2rem 0.5rem 2rem ;
+				-moz-align-items: -moz-flex-start;
+				-webkit-align-items: -webkit-flex-start;
+				-ms-align-items: -ms-flex-start;
+				align-items: flex-start;
+			}
+
+				.banner.style4 .image {
+					width: 8.125rem;
+					height: 14.44444rem;
+					margin-top: 1.5625rem;
+					margin-bottom: 3.875rem;
+				}
+
+					.banner.style4 .image:before {
+						height: 1.5625rem;
+						background-size: 40px 20px;
+						margin-top: -1.5625rem;
+						border-radius: 0.625rem 0.625rem 0 0;
+					}
+
+					.banner.style4 .image:after {
+						height: 1.875rem;
+						background-size: 40px 20px;
+						margin-bottom: -1.875rem;
+						border-radius: 0 0 0.625rem 0.625rem;
+					}
+
+/* 			.banner.style4 {
 				padding: 5rem 5rem 3rem 5rem ;
 			}
 
@@ -4181,7 +4211,7 @@ input, select, textarea {
 						background-size: 40px 20px;
 						margin-bottom: -1.875rem;
 						border-radius: 0 0 0.625rem 0.625rem;
-					}
+					} */
 
 		}
 
