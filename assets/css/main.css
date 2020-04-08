@@ -319,13 +319,13 @@ input, select, textarea {
 	input, select, textarea {
 		color: #000000;
 	}
-
+/* link colors */ 
 	a {
 		color: #000000;
 	}
 
 		a:hover {
-			color: #996af1;
+			color: #9b65bb;
 		}
 
 	strong, b {
@@ -2197,8 +2197,8 @@ input, select, textarea {
 		input[type="button"]:hover,
 		button:hover,
 		.button:hover {
-			box-shadow: inset 0 0 0 1px #996af1;
-			color: #996af1 !important;
+			box-shadow: inset 0 0 0 1px #9b65bb;
+			color: #9b65bb !important;
 		}
 
 		input[type="submit"]:active,
@@ -2207,8 +2207,8 @@ input, select, textarea {
 		button:active,
 		.button:active {
 			background-color: rgba(71, 211, 229, 0.2);
-			box-shadow: inset 0 0 0 1px #996af1;
-			color: #996af1 !important;
+			box-shadow: inset 0 0 0 1px #9b65bb;
+			color: #9b65bb !important;
 		}
 
 		input[type="submit"].primary,
@@ -2226,7 +2226,7 @@ input, select, textarea {
 			input[type="button"].primary:hover,
 			button.primary:hover,
 			.button.primary:hover {
-				background-color: #996af1;
+				background-color: #9b65bb;
 			}
 
 			input[type="submit"].primary:active,
@@ -2502,8 +2502,8 @@ input, select, textarea {
 		input[type="url"]:focus,
 		select:focus,
 		textarea:focus {
-			border-color: #996af1;
-			box-shadow: 0 0 0 1px #996af1;
+			border-color: #9b65bb;
+			box-shadow: 0 0 0 1px #9b65bb;
 		}
 
 	select {
@@ -2534,8 +2534,8 @@ input, select, textarea {
 
 	input[type="checkbox"]:focus + label:before,
 	input[type="radio"]:focus + label:before {
-		border-color: #996af1;
-		box-shadow: 0 0 0 1px #996af1;
+		border-color: #9b65bb;
+		box-shadow: 0 0 0 1px #9b65bb;
 	}
 
 	::-webkit-input-placeholder {
@@ -2621,14 +2621,14 @@ input, select, textarea {
 	}
 
 	a.icon.style2:hover:before {
-		box-shadow: inset 0 0 0 1px #996af1;
-		color: #996af1;
+		box-shadow: inset 0 0 0 1px #9b65bb;
+		color: #9b65bb;
 	}
 
 	a.icon.style2:active:before {
 		background-color: rgba(71, 211, 229, 0.1);
-		box-shadow: inset 0 0 0 1px #996af1;
-		color: #996af1;
+		box-shadow: inset 0 0 0 1px #9b65bb;
+		color: #9b65bb;
 	}
 
 /* Image */
@@ -4054,7 +4054,7 @@ input, select, textarea {
 
 	.banner.style4 .content a:hover {
 			border-bottom-color: transparent;
-			color: #996af1 !important;
+			color: rgb(153, 106, 241) !important;
 		}
 
 	.banner.style4 .content .logo {
@@ -4065,7 +4065,7 @@ input, select, textarea {
 		pointer-events: auto;
 		border-style: solid;
 		border-color: #ffffff;
-		background-color: rgba(31, 10, 49, 0.4);
+		background-color: rgb(2, 94, 81, 0.2);
 		border-width: 5px !important;
 		font-family: "Source Sans Pro", Helvetica, sans-serif;
 		font-size: 2.25rem;
@@ -4079,8 +4079,9 @@ input, select, textarea {
 	}
 /* My logo color */ 
 	.banner.style4 .content .logo:hover {
-		border-color: #72d0e0 !important;
-		color: #72d0e0 !important;
+		background-color: rgba(155, 101, 187, 0.05);
+		border-color: rgb(155, 101, 187) !important;
+		color: rgb(155, 101, 187) !important;
 	}
 
 	
@@ -4100,7 +4101,7 @@ input, select, textarea {
 		top: 0;
 		left: 0;
 		border-radius: 0;
-		background-color: rgb(31, 10, 49);
+		background-color: rgb(2, 94, 81);
 		/*background-color: rgb(8, 53, 65);*/
 	}
 
@@ -4120,7 +4121,7 @@ input, select, textarea {
 			width: 100%;
 			height: 100%;
 			border-radius: 0;
-			opacity: 0.7;
+			opacity: 0.8;
 		}
 
 	@media screen and (max-width: 1680px) {
@@ -6295,7 +6296,7 @@ input, select, textarea {
 		}
 
 			.gallery.style1 a:hover {
-				color: #996af1;
+				color: #9b65bb;
 			}
 
 		.gallery.style1 strong, .gallery.style1 b {
@@ -6334,8 +6335,8 @@ input, select, textarea {
 			.gallery.style1 input[type="button"]:hover,
 			.gallery.style1 button:hover,
 			.gallery.style1 .button:hover {
-				box-shadow: inset 0 0 0 1px #996af1;
-				color: #996af1 !important;
+				box-shadow: inset 0 0 0 1px #9b65bb;
+				color: #9b65bb !important;
 			}
 
 			.gallery.style1 input[type="submit"]:active,
@@ -6344,8 +6345,8 @@ input, select, textarea {
 			.gallery.style1 button:active,
 			.gallery.style1 .button:active {
 				background-color: rgba(71, 211, 229, 0.2);
-				box-shadow: inset 0 0 0 1px #996af1;
-				color: #996af1 !important;
+				box-shadow: inset 0 0 0 1px #9b65bb;
+				color: #9b65bb !important;
 			}
 
 			.gallery.style1 input[type="submit"].primary,
@@ -6363,7 +6364,7 @@ input, select, textarea {
 				.gallery.style1 input[type="button"].primary:hover,
 				.gallery.style1 button.primary:hover,
 				.gallery.style1 .button.primary:hover {
-					background-color: #996af1;
+					background-color: #9b65bb;
 				}
 
 				.gallery.style1 input[type="submit"].primary:active,
@@ -6619,7 +6620,7 @@ input, select, textarea {
 		}
 
 			.gallery.style2 a:hover {
-				color: #996af1;
+				color: #9b65bb;
 			}
 
 		.gallery.style2 strong, .gallery.style2 b {
@@ -6658,8 +6659,8 @@ input, select, textarea {
 			.gallery.style2 input[type="button"]:hover,
 			.gallery.style2 button:hover,
 			.gallery.style2 .button:hover {
-				box-shadow: inset 0 0 0 1px #996af1;
-				color: #996af1 !important;
+				box-shadow: inset 0 0 0 1px #9b65bb;
+				color: #9b65bb !important;
 			}
 
 			.gallery.style2 input[type="submit"]:active,
@@ -6668,8 +6669,8 @@ input, select, textarea {
 			.gallery.style2 button:active,
 			.gallery.style2 .button:active {
 				background-color: rgba(71, 211, 229, 0.2);
-				box-shadow: inset 0 0 0 1px #996af1;
-				color: #996af1 !important;
+				box-shadow: inset 0 0 0 1px #9b65bb;
+				color: #9b65bb !important;
 			}
 
 			.gallery.style2 input[type="submit"].primary,
@@ -6687,7 +6688,7 @@ input, select, textarea {
 				.gallery.style2 input[type="button"].primary:hover,
 				.gallery.style2 button.primary:hover,
 				.gallery.style2 .button.primary:hover {
-					background-color: #996af1;
+					background-color: #9b65bb;
 				}
 
 				.gallery.style2 input[type="submit"].primary:active,
@@ -8182,7 +8183,7 @@ input, select, textarea {
 			}
 
 				#wrapper > .invert a:hover {
-					color: #996af1;
+					color: #9b65bb;
 				}
 
 			#wrapper > .invert strong, #wrapper > .invert b {
@@ -8225,8 +8226,8 @@ input, select, textarea {
 				#wrapper > .invert input[type="button"]:hover,
 				#wrapper > .invert button:hover,
 				#wrapper > .invert .button:hover {
-					box-shadow: inset 0 0 0 1px #996af1;
-					color: #996af1 !important;
+					box-shadow: inset 0 0 0 1px #9b65bb;
+					color: #9b65bb !important;
 				}
 
 				#wrapper > .invert input[type="submit"]:active,
@@ -8235,8 +8236,8 @@ input, select, textarea {
 				#wrapper > .invert button:active,
 				#wrapper > .invert .button:active {
 					background-color: rgba(71, 211, 229, 0.2);
-					box-shadow: inset 0 0 0 1px #996af1;
-					color: #996af1 !important;
+					box-shadow: inset 0 0 0 1px #9b65bb;
+					color: #9b65bb !important;
 				}
 
 				#wrapper > .invert input[type="submit"].primary,
@@ -8254,7 +8255,7 @@ input, select, textarea {
 					#wrapper > .invert input[type="button"].primary:hover,
 					#wrapper > .invert button.primary:hover,
 					#wrapper > .invert .button.primary:hover {
-						background-color: #996af1;
+						background-color: #9b65bb;
 					}
 
 					#wrapper > .invert input[type="submit"].primary:active,
@@ -8290,8 +8291,8 @@ input, select, textarea {
 				#wrapper > .invert input[type="url"]:focus,
 				#wrapper > .invert select:focus,
 				#wrapper > .invert textarea:focus {
-					border-color: #996af1;
-					box-shadow: 0 0 0 1px #996af1;
+					border-color: #9b65bb;
+					box-shadow: 0 0 0 1px #9b65bb;
 				}
 
 			#wrapper > .invert select {
@@ -8322,8 +8323,8 @@ input, select, textarea {
 
 			#wrapper > .invert input[type="checkbox"]:focus + label:before,
 			#wrapper > .invert input[type="radio"]:focus + label:before {
-				border-color: #996af1;
-				box-shadow: 0 0 0 1px #996af1;
+				border-color: #9b65bb;
+				box-shadow: 0 0 0 1px #9b65bb;
 			}
 
 			#wrapper > .invert ::-webkit-input-placeholder {
@@ -8347,14 +8348,14 @@ input, select, textarea {
 			}
 
 			#wrapper > .invert a.icon.style2:hover:before {
-				box-shadow: inset 0 0 0 1px #996af1;
-				color: #996af1;
+				box-shadow: inset 0 0 0 1px #9b65bb;
+				color: #9b65bb;
 			}
 
 			#wrapper > .invert a.icon.style2:active:before {
 				background-color: rgba(71, 211, 229, 0.1);
-				box-shadow: inset 0 0 0 1px #996af1;
-				color: #996af1;
+				box-shadow: inset 0 0 0 1px #9b65bb;
+				color: #9b65bb;
 			}
 
 			#wrapper > .invert ul.alt li {
