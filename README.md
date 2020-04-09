@@ -1,23 +1,10 @@
-# Source files for MYOG Patterns hosted at LearnMYOG.com
+# LearnMYOG.com source for Make Your Own Gear sewing patterns and tutorials
 
-A collection of sewing patterns and pattern generators for outdoor enthusiasts within the Make Your Own Gear (r/MYOG) community. Created by u/g8trtim
+Sewing Patterns for DIY Outdoor Gear Makers
 
-## December 2019 Site Updates
+## Contributors and Guest Creators Welcome
 
-* New domain name, same site as previously launched (myogpatterns.github.io)
-* Round bottom stuff generator added with imperial and metric option
-* Three patterns added:
-  * Top Tube Snack Bag for your bike
-  * Hiker wallet as requested
-  * Basic fanny pack
-* Layout and presentation tweaks
-
-## January 2020 Site Updates
-
-* New! Every Day Fanny Pack including detailed free pattern released
-* Added gallery ribbon to Every Day Fanny Pack build article
-* Overall improvements to home page
-* Moved zip sack and stuff sack generators into "items" section
-* Feedback and bug reports appreciated.
-
-## February 2020 Site Updates
+ * Beginner to immediate-level outdoor related sewing patterns 
+ * Must be accompanied with detailed instructions or video in similar theme
+ * Open to collaborating on graphics and pattern refinement
+ * Contact me well before submitting pull request
