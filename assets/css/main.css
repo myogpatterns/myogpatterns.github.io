@@ -4067,7 +4067,7 @@ input, select, textarea {
 		pointer-events: auto;
 		border-style: solid;
 		border-color: #ffffff;
-		background-color: rgb(2, 94, 81, 0.2);
+		background-color: rgba(2, 94, 81, 0.2);
 		border-width: 6px !important;
 		font-family: "Source Sans Pro", Helvetica, sans-serif;
 		font-size: 2.25rem;
@@ -6418,6 +6418,21 @@ input, select, textarea {
 					width: 100%;
 					border-radius: 0;
 				}
+
+			.gallery.style1 article .overlay {
+				position: absolute;
+				bottom: 0;
+				background-color: rgba(155, 101, 187, 0.7);
+				/*background-color: rgb(155, 101, 187);
+				background-color: rgba(2, 94, 81, 0.8);
+				background-color: rgba(17, 163, 182, 0.8);*/
+				width: 100%;
+				color: #f0f0f0;
+				font-size: inherit;
+				font-weight: 300;
+				padding: 6px;
+  				text-align: center;
+			}
 
 			.gallery.style1 article .caption {
 				-moz-align-items: center;

@@ -12,6 +12,8 @@ Replace built in gallery lightbox with poptrox
 * add `#main` in Build Article ahead of `<section class="wrapper style1 align-center">`
 * add anchors for images and `class="image"`
 * caption each image with `title` in  `img src`
+* add `.overlay` Community Build
+* add Share to footer
 
 
 ## Community Build Galleries
