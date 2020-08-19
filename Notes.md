@@ -9,7 +9,10 @@
 Replace built in gallery lightbox with poptrox
 
 * add `jquery.poptrox.min.js` to scripts
-* add `#main` in Build Article ahead of `<section class="wrapper style1 align-center">`
+* add `<div id="main">` in Build Article 
+    * before `<section class="wrapper style1 align-center">`
+    * close `#main` before footer
+* remove lightbox from gallery
 * add anchors for images and `class="image"`
 * caption each image with `title` in  `img src`
 * add `.overlay` Community Build
@@ -18,7 +21,7 @@ Replace built in gallery lightbox with poptrox
 
 ## Community Build Galleries
 
-* resize images to 540x720 for portrait
+* resize images to 540x720 for portrait, 800x600 for landscape
 * `gallery style1 small`
 
 
