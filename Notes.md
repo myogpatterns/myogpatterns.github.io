@@ -30,7 +30,7 @@ Replace built in gallery lightbox with poptrox
 | Page  | poptrox  | previews  | community builds  | complete  |
 |---|:-:|:-:|:-:|:-:|
 | bpStembag  | x  |  x |  x |  x |
-| edcFannyPack  |   |   |   |   |
+| edcFannyPack  | x  | x  | x  | x  |
 | runningBelt  |   |   |   |   |
 | index  |   |   |   |   |
 
