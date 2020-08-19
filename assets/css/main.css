@@ -4068,13 +4068,13 @@ input, select, textarea {
 		border-style: solid;
 		border-color: #ffffff;
 		background-color: rgba(2, 94, 81, 0.2);
-		border-width: 6px !important;
+		border-width: 7px !important;
 		font-family: "Source Sans Pro", Helvetica, sans-serif;
-		font-size: 2.25rem;
+		font-size: 3.5rem; /*2.25*/
 		font-weight: 700;
-		letter-spacing: 0.075em;
+		letter-spacing: 0.05em; /*0.075em*/
 		line-height: 1;
-		padding: 1rem 1.5rem;
+		padding: .5rem 1.5rem;
 		/*text-transform: uppercase;*/
 		visibility: visible;
 		text-decoration: none;
