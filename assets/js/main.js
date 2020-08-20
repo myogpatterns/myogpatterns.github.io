@@ -224,7 +224,7 @@
 
 				});
 
-		// Lightbox.
+		// Lightbox. Replaced with Poptrox.
 			$('.gallery.lightbox')
 				.on('click', 'a', function(event) {
 
@@ -337,5 +337,51 @@
 							}, 275);
 
 						});
+		// Poptrox.	https://github.com/myogpatterns/jquery.poptrox
+			var $main = $('#main');   //id containing anchors <a> that want lightbox effect
 
+			$main.poptrox({
+				baseZIndex: 20000,
+				/* caption: function($a) {    //creates caption from elements after current anchor
+
+					var s = '';
+
+					$a.nextAll().each(function() {
+						s += this.outerHTML;
+					});
+
+					return s;
+
+				}, */
+				
+
+
+				fadeSpeed: 300,
+				onPopupClose: function() { $body.removeClass('modal-active'); },
+				onPopupOpen: function() { $body.addClass('modal-active'); },
+				overlayColor: '#000000',
+				overlayOpacity: 0.8,
+				popupCloserText: '',
+				popupHeight: 150,
+				popupLoaderText: '',
+				popupSpeed: 300,
+				popupWidth: 150,
+				selector: '.image',
+				usePopupCaption: true,
+				usePopupCloser: false,
+				usePopupDefaultStyling: true,
+				usePopupForceClose: true,
+				usePopupLoader: true,
+				usePopupNav: true,
+				windowMargin: 50
+			});
+
+			// Hack: Set margins to 0 when 'xsmall' activates.
+				breakpoints.on('<=xsmall', function() {
+					$main[0]._poptrox.windowMargin = 0;
+				});
+
+				breakpoints.on('>xsmall', function() {
+					$main[0]._poptrox.windowMargin = 50;
+				});
 })(jQuery);

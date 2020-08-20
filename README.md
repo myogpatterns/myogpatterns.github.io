@@ -4,7 +4,6 @@ Sewing Patterns for DIY Outdoor Gear Makers
 
 ## Contributors and Guest Creators Welcome
 
- * Beginner to immediate-level outdoor related sewing patterns 
- * Must be accompanied with detailed instructions or video in similar theme
- * Open to collaborating on graphics and pattern refinement
- * Contact me well before submitting pull request
+ * Beginner to immediate-level outdoor related sewing patterns only
+ * Open to collaborating on free patterns
+ * Contact me on reddit to discuss

@@ -2670,7 +2670,7 @@ input, select, textarea {
 
 		.image.fit {
 			display: block;
-			margin: 0 0 2rem 0;
+			margin: 0 0 0.5rem 0; /*was 2rem on bottom*/
 			width: 100%;
 		}
 
@@ -2939,6 +2939,62 @@ input, select, textarea {
 	header p {
 		color: rgba(0, 0, 0, 0.75);
 	}
+
+	article.youtube {
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: -ms-flex;
+		display: flex;
+		-moz-flex-wrap: wrap;
+		-webkit-flex-wrap: wrap;
+		-ms-flex-wrap: wrap;
+		flex-wrap: wrap;
+		-moz-justify-content: center;
+		-webkit-justify-content: center;
+		-ms-justify-content: center;
+		justify-content: center;
+		position: relative;
+	}
+	/* article.youtube img {} */
+
+	article.youtube .play-button {
+		width: 70px;
+		height: 50px;
+		background-color: rgb(29, 29, 29);
+		/*box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);*/
+		z-index: 1;
+		opacity: 0.8;
+		border-radius: 10px;
+	}
+		article.youtube .play-button:before {
+			content: "";
+			border-style: solid;
+			/* border-width: 15px 0 15px 26.0px; */
+			border-width: 10px 0 10px 20.0px;
+			border-color: transparent transparent transparent #fff;
+		}
+	article.youtube img,
+	article.youtube .play-button {
+		cursor: pointer;
+	}
+	
+	article.youtube .play-button,
+	article.youtube .play-button:before {
+		position: absolute;
+	}
+	article.youtube .play-button,
+	article.youtube .play-button:before {
+		top: 50%;
+		left: 50%;
+		transform: translate3d( -50%, -50%, 0 );
+	}
+	article.youtube a:hover ~ .play-button,
+	article.youtube .play-button:hover  {
+		opacity: 1;
+		background-color:#9b65bb;
+	}
+	
+
 
 /* Table */
 
@@ -4067,14 +4123,14 @@ input, select, textarea {
 		pointer-events: auto;
 		border-style: solid;
 		border-color: #ffffff;
-		background-color: rgb(2, 94, 81, 0.2);
-		border-width: 6px !important;
+		background-color: rgba(2, 94, 81, 0.2);
+		border-width: 7px !important;
 		font-family: "Source Sans Pro", Helvetica, sans-serif;
-		font-size: 2.25rem;
+		font-size: 3.5rem; /*2.25*/
 		font-weight: 700;
-		letter-spacing: 0.075em;
+		letter-spacing: 0.05em; /*0.075em*/
 		line-height: 1;
-		padding: 1rem 1.5rem;
+		padding: .5rem 1.5rem;
 		/*text-transform: uppercase;*/
 		visibility: visible;
 		text-decoration: none;
@@ -6418,6 +6474,21 @@ input, select, textarea {
 					width: 100%;
 					border-radius: 0;
 				}
+
+			.gallery.style1 article .overlay {
+				position: absolute;
+				bottom: 0;
+				background-color: rgba(155, 101, 187, 0.7);
+				/*background-color: rgb(155, 101, 187);
+				background-color: rgba(2, 94, 81, 0.8);
+				background-color: rgba(17, 163, 182, 0.8);*/
+				width: 100%;
+				color: #f0f0f0;
+				font-size: inherit;
+				font-weight: 300;
+				padding: 6px;
+  				text-align: center;
+			}
 
 			.gallery.style1 article .caption {
 				-moz-align-items: center;
