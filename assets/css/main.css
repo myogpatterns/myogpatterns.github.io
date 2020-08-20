@@ -2670,7 +2670,7 @@ input, select, textarea {
 
 		.image.fit {
 			display: block;
-			margin: 0 0 2rem 0;
+			margin: 0 0 0.5rem 0; /*was 2rem on bottom*/
 			width: 100%;
 		}
 
@@ -2939,6 +2939,62 @@ input, select, textarea {
 	header p {
 		color: rgba(0, 0, 0, 0.75);
 	}
+
+	article.youtube {
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: -ms-flex;
+		display: flex;
+		-moz-flex-wrap: wrap;
+		-webkit-flex-wrap: wrap;
+		-ms-flex-wrap: wrap;
+		flex-wrap: wrap;
+		-moz-justify-content: center;
+		-webkit-justify-content: center;
+		-ms-justify-content: center;
+		justify-content: center;
+		position: relative;
+	}
+	/* article.youtube img {} */
+
+	article.youtube .play-button {
+		width: 70px;
+		height: 50px;
+		background-color: rgb(29, 29, 29);
+		/*box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);*/
+		z-index: 1;
+		opacity: 0.8;
+		border-radius: 10px;
+	}
+		article.youtube .play-button:before {
+			content: "";
+			border-style: solid;
+			/* border-width: 15px 0 15px 26.0px; */
+			border-width: 10px 0 10px 20.0px;
+			border-color: transparent transparent transparent #fff;
+		}
+	article.youtube img,
+	article.youtube .play-button {
+		cursor: pointer;
+	}
+	
+	article.youtube .play-button,
+	article.youtube .play-button:before {
+		position: absolute;
+	}
+	article.youtube .play-button,
+	article.youtube .play-button:before {
+		top: 50%;
+		left: 50%;
+		transform: translate3d( -50%, -50%, 0 );
+	}
+	article.youtube a:hover ~ .play-button,
+	article.youtube .play-button:hover  {
+		opacity: 1;
+		background-color:#9b65bb;
+	}
+	
+
 
 /* Table */
 
