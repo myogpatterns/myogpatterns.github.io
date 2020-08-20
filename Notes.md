@@ -2,7 +2,7 @@
 
 [markdown guide](https://www.markdownguide.org/basic-syntax/)
 
-## Poptrox
+## Poptrox replacement to Lightbox -- Done
 
 > Branch: poptrox
 
@@ -19,7 +19,7 @@ Replace built in gallery lightbox with poptrox
 * add Share to footer
 
 
-## Community Build Galleries
+## Community Build Galleries -- Done
 
 * resize images to 540x720 for portrait, 800x600 for landscape
 * `gallery style1 small`
@@ -27,13 +27,13 @@ Replace built in gallery lightbox with poptrox
 
 ## Page Status
 
-| Page  | poptrox  | previews  | community builds  | complete  |
+| Page  | poptrox  | footer  | community builds  | complete  |
 |---|:-:|:-:|:-:|:-:|
 | bpStembag  | x  |  x |  x |  x |
 | edcFannyPack  | x  | x  | x  | x  |
 | runningBelt  | x  |  x |  x |  x |
 | trailrunpack  | x  |  x |  x |  x |
-| index  |   |   |   |   |
+| index  |   |   |   |  x |
 
 
 ## Future
