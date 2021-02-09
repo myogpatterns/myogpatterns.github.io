@@ -6478,7 +6478,22 @@ input, select, textarea {
 			.gallery.style1 article .overlay {
 				position: absolute;
 				bottom: 0;
-				background-color: rgba(155, 101, 187, 0.7);
+				background-color: rgba(155, 101, 187, 0.5);
+				/*background-color: rgb(155, 101, 187);
+				background-color: rgba(2, 94, 81, 0.8);
+				background-color: rgba(17, 163, 182, 0.8);*/
+				width: 100%;
+				color: #f0f0f0;
+				font-size: inherit;
+				font-weight: 300;
+				padding: 6px;
+  				text-align: center;
+			}
+
+			.gallery.style1 article .prototype {
+				position: absolute;
+				bottom: 0;
+				background-color: rgba(62, 189, 168, 0.5);
 				/*background-color: rgb(155, 101, 187);
 				background-color: rgba(2, 94, 81, 0.8);
 				background-color: rgba(17, 163, 182, 0.8);*/
