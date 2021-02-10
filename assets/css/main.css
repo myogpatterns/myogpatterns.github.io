@@ -2320,6 +2320,17 @@ input, select, textarea {
 		margin: 0 0 1rem 0;
 	}
 
+	label[for="fld"] {     /* hide accessibility labels on fld class */
+		border: 0;
+		clip: rect(0 0 0 0);
+		height: 1px;
+		margin: -1px;
+		overflow: hidden;
+		padding: 0;
+		position: absolute;
+		width: 1px;
+	}
+
 	input[type="text"],
 	input[type="number"],
 	input[type="password"],
