@@ -10,7 +10,7 @@
 		})(window,document,'script','dataLayer','GTM-NC2Q2HQ');</script>
 		<!-- End Google Tag Manager -->
 		
-		<title>Learn MYOG Quick Sack</title>
+		<title>Learn MYOG Cinch Sack</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<meta name="description" content="Learn to Make Your Own Gear (MYOG). Sewing patterns and tutorials for outdoor adventurers."></head>
@@ -41,7 +41,7 @@
 			<!-- Zip Pouch Generator -->
 			<section id="zipPouch" class="wrapper style2 align-center">
 				<div class="inner">
-					<h2>Quick Sack Pattern Generator</h2>
+					<h2>Drawstring Stuff Sack</h2>
 					
 					
 					<div class="index align-left">
@@ -53,28 +53,11 @@
 							
 							<div class="content">
 								<div class="image fit"><img src="images\quicksack\quicksackplan.png" style="max-width:60%; margin:auto;" alt="stuff sack plan" /></div>
-								<p>Use this pattern generator for custom-sized stuff sacks. Select between two collar styles, a drawcord cinch or a roll top collar. Provide the desired finished size of the 3D stuff sack and the generator does the calculation to eliminate any chance of wasted fabric.</p> 	
-
-								<p> The generator assumes a 1.5 inch (4cm) drawcord casing or a 3.5 inch (9 cm) roll top extension. The roll top extension is sized for 3/4 inch (20mm) webbing as a stiffener.</p>
+								<p>Use this pattern generator for custom-sized stuff sacks with a separate drawcord cinch. Provide the desired finished size of the 3D stuff sack and the generator does the calculation to eliminate any chance of wasted fabric.</p> 	
 
 								<form method="post" action="#">
 									<div class="fields">
 										
-										<!-- Set Collar Type -->
-										<div class="field third">
-											<label>Collar Style</label>	
-										</div>
-
-										<div class="field third">
-											<input type="radio" name="collar" class="dimension" id="cinch" value="0" checked>
-											<label for="cinch">Drawcord</label>
-										</div>
-										  
-										<div class="field third">
-											<input type="radio" name="collar" class="dimension" id="roll-top" value="1">
-											<label for="roll-top">Roll-Top</label>
-										</div>
-
 										<!-- Set Units -->
 										<div class="field third">
 											<label>Pattern Units</label>	
@@ -89,20 +72,20 @@
 											<input type="radio" name="units" class="dimension" id="metric" value="1">
 											<label for="metric">Centimeters (cm)</label>
 										</div>
-
+										
 										<!-- Set Dimensions -->
 										<div class="field third">
 											<label for="bottom-length">Bottom Length</label>
-											<input type="number" name="bottomLength" class="dimension" id="bottomLength" value="" />
+											<input type="number" name="bottomLength" class="dimension" id="bottomLength" min="1" value="" />
 										</div>
 										<div class="field third">
 											<label for="bottom-width">Bottom Width</label>
-											<input type="number" name="bottomWidth" class="dimension" id="bottomWidth" value="" />
+											<input type="number" name="bottomWidth" class="dimension" id="bottomWidth" min="1" value="" />
 										</div>
 										
 										<div class="field third">
-											<label for="height">Open Height</label>
-											<input type="number" name="height" class="dimension" id="height" value="" />
+											<label for="height">Height when Cinched</label>
+											<input type="number" name="height" class="dimension" id="height" min="1" value="" />
 										</div>
 
 										
@@ -116,7 +99,7 @@
 								<span class="image right"><img src="images\stuffSackPattern.png" alt="stuff sack pattern" /></span>
 								
 								<p>Construction seam allowance is included: <strong><span class="sA">based on units selected</span></strong>.
-									
+									Finished drawcord casing is always 1.5 inch (4cm).
 
 								<ul class="alt">
 									<li><strong>Body Panel Length: <span class="patternLength"></span></strong></li>
@@ -124,7 +107,6 @@
 									<li><strong>Cord Channel Length: <span class="channelLength"></span></strong></li>
 									<li><strong>Cord Channel Height: <span class="channelHeight"></span></strong></li>
 								</ul>
-
 								</p>
 								
 							</div>
@@ -260,7 +242,7 @@
 		<script src="assets/js/util.js"></script>
 		<script src="assets/js/main.js"></script>
 	<!-- MYOG Pattern Scripts -->
-		<script src="assets/js/quicksack.js"></script>
+		<script src="assets/js/cinchsack.js"></script>
 
 	</body>
 
