@@ -71,6 +71,8 @@ $('document').ready(function () {
         var bottomLength = Number( $('#bottomLength').val() );    
         var bottomWidth  = Number( $('#bottomWidth').val() );
         var sackHeight   = Number( $('#height').val() );
+
+        var halfBottomWidth = bottomWidth / 2; 
         
         if (bottomLength > 1 && bottomWidth > 0 && sackHeight > 1) {        // html input min=1, crappy validation but works
             var scrap = patternSize(units, bottomLength, bottomWidth, sackHeight);
@@ -93,6 +95,9 @@ $('document').ready(function () {
             $('.channelLength').html(channelL + unitText);
             $('.channelHeight').html(channelH + unitText);
             $('.sA').html(sA + unitText);
+            $('.bottomWidth').html(bottomWidth + unitText);
+            $('.halfBottomWidth').html(halfBottomWidth + unitText);
+            $('.bottomLength').html(bottomLength + unitText);
             
         }
     });
