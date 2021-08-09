@@ -9,55 +9,45 @@ function roundToEigthInch (number) {
     return number;
 }
 
-function patternSize(units,collar,bL,bW,h) {
+function patternSize(units,bL,bW,h) {
     if (units==1) {         // METRIC
-        var csA = 4;        // cord channel height (4cm)
-        var rt = 9;         // roll top height (9 cm)
-        var hemA = 1;       // single fold hem allowance on each end of channel (1 cm)
-        var hemRt = 4;      // double fold hem allowance at top edge of roll top for 20mm webbing
-        var sA = 1;         // general seam allowance (1 cm)
+        var rt = 12;        // roll-top collar height (12 cm)
+        var hem = 4;        // double fold hem allowance at top of collar (20 mm webbing)
+        var sA = 1.5;         // general seam allowance (1.5 cm) for french seams
     }
     else {                  // IMPERIAL
-        var csA = 1.5;      // cord channel height (1.5")
-        var rt = 3.5;       // roll top height (3.5")
-        var hemA = 0.5;     // single fold hem allowance on each end of channel (0.5")
-        var hemRt = 1.5;    // double fold hem allowance at top edge of roll top for 3/4" webbing
-        var sA = 0.5;       // general seam allowance (0.5")
+        var rt = 4.5;         // roll-top collar height (4.5") 3/4" webbing rolled 4 times
+        var hem = 1.5;      // double fold hem allowance at top of collar (0.75" webbing)
+        var sA = 5/8;       // general seam allowance (5/8") for french seams
     }
 
-    if (collar==1) {         // roll-top
-        var collarh = rt;                           // open height minus roll top
-        var channelH = collarh + 2*hemRt + sA;      //roll top height with hem and SA
-        var fabricH = h + bW + (2*sA);            // height
-    }
-    else {                      // drawcord cinch
-        var collarh = 2*csA;                // cSA folded on itself
-        var channelH = collarh + (2*sA);      // SA on top and bottom
-        var fabricH = h + bW - csA + (2*sA);     // height accounts for width and channel
-    }
     
-    if (bL,bW > 0) {
-        //main body fabric panel
-        var fabricL = 2*bL + 2*bW + 2*sA; 
-       
-        // separate cord channel
-        var channelL = 2*bL + 2*bW + 2*hemA;      //hem on each end
+    // body fabric panel
+    var fabricL  = 2*bL + (2*bW) + (2*sA);
+    var rollTopH = rt + hem;                 // roll-top height + top hem
+    var webbingL = bL + bW + 2*hem; //adds hem on each end to fold under
 
-        if (units==1) { 
-            var fabricL = fabricL.toFixed(1);    //trimming to closest mm
-            var fabricH = fabricH.toFixed(1);
-            var channelL = channelL.toFixed(1);
-            var channelH = channelH.toFixed(1);
+    if (bW > 3) {                                           // add material so top will close when bW is wide
+        var fabricH = h + bW + sA + rollTopH;           // adds (1/2bW) to top of fabricH to make up additional width
         }
-        else { 
-            var fabricL = roundToEigthInch(fabricL); //rounding to nearest 1/8" increment
-            var fabricH = roundToEigthInch(fabricH); 
-            var channelL = roundToEigthInch(channelL); 
-            var channelH = roundToEigthInch(channelH); 
-        }   
-                
-        return [fabricL, fabricH, channelL, channelH, sA];   // 
+        else {
+            var fabricH = h + (0.5*bW) + sA + rollTopH; // 1/2bW is the corner cut off bottom to make rectangular
+        }
+    
+
+
+    // rounding dimensions for output
+    if (units==1) { 
+        var fabricL = fabricL.toFixed(1);           //trimming to closest mm
+        var fabricH = fabricH.toFixed(1);
     }
+    else { 
+        var fabricL = roundToEigthInch(fabricL);    //rounding to nearest 1/8" increment
+        var fabricH = roundToEigthInch(fabricH); 
+    }   
+            
+    return [fabricL, fabricH, sA, hem, webbingL];   
+    
 };
 
 
@@ -71,34 +61,42 @@ $('document').ready(function () {
     $('.dimension').change(function () {   //when any .dimension changes (input loses focus), function runs
 
         var units = $( "input[type=radio][name=units]:checked" ).val();     // inches (val=0) or cm (val=1)
-        var collar = $( "input[type=radio][name=collar]:checked" ).val();     // cinch (val=0) or roll-top (val=1)
 
-        // assign variables based on input id values from html form
-        var bottomLength = Number($('#bottomLength').val());    
-        var bottomWidth  = Number($('#bottomWidth').val());
-        var totalHeight = Number($('#height').val());
+        // assign variables based on input id values from html form. 
+        //Ensure object is number otherwise arithmetic is screwy
+        var bottomLength = Number( $('#bottomLength').val() );    
+        var bottomWidth  = Number( $('#bottomWidth').val() );
+        var sackHeight   = Number( $('#height').val() );
+
+        var halfBottomWidth = bottomWidth / 2;          //used to size bottom corner within instructions
+        var halfTop = bottomLength + bottomWidth;       //used to size length of webbing along roll-top 
         
-        if (bottomLength, bottomWidth, totalHeight != 0) {
-            var scrap = patternSize(units,collar,bottomLength,bottomWidth,totalHeight);
+        if (bottomLength > 1 && bottomWidth > 0 && sackHeight > 1) {        // html input min=1, crappy validation but works
+            var scrap = patternSize(units, bottomLength, bottomWidth, sackHeight);
             var fabricL = scrap[0];
             var fabricH = scrap[1];
-            var channelL = scrap[2];
-            var channelH = scrap[3];
             if (units == 1) { 
                 var unitText = " cm";
-                var sA = scrap[4];
+                var sA = scrap[2];
+                var hem = scrap[3];
                 }
                 else { 
                     var unitText = " in";
-                    var sA = scrap[4];
+                    var sA = "5/8";
+                    var hem = scrap[3];
                 }
+            var webbingLength = scrap[4]; 
         
-            /* html id returns */ 
+            // html id returns  
             $('.patternLength').html(fabricL + unitText);
             $('.patternHeight').html(fabricH + unitText);
-            $('.channelLength').html(channelL + unitText);
-            $('.channelHeight').html(channelH + unitText);
             $('.sA').html(sA + unitText);
+            $('.hem').html(hem + unitText);
+            $('.bottomWidth').html(bottomWidth + unitText);
+            $('.halfBottomWidth').html(halfBottomWidth + unitText);
+            $('.bottomLength').html(bottomLength + unitText);
+            $('.webbingLength').html(webbingLength + unitText);
+            $('.halfTop').html(halfTop + unitText);
             
         }
     });
