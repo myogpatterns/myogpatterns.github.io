@@ -25,7 +25,7 @@ function patternSize(units,bL,bW,h) {
     // body fabric panel
     var fabricL  = 2*bL + (2*bW) + (2*sA);
     var rollTopH = rt + hem;                 // roll-top height + top hem
-    var webbingL = bL + bW + 2*hem; //adds hem on each end to fold under
+    var webbingL = bL + bW + 4*hem; //adds hem on each end to fold under
 
     if (bW > 3) {                                           // add material so top will close when bW is wide
         var fabricH = h + bW + sA + rollTopH;           // adds (1/2bW) to top of fabricH to make up additional width
