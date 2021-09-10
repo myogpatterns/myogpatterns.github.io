@@ -2706,6 +2706,14 @@ input, select, textarea {
 			.image.icons img {
 				width: 100%;
 			}
+		.image.preview {
+			height:200px;
+			max-width: 30rem;
+			margin: 0 0 0 0;
+		}
+			.image.preview img {
+				width: 100%;
+			}
 
 /* List */
 
