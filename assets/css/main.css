@@ -2976,6 +2976,11 @@ input, select, textarea {
 	}
 	/* article.youtube img {} */
 
+	article.youtube img,
+	article.youtube .play-button {
+		cursor: pointer;
+	}
+
 	article.youtube .play-button {
 		width: 70px;
 		height: 50px;
@@ -2992,10 +2997,6 @@ input, select, textarea {
 			border-width: 10px 0 10px 20.0px;
 			border-color: transparent transparent transparent #fff;
 		}
-	article.youtube img,
-	article.youtube .play-button {
-		cursor: pointer;
-	}
 	
 	article.youtube .play-button,
 	article.youtube .play-button:before {
@@ -3012,7 +3013,12 @@ input, select, textarea {
 		opacity: 1;
 		background-color:#9b65bb;
 	}
-	
+	article.youtube .caption { 
+		opacity: 1;
+		/*padding: 2rem;*/
+		z-index: 1;
+		font-size: 0.8rem;
+	}
 
 
 /* Table */
