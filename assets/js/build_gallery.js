@@ -6,6 +6,11 @@
     div id #build_gallery
 */
 
+$("#toggle_style_gallery_button").click(function() {
+    $("#style_gallery").slideToggle( 'fast' );
+    $( this ).toggleClass('fa-angle-down');
+    $( this ).toggleClass('fa-angle-up');
+})
 $("#toggle_build_gallery_button").click(function() {
     $("#build_gallery").slideToggle( 'fast' );
     $( this ).toggleClass('fa-angle-down');
