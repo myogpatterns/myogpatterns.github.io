@@ -3033,7 +3033,7 @@ input, select, textarea {
 		background-color: rgb(29, 29, 29);
 		/*box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);*/
 		z-index: 1;
-		opacity: 0.8;
+		opacity: 0.6;
 		border-radius: 10px;
 	}
 		article.youtube .play-button:before {
@@ -3056,7 +3056,7 @@ input, select, textarea {
 	}
 	article.youtube a:hover ~ .play-button,
 	article.youtube .play-button:hover  {
-		opacity: 1;
+		opacity: .8;
 		background-color:#9b65bb;
 	}
 	article.youtube .caption { 
