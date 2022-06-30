@@ -2729,6 +2729,14 @@ input, select, textarea {
 		border-radius: 4px;
 	}
 
+	.thumbnail.desaturated {
+		filter: saturate(0%) opacity(55%);
+	}
+
+	.thumbnail.desaturated:hover{
+		filter: none;
+	}
+
 	.thumbnail.left, .thumbnail.right {
 		/*width: 40%;*/
 		max-width: 12rem;
@@ -2757,6 +2765,83 @@ input, select, textarea {
 	}
 
 		.thumbnail.fit img {
+			width: 100%;
+		}
+/* Thumbnail */
+
+.thumbnail {
+	border: 0;
+	border-radius: 4px;
+	display: inline-block;
+	position: relative;
+}
+
+	.thumbnail img {
+		display: block;
+		border-radius: 4px;
+	}
+
+	.thumbnail.left, .thumbnail.right {
+		/*width: 40%;*/
+		max-width: 12rem;
+	}
+
+		.thumbnail.left img, .thumbnail.right img {
+			width: 100%;
+		}
+
+	.thumbnail.left {
+		float: left;
+		margin: 0 1.5rem 1rem 0;
+		top: 0.25rem;
+	}
+
+	.thumbnail.right {
+		float: right;
+		margin: 0 0 1rem 1.5rem;
+		top: 0.25rem;
+	}
+
+	.thumbnail.fit {
+		display: block;
+		margin: 0 0 0.5rem 0; /*was 2rem on bottom*/
+		width: 100%;
+	}
+
+		.thumbnail.fit img {
+			width: 100%;
+		}
+
+		/* Partner */
+
+.partner {
+	border: 0;
+	border-radius: 4px;
+	display: inline-block;
+	position: relative;
+	max-width: 200px;
+}
+
+	.partner img {
+		display: block;
+		border-radius: 4px;
+	}
+
+	.partner.desaturated {
+		filter: saturate(0%) opacity(55%);
+	}
+
+	.partner.desaturated:hover{
+		filter: none;
+	}
+
+	.partner.fit {
+		display: block;
+		margin: 0 0 0.5rem 0; /*was 2rem on bottom*/
+		width: 100%;
+	}
+
+		.partner.fit img {
 			width: 100%;
 		}
 
