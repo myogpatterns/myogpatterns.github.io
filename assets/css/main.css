@@ -23,6 +23,7 @@
 	--primary: 71, 211, 229;
 	--darkerprimary: 30, 189, 209;
 	--banneraccent: 99, 121, 119;
+	--discount: 79, 78, 137;
 }
 
 html, body, div, span, applet, object,
@@ -209,6 +210,13 @@ input, select, textarea {
 			font-size: 1.25rem;
 		}
 
+		p.discount {
+			border-radius: 4px;
+			font-size: .9rem;
+			text-align: center;
+			padding: 0.25rem 0.325rem;
+		}
+
 	h1, h2, h3, h4, h5, h6 {
 		font-weight: 300;
 		line-height: 1.375;
@@ -361,6 +369,13 @@ input, select, textarea {
 		background: rgba(0, 0, 0, 0.05);
 		border-color: rgba(0, 0, 0, 0.2);
 	}
+	
+	p.discount {
+		background: rgba(var(--primary), 0.3);
+		border-color: rgba(var(--discount), 0.2);
+	}
+
+
 
 	hr {
 		border-bottom-color: rgba(0, 0, 0, 0.2);
@@ -2827,7 +2842,7 @@ input, select, textarea {
 			width: 100%;
 		}
 
-		/* Partner */
+/* My Partner Styles for Vendor partners */
 
 .partner {
 	border: 0;
@@ -2852,13 +2867,19 @@ input, select, textarea {
 
 	.partner.fit {
 		display: block;
-		margin: 0 0 0.5rem 0; /*was 2rem on bottom*/
+		margin: auto; /*was 2rem on bottom*/
 		width: 100%;
 	}
 
 		.partner.fit img {
 			width: 100%;
 		}
+
+	@media (hover: none) {
+		.partner.desaturated { 
+			filter: none; 
+		}
+	}
 
 
 /* List */
