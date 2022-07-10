@@ -1,0 +1,21 @@
+/*
+    Special styling for filter buttons used on gallery.html
+*/
+
+
+
+    .gallery-filters > button {
+        background: inherit;
+    }
+
+    .gallery-filters > button:hover {
+        background: inherit;
+    }
+
+    .gallery-filters > button.active {
+        background: hsl(0, 0%, 92%);
+    }
+
+
+    
+    
