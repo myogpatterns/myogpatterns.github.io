@@ -3,18 +3,22 @@
 */
 
 
+.gallery img {
+    aspect-ratio:1/1;
+    object-fit: cover;
+}
 
-    .gallery-filters > button {
-        background: inherit;
-    }
+.gallery-filters > button {
+    background: inherit;
+}
 
-    .gallery-filters > button:hover {
-        background: inherit;
-    }
+.gallery-filters > button:hover {
+    background: inherit;
+}
 
-    .gallery-filters > button.active {
-        background: hsl(0, 0%, 92%);
-    }
+.gallery-filters > button.active {
+    background: hsl(0, 0%, 92%);
+}
 
 
     
