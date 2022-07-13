@@ -3109,6 +3109,12 @@ input, select, textarea {
 				padding-right: 0;
 			}
 
+			@media all and (min-width: 960px) {
+				br.responsive {
+					display: none;
+				}
+			}
+
 			ul.icons li span.gray {
 				color: transparent;
 				text-shadow: 0 0 0 lightgray;
