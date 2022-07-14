@@ -3,17 +3,15 @@
 [markdown guide](https://www.markdownguide.org/basic-syntax/)
 
 
-## Community Build Galleries -- Done
-
 ## Page Status
 
-Cinch Sack - done
-Stuff Sack - done
-Roll Top - done
+* Community Gallery
 
 
 ## Future
 
-* update top tube bag for larger phones - done
-* replace direct downloads with payhip - done
+* html components for header and footer --- done
+* freshen color scheme --- done
+* Update font awesome
+* GA4 property
 * consolidate email platforms

@@ -23,7 +23,7 @@ class Footer extends HTMLElement {
                         </p>
                     </article>
 
-                    <a href="index.html">Home</a> &emsp; <a href="about.html">About</a><br><br>
+                    <a href="index.html">Home</a> &emsp; <a href="fabrics.html">Gear Fabrics</a> &emsp; <a href="about.html">About</a><br><br>
                     <ul class="icons">
                         <li><a href="https://www.reddit.com/u/g8trtim/" class="icon brands style1 fa-reddit fa-2x" target="_blank"><span class="label">Reddit</span></a></li>
                         <li><a href="https://www.instagram.com/learnmyog/" class="icon brands style1 fa-instagram fa-2x" target="_blank"><span class="label">Instagram</span></a></li>

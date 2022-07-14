@@ -260,6 +260,38 @@ input, select, textarea {
 			padding: 0.25rem 0.325rem;
 		}
 
+		p.ratings {
+			margin: 0 0 1rem 0; 
+		}
+			p.ratings img {
+				vertical-align: middle;
+				height: 2.75rem;
+			}
+			p.ratings span {
+				padding-right: 1.5rem;
+			}
+			p.ratings span:last-child{
+				padding-right: 0;
+			}
+			span.label {
+				display:none;
+			}
+
+			@media screen and (max-width: 768px) {
+				p.ratings {
+					text-align: center;
+				}
+				p.ratings img {
+					height:2rem;
+				}
+			}
+
+		p.ratings span.gray {
+			color: transparent;
+			text-shadow: 0 0 0 lightgray;
+		}
+		
+
 	h1, h2, h3, h4, h5, h6 {
 		font-weight: 300;
 		line-height: 1.375;
@@ -2788,7 +2820,7 @@ input, select, textarea {
 				width: 100%;
 			}
 
-/* Thumbnail */
+/* Video Thumbnail */
 
 .thumbnail {
 	border: 0;
@@ -2841,20 +2873,14 @@ input, select, textarea {
 			width: 100%;
 		}
 
-/* My Partner Styles for Vendor partners */
+/* Vendor Partner Logo */
 
 .partner {
 	border: 0;
-	border-radius: 4px;
 	display: inline-block;
 	position: relative;
 	max-width: 200px;
 }
-
-	.partner img {
-		display: block;
-		border-radius: 4px;
-	}
 
 	.partner.desaturated {
 		filter: saturate(0%) opacity(55%);
@@ -2869,10 +2895,6 @@ input, select, textarea {
 		margin: auto; /*was 2rem on bottom*/
 		width: 100%;
 	}
-
-		.partner.fit img {
-			width: 100%;
-		}
 
 	@media (hover: none) {
 		.partner.desaturated { 
@@ -3100,7 +3122,6 @@ input, select, textarea {
 				padding-right: 0;
 			}
 
-			
 			ul.icons li.right {
 				float:right;
 			}
@@ -3108,21 +3129,6 @@ input, select, textarea {
 			ul.icons li.right.last {
 				padding-right: 0;
 			}
-
-			@media all and (min-width: 960px) {
-				br.responsive {
-					display: none;
-				}
-			}
-
-			ul.icons li span.gray {
-				color: transparent;
-				text-shadow: 0 0 0 lightgray;
-			}
-
-		ul.icons.min {
-			margin:0 0 .8rem 0;
-		}
 
 /* Section/Article */
 
