@@ -12,15 +12,12 @@ window.onload=function(){
     var colors=[
         "#3d3846",
         "#3d3846",
-        "#312744",
-        "#312744",
-        "#133754",
-        "#133754",
-        "#1874dd",
         "#1874dd",
         "#019aa5",
+        "#312744",
         "#019aa5",
         "#ffcc37",
+        "#133653",
         "#b063aa",
         "#d0045f"
     ];
@@ -31,5 +28,5 @@ window.onload=function(){
     if (color2 != color1){
         $(':root').css('--spotlight', color2);
     }
-    console.log(rn);
+    console.log("banner is " + color1, "spotlight is " + color2);
 }
