@@ -273,9 +273,6 @@ input, select, textarea {
 			p.ratings span:last-child{
 				padding-right: 0;
 			}
-			span.label {
-				display:none;
-			}
 
 			@media screen and (max-width: 768px) {
 				p.ratings {
@@ -290,7 +287,35 @@ input, select, textarea {
 			color: transparent;
 			text-shadow: 0 0 0 lightgray;
 		}
-		
+
+		p.partners {
+			margin: 2rem 0;
+		}
+			p.partners img {
+				vertical-align: middle;
+				height:3.5rem;
+			}
+			p.partners span {
+				padding-right: 2rem;
+			}
+			p.partners span:last-child{
+				padding-right: 0;
+			}
+
+			@media screen and (max-width: 768px) {
+				p.partners {
+					margin: 1rem 0;
+					text-align: center;
+				}
+				p.partners img {
+					margin-top:1rem;
+					height:2rem;
+				}
+			}
+
+	span.label {
+		display:none;
+	}
 
 	h1, h2, h3, h4, h5, h6 {
 		font-weight: 300;
