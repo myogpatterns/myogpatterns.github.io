@@ -15,7 +15,7 @@
 * freshen color scheme --- done
 * gear fabrics page --- done
 * ratings and partners flex box --- done
-* High res partner logos (RBTR and ROTR mainly)
+* High res partner logos webp --- done
 
 ## Future
 * Update font awesome 6
