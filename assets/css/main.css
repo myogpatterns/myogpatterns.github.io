@@ -8515,6 +8515,14 @@ input, select, textarea {
 		padding-right: 0;
 	}
 
+	@media screen and (min-width: 1280px) {
+
+		.items > * .ratings {
+			width:100%;
+			justify-content: space-around;
+		}
+	}
+
 	@media screen and (max-width: 480px) {
 		.items > * .ratings-container {
 			justify-content: center;
