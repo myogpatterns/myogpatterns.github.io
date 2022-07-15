@@ -4332,7 +4332,7 @@ input, select, textarea {
 		/* background-color: rgba(2, 94, 81, 0.2); */
 		border-width: 7px !important;
 		font-family: "Source Sans Pro", Helvetica, sans-serif;
-		font-size: 3.5rem; /*2.25*/
+		font-size: 3.0rem; /*2.25*/
 		font-weight: 700;
 		letter-spacing: 0.05em; /*0.075em*/
 		line-height: 1;
@@ -8518,8 +8518,7 @@ input, select, textarea {
 	}
 	
 	.partners > a > img {
-		height:100%;
-		width:100%;
+		height:2.5rem;
 	}
 
 		.ratings-container > .partners {
@@ -8535,7 +8534,6 @@ input, select, textarea {
 	
 		.ratings-container > .partners > a > img {
 			height: 2rem;
-			width:100%;
 		}
 
 	.partners > * {
@@ -8563,15 +8561,17 @@ input, select, textarea {
 		.items > * .ratings-container {
 			justify-content: center;
 		}
-		.ratings-container > .partners > a > img {
-			height: 1.75rem;
-		}
 		.partners {
 			flex-wrap: wrap;
+			align-items: flex-start;  /* fixes safari image stretching */ 
+		}
+		.ratings-container > .partners > a > img {
+			height: auto;
+			width:48px;
 		}
 		.partners > a > img {
-			height:48px;
-			width:100%;
+			height:auto;
+			width:4rem;
 		}
 	}
 		
