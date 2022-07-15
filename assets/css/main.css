@@ -8505,7 +8505,13 @@ input, select, textarea {
 		-webkit-flex-wrap: nowrap;
 		-ms-flex-wrap: nowrap;
 		flex-wrap: nowrap;
+		-moz-justify-content: center;
+		-webkit-justify-content: center;
+		-ms-justify-content:center;
 		justify-content: center;
+		-moz-align-items: center;
+		-webkit-align-items: center;
+		-ms-align-items: center;
 		align-items: center;
 		-moz-flex-grow: 0;
 		-webkit-flex-grow: 0;
@@ -8563,6 +8569,9 @@ input, select, textarea {
 		}
 		.partners {
 			flex-wrap: wrap;
+			-moz-align-items: flex-start;
+			-webkit-align-items: flex-start;
+			-ms-align-items: flex-start;
 			align-items: flex-start;  /* fixes safari image stretching */ 
 		}
 		.ratings-container > .partners > a > img {
