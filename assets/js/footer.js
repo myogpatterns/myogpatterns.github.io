@@ -12,11 +12,11 @@ class Footer extends HTMLElement {
             }
 
             footer p {
-                color: #000;
+                color: var(--footer-invert);
             }
 
             footer a {
-                color: #000;
+                color: var(--footer-invert);
                 text-decoration:none;
             }
                 footer a:hover {
@@ -37,7 +37,7 @@ class Footer extends HTMLElement {
                 margin-bottom: 1rem;
             }
             #sitemap {
-                margin:0.5rem 0;
+                margin:0 0 1rem 0;
             }
         </style>
 
@@ -46,9 +46,9 @@ class Footer extends HTMLElement {
                     
 
                     <ul class="icons">
-                        <li><a href="https://www.reddit.com/u/g8trtim/" class="icon brands style1 fa-reddit-alien fa-2x" target="_blank"><span class="label">Reddit</span></a></li>
                         <li><a href="https://www.instagram.com/learnmyog/" class="icon brands style1 fa-instagram fa-2x" target="_blank"><span class="label">Instagram</span></a></li>
                         <li><a href="https://www.youtube.com/user/g8trtim" class="icon brands style1 fa-youtube fa-2x" target="_blank"><span class="label">Youtube</span></a></li>
+                        <li><a href="https://www.reddit.com/u/g8trtim/" class="icon brands style1 fa-reddit-alien fa-2x" target="_blank"><span class="label">Reddit</span></a></li>
                         <li><a href="https://github.com/myogpatterns/myogpatterns.github.io" class="icon brands style1 fa-github fa-2x" target="_blank"><span class="label">Github</span></a></li>
                     </ul>
                     <section id="sitemap">

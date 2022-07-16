@@ -68,6 +68,7 @@
 	--primary-shadow: rgba(49,39,68,0.2); 
 	--discount: rgba(71, 211, 229, .2);
 	--overlay: var(--primary);  /* changes with colorswitcher.js */
+	--footer-invert: rgba(32, 28, 38, 1);
 }
 
 html, body, div, span, applet, object,
@@ -8526,6 +8527,7 @@ input, select, textarea {
 		-webkit-flex-shrink: 0;
 		-ms-flex-shrink: 0;
 		flex-shrink: 0;
+		margin: 3rem 0;
 	}
 	
 	.partners > a > img {
@@ -8541,6 +8543,7 @@ input, select, textarea {
 			-webkit-justify-content: flex-end;
 			-ms-justify-content: flex-end;
 			justify-content: flex-end;
+			margin: 0;
 		}
 	
 		.ratings-container > .partners > a > img {

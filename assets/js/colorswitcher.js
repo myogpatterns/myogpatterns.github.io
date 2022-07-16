@@ -24,7 +24,6 @@ window.onload=function(){
 
     let lightColors = ["#ffcc37"];
 
-
     // let rn = Math.floor(Math.random()*colors.length);
     var primary = colors[randomNumberInList(colors)];
     var secondary = colors[randomNumberInList(colors)];
