@@ -62,11 +62,12 @@
 	--banneraccent: rgb(99, 121, 119); /*paired with original sewing banner*/
 	
 	/* Variable Colors */
-	--banner: var(--learnmyog-purple); 		/* changes with js */
-	--spotlight: #bbb;						/* changes with js */
+	--banner: var(--learnmyog-purple); 		/* changes with colorswitcher.js */
+	--spotlight: #bbb;						/* changes with colorswitcher.js */
 	--primary: var(--banner);  		/*link and button hover color */
 	--primary-shadow: rgba(49,39,68,0.2); 
 	--discount: rgba(71, 211, 229, .2);
+	--overlay: var(--primary);  /* changes with colorswitcher.js */
 }
 
 html, body, div, span, applet, object,
@@ -6684,21 +6685,24 @@ input, select, textarea {
 					display: block;
 					width: 100%;
 					border-radius: 0;
+					aspect-ratio:1/1;
+					object-fit:cover;
 				}
 
 			.gallery.style1 article .overlay {
-				position: absolute;
-				bottom: 0;
-				background-color: rgba(155, 101, 187, 0.5);
-				/*background-color: rgb(155, 101, 187);
-				background-color: rgba(2, 94, 81, 0.8);
-				background-color: rgba(17, 163, 182, 0.8);*/
-				width: 100%;
+				display:none;
+				/* position: absolute;
+				bottom: 2%;
+				width: 80%;
+				margin-left:10%;
+				border-radius:0.25rem;
+				/* background-color: var(--overlay);
 				color: #f0f0f0;
 				font-size: inherit;
 				font-weight: 300;
-				padding: 6px;
+				padding: .3rem 0;
   				text-align: center;
+				box-shadow: var(--primary-shadow) 0px 2px 4px; */ 
 			}
 
 			.gallery.style1 article .prototype {
