@@ -52,7 +52,11 @@ class Footer extends HTMLElement {
                         <li><a href="https://github.com/myogpatterns/myogpatterns.github.io" class="icon brands style1 fa-github fa-2x" target="_blank"><span class="label">Github</span></a></li>
                     </ul>
                     <section id="sitemap">
-                    <a href="/index.html">Home</a> &emsp; <a href="/fabrics.html">Gear Fabrics</a> &emsp; <a href="/about.html">About</a> &emsp; <a href="/about.html#disclosures">Disclosures</a>  
+                        <a href="/index.html">Home</a> &emsp; 
+                        <a href="/fabrics.html">Gear Fabrics</a> &emsp; 
+                        <a href="/about.html">About</a> &emsp; 
+                        <a href="/about.html#faq">FAQ</a> &emsp; 
+                        <a href="/about.html#disclosures">Disclosures</a>  
                     </section>
                     <p>&copy; 2020 LearnMYOG. All rights reserved.</p>
                 </div>

@@ -2933,11 +2933,11 @@ input, select, textarea {
 		dl dt {
 			display: block;
 			font-weight: 400;
-			margin: 0 0 1rem 0;
+			margin: 1rem 0 0.5rem 0;
 		}
 
 		dl dd {
-			margin-left: 2rem;
+			margin-left: 0.5rem;
 		}
 
 		dl.style2 dt {
