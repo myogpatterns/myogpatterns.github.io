@@ -18,9 +18,13 @@ window.onload=function(){
         "#ffcc37",
         "#133653",
         "#b063aa",
-        "#d0045f",
+        "#d0046f",
         "#3d3846"
     ];
+
+    let lightColors = ["#ffcc37"];
+
+
     // let rn = Math.floor(Math.random()*colors.length);
     var primary = colors[randomNumberInList(colors)];
     var secondary = colors[randomNumberInList(colors)];
@@ -28,6 +32,14 @@ window.onload=function(){
     $(':root').css('--overlay', hexToRGB(primary, .4))
     if (secondary != primary){
         $(':root').css('--spotlight', secondary);
+    }
+
+    // for light colored primary (e.g.) yellow remove invert class for text colors
+    if( $.inArray(primary, lightColors) != -1){
+        $('footer').removeClass('invert');
+        console.log('priamry is light')
+    } else {
+        console.log('primary is dark so invert');
     }
     console.log("banner is " + primary, "spotlight is " + secondary);
 }

@@ -94,6 +94,7 @@ footer, header, hgroup, menu, nav, section {
 
 body {
 	line-height: 1;
+	background-color: var(--primary);
 }
 
 ol, ul {
@@ -215,7 +216,7 @@ input, select, textarea {
 		}
 
 	body {
-		background-color: #ffffff;
+		background-color: var(--primary);
 		color: #000000;
 	}
 
@@ -8591,7 +8592,7 @@ input, select, textarea {
 /* Wrapper */
 
 	#wrapper {
-		background-color: inherit;
+		background-color: #ffffff;
 		width: 100%;
 		overflow-x: hidden;
 	}
