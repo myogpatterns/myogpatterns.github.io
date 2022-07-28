@@ -54,6 +54,7 @@ class Footer extends HTMLElement {
                     <section id="sitemap">
                         <a href="/index.html">Home</a> &emsp; 
                         <a href="/fabrics.html">Gear Fabrics</a> &emsp; 
+                        <a href="/gallery.html">Maker Gallery</a> &emsp; 
                         <a href="/about.html">About</a> &emsp; 
                         <a href="/about.html#faq">FAQ</a> &emsp; 
                         <a href="/about.html#disclosures">Disclosures</a>  
