@@ -263,6 +263,14 @@ input, select, textarea {
 			padding: 0.25rem 0.325rem;
 		}
 
+		p.disclosure {
+			border:1px solid gray; 
+			padding: .2rem 0;
+			color: gray; 
+			font-size:0.7rem; 
+			text-transform:uppercase;
+		}
+
 	span.gray {
 		color: transparent;
 		text-shadow: 0 0 0 lightgray;
