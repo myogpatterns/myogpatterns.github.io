@@ -585,3 +585,48 @@
 	};
 
 })(jQuery);
+
+// Helpers for Calculators
+
+function roundToEighthInch (number) {
+  return Math.round(number * 8) / 8
+}
+
+/**
+ * For a given jquery selector return the number value
+ * OR 0 if not a number
+ * @param selector {string}
+ * @returns {number}
+ */
+function getNumberFromField (selector) {
+  const output = parseInt($(selector).val())
+  return isNaN(output) ? 0 : output
+}
+
+/***
+ * Sets each object entry to the html element with a classname matching the key.
+ * Formats the value for imperial/metric
+ *
+ * @param isMetric {boolean}
+ * @param obj {Object.<string, number>} Values to set
+ */
+function setCalculatedValues (isMetric, obj) {
+  for (let [name, value] of Object.entries(obj)) {
+    let stringValue = isMetric ?
+      value.toFixed(1) + ' cm' :
+      roundToEighthInch(value) + ' in'
+
+    $('.' + name).html(stringValue)
+  }
+}
+
+function calculatorSetup(fn, version){
+  $('document').ready(function () {
+    $('.version').html(version)
+    $('.dimension').change(fn) //when any .dimension changes (input loses focus), function runs
+  })
+}
+
+function getIsMetric(name = 'units'){
+  return $('input[type=radio][name='+name+']:checked').val() === '1'      // inches (val=0) or cm (val=1)
+}
