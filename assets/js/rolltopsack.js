@@ -5,28 +5,28 @@
 */
 
 calculatorSetup(function () {
-  let isMetric = getIsMetric()
-  let fields = ['#bottomLength', '#bottomWidth', '#height'].map(getNumberFromField)
+  let isMetric = getIsMetric();
+  let fields = ['#bottomLength', '#bottomWidth', '#height'].map(getNumberFromField);
 
   if (fields.some(field => field <= 0)) {
-    return
+    return;
   }
-  let [bottomLength, bottomWidth, height] = fields
+  let [bottomLength, bottomWidth, height] = fields;
 
   const { rollTop, hem, sA } = isMetric ?
     { rollTop: 12, hem: 4, sA: 1.5 } :
-    { rollTop: 4.5, hem: 1.5, sA: 5 / 8 }
+    { rollTop: 4.5, hem: 1.5, sA: 5 / 8 };
 
-  let rollTopHeight = rollTop + hem
-  let patternHeight
+  let rollTopHeight = rollTop + hem;
+  let patternHeight;
 
   // add material so top will close when bottomWidth is wide
   if (bottomWidth > 3) {
     // adds (1/2bW) to top of fabricH to make up additional width
-    patternHeight = height + bottomWidth + sA + rollTopHeight
+    patternHeight = height + bottomWidth + sA + rollTopHeight;
   } else {
     // 1/2bW is the corner cut off bottom to make rectangular
-    patternHeight = height + (0.5 * bottomWidth) + sA + rollTopHeight
+    patternHeight = height + (0.5 * bottomWidth) + sA + rollTopHeight;
   }
 
   let outputFields = {
@@ -38,8 +38,8 @@ calculatorSetup(function () {
     bottomLength,
     bottomWidth,
     sA,
-    hem
-  }
+    hem,
+  };
 
-  setCalculatedValues(isMetric, outputFields)
-}, 'v0.1')
+  setCalculatedValues(isMetric, outputFields);
+}, 'v0.1');

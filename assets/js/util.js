@@ -589,7 +589,7 @@
 // Helpers for Calculators
 
 function roundToEighthInch (number) {
-  return Math.round(number * 8) / 8
+  return Math.round(number * 8) / 8;
 }
 
 /**
@@ -599,8 +599,8 @@ function roundToEighthInch (number) {
  * @returns {number}
  */
 function getNumberFromField (selector) {
-  const output = parseInt($(selector).val())
-  return isNaN(output) ? 0 : output
+  const output = parseInt($(selector).val());
+  return isNaN(output) ? 0 : output;
 }
 
 /***
@@ -614,19 +614,19 @@ function setCalculatedValues (isMetric, obj) {
   for (let [name, value] of Object.entries(obj)) {
     let stringValue = isMetric ?
       value.toFixed(1) + ' cm' :
-      roundToEighthInch(value) + ' in'
+      roundToEighthInch(value) + ' in';
 
-    $('.' + name).html(stringValue)
+    $('.' + name).html(stringValue);
   }
 }
 
-function calculatorSetup(fn, version){
+function calculatorSetup (fn, version) {
   $('document').ready(function () {
-    $('.version').html(version)
-    $('.dimension').change(fn) //when any .dimension changes (input loses focus), function runs
-  })
+    $('.version').html(version);
+    $('.dimension').change(fn); //when any .dimension changes (input loses focus), function runs
+  });
 }
 
-function getIsMetric(name = 'units'){
-  return $('input[type=radio][name='+name+']:checked').val() === '1'      // inches (val=0) or cm (val=1)
+function getIsMetric (name = 'units') {
+  return $('input[type=radio][name=' + name + ']:checked').val() === '1';      // inches (val=0) or cm (val=1)
 }
