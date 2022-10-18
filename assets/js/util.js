@@ -588,8 +588,20 @@
 
 // Helpers for Calculators
 
+/**
+ * Turns any number into an 1/8th inch precision string with fractions
+ * @param number
+ * @returns {string}
+ */
 function roundToEighthInch (number) {
-  return Math.round(number * 8) / 8;
+  const fractions = ['1/8', '1/4', '3/8', '1/2', '5/8', '3/4', '7/8'];
+
+  const rounded = Math.abs(Math.round(number * 8) / 8);
+  const int = Math.floor(rounded);
+  const decimal = rounded - int;
+
+  const fractionalString = decimal !== 0 ? ' ' + fractions[(decimal * 8) - 1] : '';
+  return `${number < 0 ? '-': ''}${int !== 0 ? int : ''}${fractionalString}` || '0';
 }
 
 /**
