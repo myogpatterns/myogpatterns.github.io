@@ -599,7 +599,7 @@ function roundToEighthInch (number) {
  * @returns {number}
  */
 function getNumberFromField (selector) {
-  const output = parseInt($(selector).val());
+  const output = parseFloat($(selector).val());
   return isNaN(output) ? 0 : output;
 }
 
