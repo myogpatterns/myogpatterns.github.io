@@ -2884,12 +2884,17 @@ input, select, textarea {
 		width: 100%;
 	}
 
+	.partner.icon {
+		height: 1.5em;
+		width: auto;
+		vertical-align:middle;
+	}
+
 	@media (hover: none) {
 		.partner.desaturated { 
 			filter: none; 
 		}
 	}
-
 
 /* List */
 
