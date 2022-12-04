@@ -2886,6 +2886,7 @@ input, select, textarea {
 
 	.partner.icon {
 		height: 1.5em;
+		border-radius: 15%;
 		width: auto;
 		vertical-align:middle;
 	}
