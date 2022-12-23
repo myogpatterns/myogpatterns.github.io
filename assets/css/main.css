@@ -265,7 +265,7 @@ input, select, textarea {
 
 		p.disclosure {
 			border:1px solid gray; 
-			padding: .2rem 0;
+			padding: .2rem;
 			color: gray; 
 			font-size:0.7rem; 
 			text-transform:uppercase;
