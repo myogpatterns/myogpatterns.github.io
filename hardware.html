@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LearnMYOG Pack Hardware Picker</title>
+    <script defer src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source Sans Pro">
+</head>
+<body>
+    <div class="container">
+        <div class="page-header sticky-top">
+            <div class="content">
+                <h1>Pack Hardware Picker</h1>
+
+                <div class="filters">
+                    <div class="ui-group">       
+                        <div class="button-group" data-filter-group="vendor">
+                            <button class="button is-checked" data-filter="">All</button>
+                            <button class="button" data-filter=".Ripstop-by-the-Roll">Ripstop by the Roll</button>
+                            <button class="button" data-filter=".Mozet-Supplies">Mozet Supplies</button>
+                            <button class="button" data-filter=".adventurexpert">AdventurExpert</button>
+                        </div>
+                    </div> 
+                </br>
+                    <div class="ui-group">
+                        <div class="button-group" data-filter-group="style">
+                            <button class="button is-checked" data-filter="">Any</button>
+                            <button class="button" data-filter=".plastic">Plastic</button>
+                            <button class="button" data-filter=".metal">Metal</button>
+                        </div>
+                    </div>
+                    <div class="ui-group">
+                        <div class="button-group" data-filter-group="kind">
+                            <button class="button is-checked" data-filter="">Any</button>
+                            <button class="button" data-filter=".buckle">Buckles</button>
+                            <button class="button" data-filter=".sternum">Sternums</button>
+                            <button class="button" data-filter=".cord">Cords</button>
+                            <button class="button" data-filter=".hook">Hooks</button>
+                            <button class="button" data-filter=".ring">Rings</button>
+                            <button class="button" data-filter=".misc">Misc</button>
+                        </div>
+                    </div>
+                    <span></span>
+                </div>
+            </div>
+            <!-- <hr> -->
+        </div>
+        <div class="fill-screen">
+            <div id="card-shelf" class="content" ></div>
+        </div>
+        <div class="page-footer">
+            <div class="content">
+                Footer
+            </div>
+        </div>
+    </div>
+    <script defer src="app.js"></script>
+</body>
+</html>

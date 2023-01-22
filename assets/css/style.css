@@ -1,0 +1,220 @@
+/* :root {
+  --buttonHighlight: hsl(180, 40%, 25%);
+  --buttonHover: hsl(180, 40%, 65%);
+} */
+
+
+
+/* ----  custom ----- */
+
+/* body {
+  font-family: "Source Sans Pro", "Open Sans", sans-serif;
+  box-sizing: border-box;
+} */
+
+/* a {text-decoration: none;} */
+
+/* h1 {
+  font-size: 2.5em;
+  font-weight: 900;
+  margin: 0.8em 0 0.6em 0; 
+} */
+
+/* .container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.page-header, .page-footer {
+  background-color: white;
+  flex-grow: 0;
+  flex-shrink: 0;
+  padding: 1em 0;
+  z-index: 10;
+} */
+
+/* .sticky-top {
+  position: -webkit-sticky; 
+  position: sticky;
+  top: 0;
+} */
+/* 
+.fill-screen {
+  flex: 1;
+} */
+
+/* .content {
+  width: 80%;
+  padding: .5em 0;
+  margin: 0 auto;
+} */
+
+/* .content::after {
+  margin: 0;
+} */
+
+/* .align-center {
+  text-align: center;
+  margin-bottom: 1.2em;
+} */
+
+
+/* ----  cards ----- */
+
+#card-shelf {
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 16.6%));
+    grid-gap: 0px;
+}
+
+@media screen and (max-width: 480px) {
+  #card-shelf {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 50%));
+    grid-gap: 0px;
+}
+}
+
+.card {
+  display:grid;
+  background: white;
+  border: 0.1px solid lightslategray;
+  box-sizing: border-box;
+}
+
+.card img{
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+.card-info {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  align-content: space-between;
+  padding: 0 0.5em;
+}
+
+.card-info .title{
+  margin: 0 0 0.5em 0;
+  width: 100%;
+  font-weight:300;
+  display: inherit;
+}
+
+.card-info .vendor {
+  display: flex;
+  justify-content: right;
+}
+
+.card-info .vendor, .option {
+  display: inherit;
+  color: #667788;
+  font-size: 0.7em;
+  align-self: center;
+  width:50%;
+}
+
+.card-info .vendor img {
+  margin: 8px;
+  width: 32px;
+  aspect-ratio: 1 / 1;
+  border-radius: 16px;
+}
+
+/* ----  buttons ----- */
+
+.button {
+  display: inline-block;
+  padding: 0.5em 1.0em;
+  background: #EEE;
+  border: none;
+  border-radius: 7px;
+  background-image: linear-gradient( to bottom, hsla(0, 0%, 0%, 0), hsla(0, 0%, 0%, 0.2) );
+  color: #222;
+  text-shadow: 0 1px white;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: var(--buttonHover, #8CF);
+  text-shadow: 0 1px hsla(0, 0%, 100%, 0.5);
+  color: rgb(71, 71, 71);
+}
+
+.button:active,
+.button.is-checked {
+  color: hsl(0, 0%, 90%);
+  background-color: var(--buttonHighlight, #28F);
+}
+
+.button.is-checked {
+  color: white;
+  text-shadow: 0 -1px hsla(0, 0%, 0%, 0.8);
+}
+
+.button:active {
+  box-shadow: inset 0 1px 10px hsla(0, 0%, 0%, 0.8);
+}
+
+/*  button-group  */
+
+.button-group:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.button-group .button {
+  float: left;
+  border-radius: 0;
+  margin-left: 0;
+  margin-right: 1px;
+}
+
+.button-group .button:first-child { border-radius: 0.5em 0 0 0.5em; }
+.button-group .button:last-child { border-radius: 0 0.5em 0.5em 0; }
+
+
+/* ui group */
+
+.ui-group {
+  display: inline-block;
+}
+
+.ui-group .button-group {
+  display: inline-block;
+  margin-right: 1.5em;
+}
+
+
+/* ---- leaflet.js map ---- */
+
+#map { 
+  height: 400px; 
+  z-index: 1;
+}
+
+#store-shelf {
+  column-count: 3;
+}
+
+.no-deco {
+  line-height: 2em;
+  list-style-type: none; 
+}
+.no-deco a {
+  text-decoration: none;
+
+}
+
+@media screen and (max-width: 480px) {
+  #store-shelf {
+    column-count: 1;
+  }
+  #map {
+    height: 240px;
+  }
+}
