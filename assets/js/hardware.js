@@ -2,8 +2,8 @@
     Displays products from allproducts.json
     allproducts.json created with db-capture.py
 */
-const allProducts = "./allproducts.json";
-const imgdir = "./"
+const allProducts = "assets/db/allproducts.json";
+const imgdir = "images/shared/partners/48/"
 
 
 // displayProductsfromArray(data);

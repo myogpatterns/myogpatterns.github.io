@@ -7,8 +7,8 @@ Mozet Supplies,https://mozetsupplies.ca/,"Victoria, CA",CA,48.42836,-123.35879,T
 PacCana,https://www.paccana.com/,"Calgary, CA",CA,51.077,-114.01372,
 Rockywoods,https://www.rockywoods.com/,"Loveland, CO",US,40.39539,-105.07696,
 Seattle Fabrics,https://www.seattlefabrics.com/,"Seattle, WA",US,47.69221,-122.34385,
-ExtremTextil,https://www.extremtextil.de/en/,"Berlin, DE",DE,52.50077,13.42065,
-Monkey Puzzle Fabrics,https://www.makeyourowngear.com.au/,Blackheath NSW,AU,-33.63748,150.28403,
+ExtremTextil,https://www.extremtextil.de/en/,"Berlin, DE",DE,52.50077,13.42065,TRUE
+Monkey Puzzle Fabrics,https://www.makeyourowngear.com.au/,"Blackheath, NSW",AU,-33.63748,150.28403,
 A+ Products,https://www.aplusproducts.net/,"Marlboro, NJ",US,40.31365,-74.25847,
 Strapworks,https://www.strapworks.com/,"Eugene, OR",US,44.04663,-123.08899,
 Jontay,https://jontay.com/,"Blackshear, GA",US,31.301,-82.24369,
@@ -22,7 +22,8 @@ Pennine Outdoors,https://www.pennineoutdoor.co.uk/,"High Bentham, UK",GB,54.1182
 Hudson's Supplies,https://www.hudson4supplies.com/,"Montreal, QC",CA,45.50008,-73.66585,
 Outdoor Experten,https://www.outdoorexperten.se/,"Västerås, SE",SE,59.61187,16.61122,
 Tactical Trim,https://www.tacticaltrim.de/,"Berlin, DE",DE,52.428389,13.381763,
-Wawak,https://www.wawak.com/,"Conklin, NY",US,42.0663,-75.81536,
-AdventurExpert,https://www.adventurexpert.com/,"Domžale, Slovenia",SI,46.12284,14.61172,
+Wawak,https://www.wawak.com/,"Conklin, NY",US,42.0663,-75.81536,TRUE
+AdventurExpert,https://www.adventurexpert.com/,"Domžale, Slovenia",SI,46.12284,14.61172,TRUE
 The Rain Shed,https://www.therainshed.com/,"Cle Elum, WA",US,47.19437,-120.93742,
 Mill Yardage,https://www.millyardage.com/,"Rollinsford, NH",US,43.23523,-70.81722,
+Outdoor Wilderness Fabrics, https://www.owfinc.com/,"Caldwell, ID",US,43.66944,-116.69425,
