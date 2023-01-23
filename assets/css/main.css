@@ -4479,41 +4479,13 @@ input, select, textarea {
 			opacity: 0.8;
 		}
 
-	@media screen and (max-width: 1680px) {
-
-		.banner.style4 {
-			/* padding-bottom: 3rem; */
-			/* padding-bottom: 1.5rem; */
-		}
-
-			
-
-	}
-
-
-	@media screen and (max-width: 980px) {
-
-		.banner.style4 {
-			/* padding-bottom: 3rem ; */
-			/* padding-bottom: 1.5rem ; */
-		}
-
-	
-	}
 
 	@media screen and (max-width: 736px) {
 
-		.banner.style4 {
-			/* padding-bottom: 3rem ; */
-			/* padding-bottom: 1.5rem ; */
+		.banner.style4 .logo {
+			font-size: 1.75rem;
+			border-width: 3px !important;
 		}
-
-			
-
-			.banner.style4 .logo {
-				font-size: 1.75rem;
-				border-width: 3px !important;
-			}
 
 	}
 
