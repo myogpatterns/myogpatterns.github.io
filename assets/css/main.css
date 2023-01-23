@@ -2183,23 +2183,30 @@ input, select, textarea {
 	}
 
 /* Nav */
-	#nav ul.links {
+	#nav ul {
 		display: flex;
 		flex: 1;
 		list-style: none;
 		justify-content: center;
 		margin: 0;
+		padding: 0;
 	}
-	#nav li {
+
+	#nav li.links {
 		display: inline-flex;
 		margin: 0;
 		background-color: inherit;
 		line-height: 1em;
 		cursor: pointer;
-		font-weight:400;
-		font-size:1rem;
+		/* font-weight:400; */
+		/* font-size:1rem; */
 		text-transform: uppercase;
 		font-family: "Source Sans Pro", Helvetica, sans-serif;
+		padding: 0;
+	}
+
+	#nav .menu{
+		display: none;
 	}
 	
 	#nav a {
@@ -2220,9 +2227,27 @@ input, select, textarea {
 
 	#nav li.active {
 		background-color: white;
+		border-bottom: transparent;
 	}
 	#nav li.active > a {
 		color: var(--primary);
+	}
+
+	@media screen and (max-width: 768px) {
+		#nav ul {
+			flex-direction: column-reverse;
+			padding: 0;
+		}
+		
+		#nav li.links { 
+			display: none;
+		}
+
+		#nav .menu {
+			display: flex;
+			flex-grow: 1;
+			justify-content: flex-end;
+		}
 	}
 
 /* Button */
@@ -8999,7 +9024,7 @@ input, select, textarea {
 			box-shadow: inset 0 1px 0 0 rgba(0, 0, 0, 0.075);
 		}
 
-			#wrapper.divided > *:first-child {
+			#wrapper.divided > *:first-child, #main {
 				box-shadow: none !important;
 			}
 

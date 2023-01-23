@@ -642,3 +642,16 @@ function calculatorSetup (fn, version) {
 function getIsMetric (name = 'units') {
   return $('input[type=radio][name=' + name + ']:checked').val() === '1';      // inches (val=0) or cm (val=1)
 }
+
+/* Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon */
+function navCollapse() {
+	var elms = document.querySelectorAll("li.links");
+	
+	Array.from(elms).forEach((x) => {
+	if (x.style.display === "inline-flex") {
+		x.style.display = "none";
+	} else {
+		x.style.display = "inline-flex";
+	}
+})
+}
