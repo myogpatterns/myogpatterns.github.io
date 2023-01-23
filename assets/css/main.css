@@ -2238,9 +2238,17 @@ input, select, textarea {
 			flex-direction: column-reverse;
 			padding: 0;
 		}
+
+		#nav ul li {
+			padding: 0;
+		}
 		
 		#nav li.links { 
 			display: none;
+		}
+
+		#nav a {
+			padding: 1em;
 		}
 
 		#nav .menu {
@@ -4361,10 +4369,8 @@ input, select, textarea {
 
 /* Banner (style4) My Custom Style */
 	.banner.style4 {
-		/* height:20rem; 
-		padding-bottom: 4rem; */
 		height:12rem; 
-		padding-bottom: 2rem;
+		/* padding-bottom: 2rem; */
 		/*padding: 3rem 3.75rem 3rem 3.75rem ;*/
 		-moz-align-items: center;
 		-webkit-align-items: center;
@@ -4477,7 +4483,7 @@ input, select, textarea {
 
 		.banner.style4 {
 			/* padding-bottom: 3rem; */
-			padding-bottom: 1.5rem;
+			/* padding-bottom: 1.5rem; */
 		}
 
 			
@@ -4489,7 +4495,7 @@ input, select, textarea {
 
 		.banner.style4 {
 			/* padding-bottom: 3rem ; */
-			padding-bottom: 1.5rem ;
+			/* padding-bottom: 1.5rem ; */
 		}
 
 	
@@ -4499,7 +4505,7 @@ input, select, textarea {
 
 		.banner.style4 {
 			/* padding-bottom: 3rem ; */
-			padding-bottom: 1.5rem ;
+			/* padding-bottom: 1.5rem ; */
 		}
 
 			
