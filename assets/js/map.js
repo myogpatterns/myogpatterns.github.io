@@ -7,7 +7,7 @@
 // https://github.com/risan/country-flag-emoji-json
 const CountryFlagEmojiJSON = "https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/index.json"
 
-const map = L.map('map').setView([40, -53], 3);
+const map = L.map('map', {worldCopyJump: true, center: [40,-53], zoom: 3});
 
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 9,
@@ -37,9 +37,6 @@ async function getFlagEmoji( array, data ) {
         } catch (TypeError) {
             marker["flag"] = "🏴‍☠️";
         }
-        // if (marker.friend) {
-        //     marker["flag"] += "⭐️";
-        // }
     })
     drawMarkers( data )
 }

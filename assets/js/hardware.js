@@ -1,13 +1,13 @@
-/*
-    Displays products from allproducts.json
-    allproducts.json created with db-capture.py
-*/
-const allProducts = "assets/db/allproducts.json";
-const imgdir = "images/shared/partners/48/"
+
+ //   Displays products from allproducts.json
+ //   allproducts.json created with db-capture.py
+
+var allProducts = "assets/db/allproducts.json";
+var imgdir = "images/shared/partners/48/";
 
 
 // displayProductsfromArray(data);
-const product_list = getProducts(allProducts);
+var product_list = getProducts(allProducts);
 
 async function getProducts(array) {
     const response = await fetch(array);
@@ -39,8 +39,10 @@ function displayProducts(product_list){
             `<img src="${product.productImg}" loading="lazy" alt="product image">
               <div class="card-info">
                   <p class="title">${title}</p>
-                  <p class="option">${productsizes}</p>
-                  <p class="vendor"><a href=${product.url} target=_blank title="product url"><img src=${imgdir}${product.vendorImg} alt="vendor logo"></a></p>
+                  <div class="details">
+                    <p class="option">${productsizes}</p>
+                    <p class="vendor"><a href=${product.url} target=_blank title="product url"><img src=${imgdir}${product.vendorImg} alt="vendor logo"></a></p>
+                  </div>
               </div>
             </div>`;
         cards.appendChild(card);
@@ -80,9 +82,9 @@ $('.filters').on('click', '.button', function( event ) {
 $('.button-group').each( function( i, buttonGroup ) {
     var $buttonGroup = $( buttonGroup );
     $buttonGroup.on( 'click', 'button', function( event ) {
-        $buttonGroup.find('.is-checked').removeClass('is-checked');
+        $buttonGroup.find('.is-checked').removeClass('is-checked primary');
         var $button = $( event.currentTarget );
-        $button.addClass('is-checked');
+        $button.addClass('is-checked primary');
     });
 });
 // flatten object by concatting values

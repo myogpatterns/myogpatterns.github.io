@@ -1,25 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Google Tag Manager -->
+		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-NC2Q2HQ');</script>
+            <!-- End Google Tag Manager -->
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LearnMYOG Pack Hardware Picker</title>
+    <title>Hardware Picker</title>
+    <meta name="description" content="Learn to Make Your Own Gear (MYOG). DIY sewing patterns for backpacks, technical apparel, and outdoor adventurers."></head>
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="manifest" href="images/site.webmanifest">
+
     <script defer src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
 
+    <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source Sans Pro">
+
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <script src="assets/js/colorswitcher.js" defer></script>
+    <script src="assets/js/header.js" type="text/javascript" defer></script>
+    <script src="assets/js/footer.js" type="text/javascript" defer></script>
+    
+    <link defer rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin=""/>
+    <script defer src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+    <!-- Global site tag (gtag.js) - Google Analytics GA4 -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-WP4C42S5VW"></script>
+		<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'G-WP4C42S5VW');
+		</script>
+		<!-- Global site tag (gtag.js) - Google Analytics GA4 -->
 </head>
 <body>
-    <div class="container">
-        <div class="page-header sticky-top">
-            <div class="content">
-                <h1>Pack Hardware Picker</h1>
+    <!-- Wrapper -->
+    <div id="wrapper" class="divided">
 
-                <div class="filters">
+        <!-- Banner -->
+        <header-template></header-template>
+
+        <div class="color8 invert align-center">
+            <nav id="nav">
+                <ul >
+                    <li class="links"><a href="zerotohero.html">Getting Started</a></li>
+                    <li class="links"><a href="index.html">Patterns</a></li>
+                    <li class="links"><a href="fabrics.html">Fabrics</a></li>
+                    <li class="links active"><a href="hardware.html">Hardware</a></li>
+                    <li class="links"><a href="map.html">MYOG Suppliers</a></li>
+                    <li class="menu"><a href="javascript:void(0);" class="icon" onclick="navCollapse()">
+                        <i class="fa fa-compass fa-2x"></i></a></li>
+                </ul>
+            </nav>
+        </div>
+        <div id="main">
+            <section class="filters wrapper style1 align-left">
+                <div class="inner">
                     <div class="ui-group">       
                         <div class="button-group" data-filter-group="vendor">
-                            <button class="button is-checked" data-filter="">All</button>
+                            <button class="button primary is-checked" data-filter="">All</button>
                             <button class="button" data-filter=".Ripstop-by-the-Roll">Ripstop by the Roll</button>
                             <button class="button" data-filter=".Mozet-Supplies">Mozet Supplies</button>
                             <button class="button" data-filter=".adventurexpert">AdventurExpert</button>
@@ -28,14 +76,14 @@
                 </br>
                     <div class="ui-group">
                         <div class="button-group" data-filter-group="style">
-                            <button class="button is-checked" data-filter="">Any</button>
+                            <button class="button primary is-checked" data-filter="">Any</button>
                             <button class="button" data-filter=".plastic">Plastic</button>
                             <button class="button" data-filter=".metal">Metal</button>
                         </div>
                     </div>
                     <div class="ui-group">
                         <div class="button-group" data-filter-group="kind">
-                            <button class="button is-checked" data-filter="">Any</button>
+                            <button class="button primary is-checked" data-filter="">Any</button>
                             <button class="button" data-filter=".buckle">Buckles</button>
                             <button class="button" data-filter=".sternum">Sternums</button>
                             <button class="button" data-filter=".cord">Cords</button>
@@ -44,20 +92,26 @@
                             <button class="button" data-filter=".misc">Misc</button>
                         </div>
                     </div>
-                    <span></span>
+            </section>
+            <section class="wrapper style1 align-center">
+                <div class="inner">
+                    <!-- hardware.js insert -->
+                    <div id="card-shelf" class="content" ></div>
+                    <p class="disclosure">This page contains affiliate links, meaning I make a commission for qualified purchases, at no cost to you. See <a href="/about.html#disclosures">Disclosures</a> for more information.</p>
                 </div>
-            </div>
-            <!-- <hr> -->
-        </div>
-        <div class="fill-screen">
-            <div id="card-shelf" class="content" ></div>
-        </div>
-        <div class="page-footer">
-            <div class="content">
-                Footer
-            </div>
+            </section>
         </div>
     </div>
+    <footer-template></footer-template>
+
+    <script defer src="assets/js/hardware.js"></script>
+    <script defer src="assets/js/jquery.scrollex.min.js"></script>
+    <script defer src="assets/js/jquery.scrolly.min.js"></script>
+    <script defer src="assets/js/jquery.poptrox.min.js"></script>
+    <script defer src="assets/js/browser.min.js"></script>
+    <script defer src="assets/js/breakpoints.min.js"></script>
+    <script defer src="assets/js/util.js"></script>
+    <script defer src="assets/js/main.js"></script>
     <script defer src="assets/js/hardware.js"></script>
 </body>
 </html>
