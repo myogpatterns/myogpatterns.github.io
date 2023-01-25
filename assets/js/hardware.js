@@ -2,12 +2,12 @@
  //   Displays products from allproducts.json
  //   allproducts.json created with db-capture.py
 
-var allProducts = "assets/db/allproducts.json";
-var imgdir = "images/shared/partners/48/";
+const allProducts = "assets/db/allproducts.json";
+const imgdir = "images/shared/partners/48/";
 
 
 // displayProductsfromArray(data);
-var product_list = getProducts(allProducts);
+const product_list = getProducts(allProducts);
 
 async function getProducts(array) {
     const response = await fetch(array);
