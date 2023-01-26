@@ -42,12 +42,12 @@ async function getFlagEmoji( array, data ) {
 }
 
 function drawMarkers( data ) {
-    data.sort((a,b) => a.country.localeCompare(b.country));
+    data.sort((a,b) => a.country.localeCompare(b.country) || a.name.localeCompare(b.name));
 
     data.forEach(marker => {
         let star = (marker.friend) ? "⭐️" : "";
         L.marker([marker.lat, marker.long], {
-            icon: marker.friend == true ? greenIcon : blueIcon
+            icon: marker.friend == true ? yellowIcon : blueIcon
         }).addTo(map)
         .bindPopup(`<a href="${marker.website}" target="_blank">${star + " " + marker.name}</a>`)
 
