@@ -17,12 +17,17 @@ window.onload=function(){
         "#312744",
         "#ffcc37",
         "#133653",
+        "#2a3d37",
         "#b063aa",
         "#d0046f",
-        "#3d3846"
+        "#c5d929",
+        "#4e0d0f",
+        "#433818",
+        "#375466",
+        "#936621"
     ];
 
-    let lightColors = ["#ffcc37"];
+    let lightColors = ["#ffcc37", "#c5d929"];
 
     // let rn = Math.floor(Math.random()*colors.length);
     var primary = colors[randomNumberInList(colors)];
@@ -36,7 +41,7 @@ window.onload=function(){
     // for light colored primary (e.g.) yellow remove invert class for text colors
     if( $.inArray(primary, lightColors) != -1){
         $('footer').removeClass('invert');
-        console.log('priamry is light')
+        console.log('primary is light')
     } else {
         console.log('primary is dark so invert');
     }

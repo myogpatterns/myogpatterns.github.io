@@ -11,50 +11,24 @@
 */
 
 :root {
-	/* 
-	Variable use
-		color: var(--primary);
-		background-color: rgba(var(--primary), 0.2)
-
-		my early purple color: #9b65bb
-		--teal: rgb(71, 211, 229);
-		--darkteal: rgb(30, 189, 209);
-
-	--dark-purple: #312744ff;
-	--prussian-blue: #133653ff;
-	--bright-navy-blue: #1874ddff;
-	--viridian-green: #019aa5ff;
-	--sunglow: #ffcc37ff;
-	--pearly-purple: #b063aaff;
-	--magenta-dye: #d0046fff;
-
-	/* CSS HSL */
-	/* --dark-purple: hsla(261, 27%, 21%, 1);
-	--prussian-blue: hsla(207, 63%, 20%, 1);
-	--bright-navy-blue: hsla(212, 80%, 48%, 1);
-	--viridian-green: hsla(184, 99%, 33%, 1);
-	--sunglow: hsla(45, 100%, 61%, 1);
-	--pearly-purple: hsla(305, 33%, 54%, 1);
-	--magenta-dye: hsla(329, 96%, 42%, 1); */
-
-	/* CSS RGB
-	--dark-purple: rgba(49, 39, 68, 1);
-	--prussian-blue: rgba(19, 54, 83, 1);
-	--bright-navy-blue: rgba(24, 116, 221, 1);
-	--viridian-green: rgba(1, 154, 165, 1);
-	--sunglow: rgba(255, 204, 55, 1);
-	--pearly-purple: rgba(176, 99, 170, 1);
-	--magenta-dye: rgba(208, 4, 111, 1); */
 		
 	/* Challenge Colors */
 	--learnmyog-purple: #3d3846ff;
 	--dark-purple: #312744ff;
 	--prussian-blue: #133653ff;
+	--green-mountain: #2a3d37ff;
 	--bright-navy-blue: #1874ddff;
 	--viridian-green: #019aa5ff;
 	--sunglow: #ffcc37ff;
 	--pearly-purple: #b063aaff;
 	--magenta-dye: #d0046fff;
+	--silver-bullet: #c2c1c2ff;
+	--barn-red: #4e0d0fff;
+	--army-olive: #433818ff;
+	--key-lime: #c5d929ff;
+	--blue-wave: #375466ff;
+	--avocado: #696f31ff;
+	--bronze: #936621;
 
 	/* Original Html5 colors */
 	--story-teal: rgb(71, 211, 229);
@@ -63,7 +37,7 @@
 	
 	/* Variable Colors */
 	--banner: var(--learnmyog-purple); 		/* changes with colorswitcher.js */
-	--spotlight: #bbb;						/* changes with colorswitcher.js */
+	--spotlight: var(--silver-bullet);						/* was #bbb changes with colorswitcher.js */
 	--primary: var(--banner);  		/*link and button hover color */
 	--primary-shadow: rgba(49,39,68,0.2); 
 	--discount: rgba(71, 211, 229, .2);
