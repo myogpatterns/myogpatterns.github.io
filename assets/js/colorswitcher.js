@@ -4,19 +4,16 @@ const mainColors=[
     "#312744", //--dark-purple: #312744ff
     "#133653", //--prussian-blue: #133653ff
     "#2a3d37", //--green-mountain: #2a3d37ff
-    "#4e0d0f", //--barn-red: #4e0d0fff
     "#433818", //--army-olive: #433818ff
     "#375466", //--blue-wave: #375466ff;
-    "#800007", //--brick-red: #800007ff;
 ];
 
 const accentColors = [
     "#1874dd", //--bright-navy-blue: #1874ddff
     "#019aa5", //--viridian-green: #019aa5ff
-    "#ffcc37", //--sunglow: #ffcc37ff
+    "#e76f51", // earthy orange
     "#b063aa", //--pearly-purple: #b063aaff
     "#d0046f", //--magenta-dye: #d0046fff
-    "#c2c1c2", //--silver-bullet: #c2c1c2ff
     "#a0743c", //--coyote-brown: #a0743cff
 ];
 

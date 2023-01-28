@@ -2157,6 +2157,8 @@ input, select, textarea {
 	}
 
 /* Nav */
+	.spotlight-color {background-color: var(--spotlight) !important; color: white !important;}
+
 	#nav ul {
 		display: flex;
 		flex: 1;
