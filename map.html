@@ -13,22 +13,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LearnMYOG Map</title>
-    <meta name="description" content="Learn to Make Your Own Gear (MYOG). DIY sewing patterns for backpacks, technical apparel, and outdoor adventurers."></head>
+    <meta name="description" content="Learn to Make Your Own Gear (MYOG) suppliers aroudn the globe. Your best resources for fabric and hardware to make DIY outdoor backpacks and apparel.">
     <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
     <link rel="manifest" href="images/site.webmanifest">
 
-    <script defer src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
-
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/style.css">
 
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-    <script src="assets/js/colorswitcher.js" defer></script>
-    <script src="assets/js/header.js" type="text/javascript" defer></script>
-    <script src="assets/js/nav.js" type="text/javascript" defer></script>
-    <script src="assets/js/footer.js" type="text/javascript" defer></script>
+    <script defer src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+    <script defer src="assets/js/colorswitcher.js"></script>
+    <script defer src="assets/js/header.js" type="text/javascript"></script>
+    <script defer src="assets/js/nav.js" type="text/javascript"></script>
+    <script defer src="assets/js/footer.js" type="text/javascript"></script>
     
     <link defer rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin=""/>
     <script defer src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
@@ -58,6 +57,7 @@
         <!-- Main -->
         <section id="main" class="wrapper style1 align-center">
             <div class="inner">
+                <h1 style="display:none">MYOG Suppliers</h1>
                 <!-- map.js insert -->
                 <div id="map"></div> 
                 <p class="major align-center">⭐️ LearnMYOG Recommended All-Stars</p>
@@ -71,8 +71,6 @@
     </div>
     <footer-template></footer-template>
 
-    <script defer src="assets/js/papaparse.min.js"></script>
-    <script defer src="assets/js/map.js"></script>
     <script defer src="assets/js/jquery.scrollex.min.js"></script>
     <script defer src="assets/js/jquery.scrolly.min.js"></script>
     <script defer src="assets/js/jquery.poptrox.min.js"></script>
@@ -83,8 +81,17 @@
     <script defer>
         window.addEventListener('load', function () {
             const pgtitle = document.location.href.match(/[^\/]+$/)[0] //get page name e.g. map.html
-            document.querySelector(`#nav .links a[href*="${pgtitle}"`).parentElement.classList.add("active");
+            try {
+                document.querySelector(`#nav .links a[href*="${pgtitle}"`).parentElement.classList.add("active");
+                console.log(pgtitle,"is a nav element. Set active.")
+            } catch (TypeError) {
+                console.log(pgtitle,"not a nav element.")
+            }
         }, false);
     </script>
+	<!-- MYOG Pattern Scripts -->
+    <script defer src="assets/js/papaparse.min.js"></script>
+    <script defer src="assets/js/map.js"></script>
+
 </body>
 </html>

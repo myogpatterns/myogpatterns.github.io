@@ -1,6 +1,5 @@
 <!DOCTYPE HTML>
-
-<html>
+<html lang="en">
 	<head>
 		<!-- Google Tag Manager -->
 		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -10,20 +9,31 @@
 		})(window,document,'script','dataLayer','GTM-NC2Q2HQ');</script>
 		<!-- End Google Tag Manager -->
 		
-		<title>Learn MYOG UL Windshell</title>
+		<title>LearnMYOG UL Windshell</title>
 		<link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
 		<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
 		<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
 		<link rel="manifest" href="images/site.webmanifest">
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<meta name="description" content="Learn to Make Your Own Gear (MYOG). Sewing patterns and tutorials for outdoor adventurers."></head>
+		<meta name="description" content="Learn to Make Your Own Gear (MYOG). Sewing patterns and tutorials for outdoor adventurers.">
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-		<script src="assets/js/colorswitcher.js" defer></script>
-		<script src="assets/js/header.js" type="text/javascript" defer></script>
-		<script src="assets/js/footer.js" type="text/javascript" defer></script>
+		<script defer src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+		<script defer src="assets/js/colorswitcher.js"></script>
+		<script defer src="assets/js/header.js" type="text/javascript"></script>
+		<script defer src="assets/js/nav.js" type="text/javascript"></script>
+		<script defer src="assets/js/footer.js" type="text/javascript"></script>
+		<!-- Global site tag (gtag.js) - Google Analytics GA4 -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-WP4C42S5VW"></script>
+		<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
 
+		gtag('config', 'G-WP4C42S5VW');
+		</script>
+		<!-- Global site tag (gtag.js) - Google Analytics GA4 -->
 	</head>
 	<body class="is-preload">
 
@@ -36,6 +46,11 @@
 
 			<!-- Banner -->
 			<header-template></header-template>
+
+			<!-- Nav -->
+			<div class="spotlight-color invert align-center">
+				<nav-template></nav-template>
+			</div>
 			
 			<div id="main">	<!-- Build Article -->
 			
@@ -509,17 +524,26 @@
 
 		</div>
 
-	<!-- HTML Template Scripts -->
-		<script src="assets/js/jquery.min.js"></script>
-		<script src="assets/js/jquery.scrollex.min.js"></script>
-		<script src="assets/js/jquery.scrolly.min.js"></script>
-		<script src="assets/js/jquery.poptrox.min.js"></script>
-		<script src="assets/js/browser.min.js"></script>
-		<script src="assets/js/breakpoints.min.js"></script>
-		<script src="assets/js/util.js"></script>
-		<script src="assets/js/main.js"></script>
-		<script src="assets/js/build_gallery.js"></script>
-	<!-- MYOG Pattern Scripts -->
+		<script defer src="assets/js/jquery.scrollex.min.js"></script>
+		<script defer src="assets/js/jquery.scrolly.min.js"></script>
+		<script defer src="assets/js/jquery.poptrox.min.js"></script>
+		<script defer src="assets/js/browser.min.js"></script>
+		<script defer src="assets/js/breakpoints.min.js"></script>
+		<script defer src="assets/js/util.js"></script>
+		<script defer src="assets/js/main.js"></script>
+		<script defer>
+			window.addEventListener('load', function () {
+				const pgtitle = document.location.href.match(/[^\/]+$/)[0] //get page name e.g. map.html
+				try {
+					document.querySelector(`#nav .links a[href*="${pgtitle}"`).parentElement.classList.add("active");
+					console.log(pgtitle,"is a nav element. Set active.")
+				} catch (TypeError) {
+					console.log(pgtitle,"not a nav element.")
+				}
+			}, false);
+		</script>
+		<!-- MYOG Pattern Scripts -->
+		<script defer src="assets/js/build_gallery.js"></script>
 
 	</body>
 

@@ -5,24 +5,19 @@
 
 ## Upcoming Content
 
-* Community Gallery
 * Apparel Fabrics
-* Beginner flow diagram
+* Rain pants
 
 ## In Work
 
-* html components for header and footer --- done
-* freshen color scheme --- done
-* gear fabrics page --- done
-* ratings and partners flex box --- done
-* High res partner logos webp --- done
+* Hardware Picker
 
 ## Future
 * Update font awesome 6
-* GA4 property
+* GA4 property -- done
 * consolidate email platforms
 
-## Apparel Fabrics
+## Apparel Fabrics Page
 ### UL Windshell
 * HyderD 1.0 and 1.6
 * Ripstop nylon

@@ -7,8 +7,8 @@ class Nav extends HTMLElement {
         this.innerHTML = `
         <nav id="nav">
             <ul >
-                <li class="links"><a href="zerotohero.html">Getting Started</a></li>
                 <li class="links"><a href="index.html">Patterns</a></li>
+                <li class="links"><a href="zerotohero.html">Getting Started</a></li>
                 <li class="links"><a href="fabrics.html">Fabrics</a></li>
                 <li class="links"><a href="hardware.html">Hardware</a></li>
                 <li class="links"><a href="map.html">MYOG Suppliers</a></li>
