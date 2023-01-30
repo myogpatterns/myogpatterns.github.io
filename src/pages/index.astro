@@ -1,81 +1,498 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout title="Welcome to Astro.">
-	<main>
-		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
-		<p class="instructions">
-			To get started, open the directory <code>src/pages</code> in your project.<br />
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-		</p>
-		<ul role="list" class="link-card-grid">
-			<Card
-				href="https://docs.astro.build/"
-				title="Documentation"
-				body="Learn how Astro works and explore the official API docs."
-			/>
-			<Card
-				href="https://astro.build/integrations/"
-				title="Integrations"
-				body="Supercharge your project with new frameworks and libraries."
-			/>
-			<Card
-				href="https://astro.build/themes/"
-				title="Themes"
-				body="Explore a galaxy of community-built starter themes."
-			/>
-			<Card
-				href="https://astro.build/chat/"
-				title="Community"
-				body="Come say hi to our amazing Discord community. ❤️"
-			/>
-		</ul>
-	</main>
-</Layout>
+<Layout title="Learn MYOG">
+  <!--Spotlight-->
+  <section
+    slot="nav"
+    class="spotlight style1 color8 invert orient-right content-align-center image-position-left"
+  >
+    <div class="content">
+      <h3>Chonky Sling</h3>
+      <p>
+        Now Available. Self-compressing sling bag with external bottle pocket!
+      </p>
+      <a href="chonkySling.html" class="button primary">Get it here</a>
+    </div>
+    <div class="image">
+      <img
+        style="object-position:bottom"
+        src="images/chonkysling/sling7.jpg"
+        alt="chonky sling"
+      />
+    </div>
+  </section>
 
-<style>
-	main {
-		margin: auto;
-		padding: 1.5rem;
-		max-width: 60ch;
-	}
-	h1 {
-		font-size: 3rem;
-		font-weight: 800;
-		margin: 0;
-	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-	.instructions {
-		line-height: 1.6;
-		margin: 1rem 0;
-		border: 1px solid rgba(var(--accent), 25%);
-		background-color: white;
-		padding: 1rem;
-		border-radius: 0.4rem;
-	}
-	.instructions code {
-		font-size: 0.875em;
-		font-weight: bold;
-		background: rgba(var(--accent), 12%);
-		color: rgb(var(--accent));
-		border-radius: 4px;
-		padding: 0.3em 0.45em;
-	}
-	.instructions strong {
-		color: rgb(var(--accent));
-	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 1rem;
-		padding: 0;
-	}
-</style>
+  <!-- Items -->
+  <section id="main" class="wrapper style1 align-center">
+    <div class="inner">
+      <h2>Make Your Own Outdoor Gear</h2>
+      <h3>Sewing Patterns for Adventure Gear and Technical Apparel</h3>
+      <div class="items style3 medium">
+        <section>
+          <!-- ACP -->
+          <span class="icon"
+            ><a href="alphaCampPants.html"
+              ><img
+                class="image preview"
+                src="images/index/camp_pants2.jpg"
+                alt="Camp Pants"
+              /></a
+            ></span
+          >
+          <h4>Alpha Camp Pants</h4>
+        </section>
+        <section>
+          <!-- ARH -->
+          <span class="icon"
+            ><a href="alphaRaglan.html"
+              ><img
+                class="image preview"
+                src="images/index/bala1.jpg"
+                alt="Alpha Direct Midlayer"
+              /></a
+            ></span
+          >
+          <h4>Alpha Raglan Hoodie</h4>
+        </section>
+        <section>
+          <!-- UL Windshell -->
+          <span class="icon"
+            ><a href="windshell.html"
+              ><img
+                class="image preview"
+                src="images/windshell2/coverart.jpg"
+                alt="UL wind shell"
+              /></a
+            ></span
+          >
+          <h4>UL Windshell</h4>
+        </section>
+        <section>
+          <!-- Trail Running Pack-->
+          <span class="icon"
+            ><a href="trailRunningBackpack.html"
+              ><img
+                class="image preview"
+                src="images/trailRunBackpack/trp6.jpg"
+                alt="trail running pack"
+              /></a
+            ></span
+          >
+          <h4>Trail Running Backpack</h4>
+        </section>
+        <section>
+          <!-- Chonky Sling -->
+          <span class="icon"
+            ><a href="chonkySling.html"
+              ><img
+                class="image preview"
+                src="images/index/chonkysling.jpg"
+                alt="chonky sling bag"
+              /></a
+            ></span
+          >
+          <h4>Chonky Sling</h4>
+        </section>
+        <section>
+          <!-- Fastpack-->
+          <span class="icon"
+            ><a href="fastpack.html"
+              ><img
+                class="image preview"
+                src="images/index/fastpackhero3.jpg"
+                alt="fastpack"
+              /></a
+            ></span
+          >
+          <h4>Fastpack</h4>
+        </section>
+        <section>
+          <!-- Pullover -->
+          <span class="icon"
+            ><a href="pulloverHoodie.html"
+              ><img
+                class="image preview"
+                src="images/index/pullover.jpg"
+                alt="pullover hoodie"
+              /></a
+            ></span
+          >
+          <h4>Everyday Fleece Pullover</h4>
+        </section>
+        <section>
+          <!-- DIAS -->
+          <span class="icon"
+            ><a href="dias.html"
+              ><img
+                class="image preview"
+                src="images/index/diashi2.jpg"
+                alt="Do It All Shorts"
+              /></a
+            ></span
+          >
+          <h4>DIAS</h4>
+        </section>
+        <section>
+          <!-- Frame Bags -->
+          <span class="icon"
+            ><a href="framebags.html"
+              ><img
+                class="image preview"
+                src="images/index/framebags.jpg"
+                alt="frame bags"
+              /></a
+            ></span
+          >
+          <h4>Bikepacking Frame Bag Set</h4>
+        </section>
+        <section>
+          <!-- Feed bag -->
+          <span class="icon"
+            ><a href="bpStemBag.html"
+              ><img
+                class="image preview"
+                src="images/index/stembag.jpg"
+                alt="feed bag"
+              /></a
+            ></span
+          >
+          <h4>Bikepacking Feed Bag</h4>
+        </section>
+        <section>
+          <!-- Running Belt -->
+          <span class="icon"
+            ><a href="runningBelt.html"
+              ><img
+                class="image preview"
+                src="images/index/runningbelt.jpg"
+                alt="running belt"
+              /></a
+            ></span
+          >
+          <h4>Running Belt</h4>
+        </section>
+        <section>
+          <!-- ED Fanny Pack -->
+          <span class="icon"
+            ><a href="edcFannyPack.html"
+              ><img
+                class="image preview"
+                src="images/index/edfannypack.jpg"
+                alt="fanny pack"
+              /></a
+            ></span
+          >
+          <h4>Everyday Fanny Pack</h4>
+        </section>
+        <section>
+          <!-- Totepack -->
+          <span class="icon"
+            ><a href="edTotepack.html"
+              ><img
+                class="image preview"
+                src="images/index/totepack.jpg"
+                alt="totepack"
+              /></a
+            ></span
+          >
+          <h4>Everyday Totepack</h4>
+        </section>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrapper style2 align-center">
+    <div class="inner">
+      <h3>Custom Pattern Generators</h3>
+      <!-- <p style="font-style: italic;">Outdoor gear sewing projects, custom pattern generators, and Make Your Own Gear tutorials</p> -->
+      <div class="items style3 small">
+        <section>
+          <span class="icon"
+            ><a href="cinchsack.html"
+              ><img
+                class="image preview"
+                src="images/index/cinchsack.jpg"
+                alt="cinch collar stuff sack"
+              /></a
+            ></span
+          >
+          <h4>Simple Cinch Sack</h4>
+        </section>
+        <section>
+          <span class="icon"
+            ><a href="rolltopsack.html"
+              ><img
+                class="image preview"
+                src="images/index/rolltop.jpg"
+                alt="roll-top storage bag"
+              /></a
+            ></span
+          >
+          <h4>Roll-Top Stuff Sack</h4>
+        </section>
+        <section>
+          <span class="icon"
+            ><a href="stuffsack.html"
+              ><img
+                class="image preview"
+                src="images/index/roundstuff.jpg"
+                alt="stuff sack"
+              /></a
+            ></span
+          >
+          <h4>Rounded Stuff Sack</h4>
+        </section>
+
+        <section>
+          <span class="icon"
+            ><a href="zpinstructions.html"
+              ><img
+                class="image preview"
+                src="images/index/zipsack.jpg"
+                alt="zip sack"
+              /></a
+            ></span
+          >
+          <h4>Zip Pouch</h4>
+        </section>
+      </div>
+    </div>
+  </section>
+
+  <section
+    class="spotlight style1 color8 invert orient-left content-align-center image-position-center"
+  >
+    <div class="content">
+      <h3>Zero to Hero</h3>
+      <p>
+        From Day 1 to Gear Making Guru <br />
+        Ultimate Guide and Essential Tools
+      </p>
+      <a href="/zerotohero.html" class="button primary"
+        ><span class="icon solid fa-forward"></span> Show me the way!</a
+      >
+    </div>
+    <div class="image">
+      <img src="images/index/zero2hero.jpg" alt="sewist" />
+    </div>
+  </section>
+
+  <section class="wrapper style1 align-center">
+    <div class="inner">
+      <h3>Articles and Guides</h3>
+
+      <div class="items style3 small">
+        <section>
+          <span class="icon"
+            ><a href="zerotohero.html#tools"
+              ><img
+                class="image icons"
+                src="images/shared/products/HD1000.webp"
+                alt="sewing tools"
+              /></a
+            ></span
+          >
+          <h4>Essential Tools</h4>
+        </section>
+        <section>
+          <span class="icon"
+            ><a href="fabrics.html"
+              ><img
+                class="image icons"
+                src="images/index/fabrics.jpg"
+                alt="fabrics"
+              /></a
+            ></span
+          >
+          <h4>Technical Fabrics</h4>
+        </section>
+        <section>
+          <span class="icon"
+            ><a href="hardware.html"
+              ><img
+                class="image icons"
+                src="images/index/hardware.jpg"
+                alt="backpack hardware"
+              /></a
+            ></span
+          >
+          <h4>Pack Hardware</h4>
+        </section>
+        <section>
+          <span class="icon"
+            ><a href="articles/zippers.html"
+              ><img
+                class="image icons"
+                src="images/index/zippers.jpg"
+                alt="zippers"
+              /></a
+            ></span
+          >
+          <h4>Zippers</h4>
+        </section>
+        <section>
+          <span class="icon"
+            ><a href="cricut.html"
+              ><img
+                class="image icons"
+                src="images/shared/products/cricut-maker.webp"
+                alt="Cricut Maker"
+              /></a
+            ></span
+          >
+          <h4>Cricut Worth a Buy?</h4>
+        </section>
+        <section>
+          <span class="icon"
+            ><a href="articles/3dCorners.html"
+              ><img
+                class="image icons"
+                src="images/index/3dCronersthumb.jpg"
+                alt="zippers"
+              /></a
+            ></span
+          >
+          <h4>Corners & Curves</h4>
+        </section>
+        <section>
+          <span class="icon"
+            ><a href="https://youtu.be/IA5X1dcTO0c" target="_blank"
+              ><img
+                class="image icons"
+                src="images/shared/partners/200/rotr2.webp"
+                alt="podcast episode"
+              /></a
+            ></span
+          >
+          <h4>Dispel Maker Fears, ep 42</h4>
+        </section>
+        <section>
+          <span class="icon"
+            ><a href="https://youtu.be/uqm3Dv6JbF0" target="_blank"
+              ><img
+                class="image icons"
+                src="images/shared/partners/200/rotr2.webp"
+                alt="podcast episode"
+              /></a
+            ></span
+          >
+          <h4>Sewing with Polartec, ep 58</h4>
+        </section>
+      </div>
+      <h3>Community Partners</h3>
+      <div class="partners">
+        <a
+          href="https://ripstopbytheroll.com/?rfsn=4608557.2d546b9"
+          target="_blank"
+          ><img
+            class="partner desaturated"
+            src="images/shared/partners/200/RBTR.webp"
+          /><span class="label">RipstopbytheRoll</span></a
+        >
+
+        <a href="https://r.efer.me/6619983774018" target="_blank"
+          ><img
+            class="partner desaturated"
+            src="images/shared/partners/200/discoveryfabrics.webp"
+          /><span class="label">Discovery Fabrics</span></a
+        >
+
+        <a href="https://mozetsupplies.ca/?ref=myog" target="_blank"
+          ><img
+            class="partner desaturated"
+            src="images/shared/partners/200/mozet.webp"
+          /><span class="label">Mozet Supplies</span></a
+        >
+
+        <a href="https://www.questoutfitters.com/" target="_blank"
+          ><img
+            class="partner desaturated"
+            src="images/shared/partners/200/questoutfitters.webp"
+          /><span class="label">Quest Outfitters</span></a
+        >
+
+        <a href="https://www.adventurexpert.com/" target="_blank"
+          ><img
+            class="partner desaturated"
+            src="images/shared/partners/200/adventurexpert.webp"
+          /><span class="label">AdventurExpert</span></a
+        >
+
+        <a href="https://www.wawak.com/" target="_blank"
+          ><img
+            class="partner desaturated"
+            src="images/shared/partners/200/wawak.webp"
+          /><span class="label">Wawak</span></a
+        >
+      </div>
+    </div>
+  </section>
+
+  <section class="wrapper style1 align-center">
+    <div class="inner index align-left">
+      <section>
+        <header>
+          <h3>Opt In for New Patterns</h3>
+        </header>
+        <div class="content">
+          <!-- Email Subscribe -->
+          <form>
+            <div class="fields" name="frmLB1389444">
+              <input
+                type="hidden"
+                name="successurl"
+                value="https://lb.benchmarkemail.com/Code/ThankYouOptin"
+              />
+              <input
+                type="hidden"
+                name="errorurl"
+                value="http://lb.benchmarkemail.com//Code/Error"
+              />
+              <input
+                type="hidden"
+                name="token"
+                value="mFcQnoBFKMQM9KT90XnjhKjgVtVj7bhtMJqH7uAtweZYtlKZt880Dg%3D%3D"
+              />
+              <input type="hidden" name="doubleoptin" value="1" />
+
+              <div class="field half">
+                <input
+                  class="fld"
+                  type="text"
+                  placeholder="First Name *"
+                  name="fldfirstname_MW4UW"
+                  maxlength="80"
+                />
+                <label for="fld">Name</label>
+              </div>
+
+              <div class="field half">
+                <input
+                  class="fld"
+                  type="text"
+                  placeholder="Email Address *"
+                  name="fldEmail_MW4UW"
+                  maxlength="80"
+                />
+                <label for="fld">Email Address</label>
+              </div>
+            </div>
+
+            <div class="actions small">
+              <button
+                type="button"
+                id="btnSubmit"
+                krydebug="1751"
+                class="button"
+                onclick="javascript:_doSubmit1389444('1389444');"
+                >Subscribe</button
+              >
+            </div>
+          </form>
+        </div>
+      </section>
+    </div>
+  </section>
+</Layout>

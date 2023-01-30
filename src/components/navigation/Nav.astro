@@ -1,0 +1,144 @@
+---
+const { pathname } = Astro.url;
+const links = [
+  {
+    href: "/",
+    value: "Patterns",
+  },
+  {
+    href: "/zerotohero",
+    value: "Getting Started",
+  },
+  {
+    href: "/fabrics",
+    value: "Fabrics",
+  },
+  {
+    href: "/hardware",
+    value: "Hardware",
+  },
+  {
+    href: "/map",
+    value: "MYOG Suppliers",
+  },
+];
+---
+
+<nav id="nav">
+  <ul>
+    {
+      links.map(({ href, value }) => (
+        <li
+          class={`links ${
+            pathname.startsWith(href) && href !== "/" ? "active" : ""
+          }`}
+        >
+          <a href={href}>{value}</a>
+        </li>
+      ))
+    }
+
+    <li class="menu">
+      <a href="javascript:void(0);" class="icon">
+        <i class="fa fa-compass fa-2x"></i>
+      </a>
+    </li>
+  </ul>
+</nav>
+
+<script>
+  function navCollapse() {
+    var elms = document.querySelectorAll<HTMLElement>("li.links");
+    elms.forEach((x) => {
+      if (x.style.display === "inline-flex") {
+        x.style.removeProperty("display");
+      } else {
+        x.style.display = "inline-flex";
+      }
+    });
+  }
+
+  document.querySelector("#nav .icon")?.addEventListener("click", navCollapse);
+</script>
+
+<style>
+  #nav {
+    background-color: var(--spotlight);
+  }
+
+  #nav ul {
+    display: flex;
+    flex: 1;
+    list-style: none;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+  }
+
+  #nav li.links {
+    display: inline-flex;
+    margin: 0;
+    background-color: inherit;
+    line-height: 1em;
+    cursor: pointer;
+    /* font-weight:400; */
+    /* font-size:1rem; */
+    text-transform: uppercase;
+    font-family: "Source Sans Pro", Helvetica, sans-serif;
+    padding: 0;
+  }
+
+  #nav .menu {
+    display: none;
+  }
+
+  #nav a {
+    text-decoration: none;
+    padding: 1.5em;
+    color: white;
+  }
+
+  #nav li:hover {
+    color: black;
+    background-color: rgba(255, 255, 255, 0.25);
+    -webkit-transition: background-color 0.2s ease-in-out,
+      color 0.2s ease-in-out;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  }
+
+  #nav li:hover > a {
+    color: var(--primary);
+  }
+
+  #nav li.active {
+    background-color: white;
+  }
+  #nav li.active > a {
+    color: var(--primary);
+  }
+
+  @media screen and (max-width: 768px) {
+    #nav ul {
+      flex-direction: column-reverse;
+      padding: 0;
+    }
+
+    #nav ul li {
+      padding: 0;
+    }
+
+    #nav li.links {
+      display: none;
+    }
+
+    #nav a {
+      padding: 1em;
+    }
+
+    #nav .menu {
+      display: flex;
+      flex-grow: 1;
+      justify-content: flex-end;
+    }
+  }
+</style>
