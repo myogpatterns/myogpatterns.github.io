@@ -1,0 +1,17 @@
+---
+export type Props = {
+  header: string;
+  tagline: string;
+};
+
+const { header, tagline } = Astro.props;
+---
+
+<header>
+  <h1 style="font-size: 3.5rem;">
+    {header}
+  </h1>
+  <p>
+    {tagline}
+  </p>
+</header>

@@ -1,0 +1,14 @@
+---
+export type Props = {
+  style?: string;
+};
+
+const { style = "style1" } = Astro.props;
+---
+
+<section class={`wrapper ${style} align-center`}>
+  <div class="inner">
+    <slot />
+  </div>
+  <slot name="outside" />
+</section>

@@ -1,5 +1,6 @@
 ---
-import Layout from "../layouts/Layout.astro";
+import Layout from "@/layouts/Layout.astro";
+import PageLink from "@/components/PageLink.astro";
 ---
 
 <Layout title="Learn MYOG">
@@ -356,6 +357,10 @@ import Layout from "../layouts/Layout.astro";
           >
           <h4>Corners & Curves</h4>
         </section>
+        <PageLink
+          slug="3d-corners"
+          image={import("@/images/index/3dCronersthumb.jpg")}
+        />
         <section>
           <span class="icon"
             ><a href="https://youtu.be/IA5X1dcTO0c" target="_blank"

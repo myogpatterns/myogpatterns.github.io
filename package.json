@@ -11,9 +11,12 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/image": "^0.14.0",
+    "@astrojs/mdx": "^0.16.0",
     "@fortawesome/fontawesome-free": "^6.2.1",
     "astro": "^2.0.2",
-    "leaflet": "^1.9.3"
+    "leaflet": "^1.9.3",
+    "sharp": "^0.31.3"
   },
   "devDependencies": {
     "@types/leaflet": "^1.9.0"

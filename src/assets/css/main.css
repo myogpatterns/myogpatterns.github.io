@@ -217,6 +217,7 @@ body {
 
 html {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 *,
@@ -2974,6 +2975,7 @@ a.icon.style2:active:before {
 .image.left img,
 .image.right img {
   width: 100%;
+  height: 100%;
 }
 
 .image.left {
@@ -8657,6 +8659,7 @@ body.is-preload .items.onload-fade-in > * > .inner {
 
 .ratings-container > .partners > a > img {
   height: 2rem;
+  width: auto;
 }
 
 .partners > * {
