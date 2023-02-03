@@ -1,6 +1,7 @@
 ---
 import Layout from "@/layouts/Layout.astro";
 import PageLink from "@/components/PageLink.astro";
+import EmailSubscribe from "@/components/EmailSubscribe.astro";
 ---
 
 <Layout title="Learn MYOG">
@@ -416,69 +417,5 @@ import PageLink from "@/components/PageLink.astro";
     </div>
   </section>
 
-  <section class="wrapper style1 align-center">
-    <div class="inner index align-left">
-      <section>
-        <header>
-          <h3>Opt In for New Patterns</h3>
-        </header>
-        <div class="content">
-          <!-- Email Subscribe -->
-          <form>
-            <div class="fields" name="frmLB1389444">
-              <input
-                type="hidden"
-                name="successurl"
-                value="https://lb.benchmarkemail.com/Code/ThankYouOptin"
-              />
-              <input
-                type="hidden"
-                name="errorurl"
-                value="http://lb.benchmarkemail.com//Code/Error"
-              />
-              <input
-                type="hidden"
-                name="token"
-                value="mFcQnoBFKMQM9KT90XnjhKjgVtVj7bhtMJqH7uAtweZYtlKZt880Dg%3D%3D"
-              />
-              <input type="hidden" name="doubleoptin" value="1" />
-
-              <div class="field half">
-                <input
-                  class="fld"
-                  type="text"
-                  placeholder="First Name *"
-                  name="fldfirstname_MW4UW"
-                  maxlength="80"
-                />
-                <label for="fld">Name</label>
-              </div>
-
-              <div class="field half">
-                <input
-                  class="fld"
-                  type="text"
-                  placeholder="Email Address *"
-                  name="fldEmail_MW4UW"
-                  maxlength="80"
-                />
-                <label for="fld">Email Address</label>
-              </div>
-            </div>
-
-            <div class="actions small">
-              <button
-                type="button"
-                id="btnSubmit"
-                krydebug="1751"
-                class="button"
-                onclick="javascript:_doSubmit1389444('1389444');"
-                >Subscribe</button
-              >
-            </div>
-          </form>
-        </div>
-      </section>
-    </div>
-  </section>
+  <EmailSubscribe />
 </Layout>

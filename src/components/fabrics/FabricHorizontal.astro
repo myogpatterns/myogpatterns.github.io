@@ -67,7 +67,7 @@ const { ratings, title, partners, image } = Astro.props;
             const { linkFn, label, image } = partnerInfos[name as PartnerKeys];
             return (
               <a href={linkFn(product)} target="_blank" class="label">
-                <Image src={image} alt={label} />
+                <Image src={image as any} alt={label} />
                 <span class="label">{label}</span>
               </a>
             );
