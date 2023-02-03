@@ -11,7 +11,5 @@ const { header, tagline } = Astro.props;
   <h1 style="font-size: 3.5rem;">
     {header}
   </h1>
-  <p>
-    {tagline}
-  </p>
+  <p set:html="tagline" />
 </header>
