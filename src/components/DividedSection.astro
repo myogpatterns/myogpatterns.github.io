@@ -1,0 +1,19 @@
+---
+import LeftHeading from "./LeftHeading.astro";
+import Section from "./Section.astro";
+
+export type Props = {
+  header: string;
+  style?: string;
+};
+
+const { header, style } = Astro.props;
+---
+
+<Section style={style}>
+  <div class="index align-left">
+    <LeftHeading header={header}>
+      <slot />
+    </LeftHeading>
+  </div>
+</Section>

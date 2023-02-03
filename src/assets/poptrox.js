@@ -1,5 +1,5 @@
 /* jquery.poptrox.js v2.5.2-dev | (c) @ajlkn | github.com/ajlkn/jquery.poptrox | MIT licensed */
-!(function (e) {
+export default (function (e) {
   (e.fn.poptrox_disableSelection = function () {
     return e(this)
       .css("user-select", "none")
@@ -446,7 +446,8 @@
             p,
             i = e(this),
             r = i.find("img"),
-            n = i.data("poptrox");
+            n = i.data("poptrox"),
+            c;
           if ("ignore" != n && i.attr("href")) {
             if (
               ((t = {
@@ -608,4 +609,4 @@
         r
       );
     });
-})(jQuery);
+});

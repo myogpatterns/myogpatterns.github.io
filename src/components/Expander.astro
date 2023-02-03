@@ -1,0 +1,48 @@
+---
+type Props = {
+  buttonTitle: string;
+};
+
+const { buttonTitle } = Astro.props;
+---
+
+<div class="expander-wrapper">
+  <p>
+    <button class="button large icon solid fa-angle-down toggle-button">
+      {buttonTitle}
+    </button>
+  </p>
+
+  <div class="expander hidden">
+    <slot />
+  </div>
+</div>
+
+<script>
+  const height = document.querySelector(".expander > *")?.clientHeight;
+  const expander = document.querySelector(".expander") as HTMLElement;
+
+  expander.style.height = `${height}px`;
+
+  document.querySelectorAll(".toggle-button")?.forEach((obj) =>
+    obj.addEventListener("click", () => {
+      obj.parentElement?.parentElement
+        ?.querySelector(".expander")
+        ?.classList.toggle("hidden");
+
+      obj.classList.toggle("fa-angle-down");
+      obj.classList.toggle("fa-angle-up");
+    })
+  );
+</script>
+
+<style>
+  .expander {
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .hidden {
+    height: 0 !important;
+  }
+</style>

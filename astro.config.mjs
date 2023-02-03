@@ -1,4 +1,5 @@
 import { defineConfig } from "astro/config";
+import rehypeExternalLinks from "rehype-external-links";
 
 // https://astro.build/config
 import mdx from "@astrojs/mdx";
@@ -14,4 +15,15 @@ export default defineConfig({
       serviceEntryPoint: "@astrojs/image/sharp",
     }),
   ],
+  markdown: {
+    rehypePlugins: [
+      [
+        rehypeExternalLinks,
+        {
+          target: "_blank",
+          rel: "noreferrer",
+        },
+      ],
+    ],
+  },
 });

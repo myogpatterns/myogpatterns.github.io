@@ -6824,6 +6824,7 @@ body.is-preload .gallery.onload-fade-in article .image img {
 .gallery.style1 article .image img {
   display: block;
   width: 100%;
+  height: auto;
   border-radius: 0;
   aspect-ratio: 1/1;
   object-fit: cover;

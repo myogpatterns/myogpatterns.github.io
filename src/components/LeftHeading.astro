@@ -1,7 +1,6 @@
 ---
 export type Props = {
   header: string;
-  tagline: string;
 };
 
 const { header } = Astro.props;
@@ -11,7 +10,13 @@ const { header } = Astro.props;
   <header>
     <h2 style="font-size: 1.5rem;">{header}</h2>
   </header>
-  <div class="content">
+  <div class="content little-headers">
     <slot />
   </div>
 </section>
+
+<style is:global>
+  .little-headers h3 {
+    font-size: 1.1rem;
+  }
+</style>

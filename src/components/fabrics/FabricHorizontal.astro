@@ -2,36 +2,7 @@
 import { Image } from "@astrojs/image/components";
 import { ripstopLink } from "@/ts/links";
 import RatingCollection from "./RatingCollection.astro";
-
-const partnerInfos = {
-  ripstopbytheroll: {
-    label: "RipstopbytheRoll",
-    image: import("@/images/shared/partners/200/RBTR.webp"),
-    linkFn: ripstopLink,
-  },
-  questoutfitters: {
-    label: "QuestOutfitters",
-    image: import("@/images/shared/partners/200/questoutfitters.webp"),
-    linkFn: (product: string) => `https://www.questoutfitters.com/${product}`,
-  },
-  adventurexpert: {
-    label: "AdventurExpert",
-    image: import("@/images/shared/partners/200/adventurexpert.webp"),
-    linkFn: (product: string) =>
-      `https://www.adventurexpert.com/product/${product}/`,
-  },
-  refasten: {
-    label: "ReFasten.ca",
-    image: import("@/images/shared/partners/200/refasten.webp"),
-    linkFn: (product: string) =>
-      `https://refasten.ca/collections/fabric/products/${product}/`,
-  },
-  amazon: {
-    label: "Amazon.com",
-    image: import("@/images/shared/partners/200/amazon.webp"),
-    linkFn: (product: string) => `https://amzn.to/${product}`,
-  },
-} as const;
+import { partnerInfos } from "@/ts/partners";
 
 type PartnerKeys = keyof typeof partnerInfos;
 
@@ -64,9 +35,16 @@ const { ratings, title, partners, image } = Astro.props;
       <div class="partners">
         {
           Object.entries(partners).map(([name, product]) => {
-            const { linkFn, label, image } = partnerInfos[name as PartnerKeys];
+            const { label, image, ...partnerInfo } =
+              partnerInfos[name as PartnerKeys];
             return (
-              <a href={linkFn(product)} target="_blank" class="label">
+              <a
+                href={
+                  partnerInfo.linkFn?.(product as string) || partnerInfo.link
+                }
+                target="_blank"
+                class="label"
+              >
                 <Image src={image as any} alt={label} />
                 <span class="label">{label}</span>
               </a>

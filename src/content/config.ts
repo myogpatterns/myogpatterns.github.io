@@ -11,4 +11,10 @@ export const collections = {
       linkTitle: z.string(),
     }),
   }),
+  pattern: defineCollection({
+    schema: z.object({
+      title: z.string(),
+      linkTitle: z.string().optional(),
+    }),
+  }),
 };

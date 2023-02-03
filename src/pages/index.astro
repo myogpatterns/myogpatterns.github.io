@@ -1,6 +1,8 @@
 ---
 import Layout from "@/layouts/Layout.astro";
-import PageLink from "@/components/PageLink.astro";
+import ArticleLink from "@/components/pageLinks/ArticleLink.astro";
+import PatternLink from "@/components/pageLinks/PatternLink.astro";
+import Partners from "@/components/Partners.astro";
 import EmailSubscribe from "@/components/EmailSubscribe.astro";
 ---
 
@@ -32,19 +34,11 @@ import EmailSubscribe from "@/components/EmailSubscribe.astro";
       <h2>Make Your Own Outdoor Gear</h2>
       <h3>Sewing Patterns for Adventure Gear and Technical Apparel</h3>
       <div class="items style3 medium">
-        <section>
-          <!-- ACP -->
-          <span class="icon"
-            ><a href="alphaCampPants.html"
-              ><img
-                class="image preview"
-                src="images/index/camp_pants2.jpg"
-                alt="Camp Pants"
-              /></a
-            ></span
-          >
-          <h4>Alpha Camp Pants</h4>
-        </section>
+        <PatternLink
+          slug="alpha-camp-pants"
+          image={import("@/images/index/camp_pants2.jpg")}
+        />
+
         <section>
           <!-- ARH -->
           <span class="icon"
@@ -323,7 +317,10 @@ import EmailSubscribe from "@/components/EmailSubscribe.astro";
           <h4>Pack Hardware</h4>
         </section>
 
-        <PageLink slug="zippers" image={import("@/images/index/zippers.jpg")} />
+        <ArticleLink
+          slug="zippers"
+          image={import("@/images/index/zippers.jpg")}
+        />
 
         <section>
           <span class="icon"
@@ -338,7 +335,7 @@ import EmailSubscribe from "@/components/EmailSubscribe.astro";
           <h4>Cricut Worth a Buy?</h4>
         </section>
 
-        <PageLink
+        <ArticleLink
           slug="3d-corners"
           image={import("@/images/index/3dCronersthumb.jpg")}
         />
@@ -368,51 +365,19 @@ import EmailSubscribe from "@/components/EmailSubscribe.astro";
           <h4>Sewing with Polartec, ep 58</h4>
         </section>
       </div>
+
       <h3>Community Partners</h3>
       <div class="partners">
-        <a
-          href="https://ripstopbytheroll.com/?rfsn=4608557.2d546b9"
-          target="_blank"
-          ><img
-            class="partner desaturated"
-            src="images/shared/partners/200/RBTR.webp"
-          /><span class="label">RipstopbytheRoll</span></a
-        >
-
-        <a href="https://r.efer.me/6619983774018" target="_blank"
-          ><img
-            class="partner desaturated"
-            src="images/shared/partners/200/discoveryfabrics.webp"
-          /><span class="label">Discovery Fabrics</span></a
-        >
-
-        <a href="https://mozetsupplies.ca/?ref=myog" target="_blank"
-          ><img
-            class="partner desaturated"
-            src="images/shared/partners/200/mozet.webp"
-          /><span class="label">Mozet Supplies</span></a
-        >
-
-        <a href="https://www.questoutfitters.com/" target="_blank"
-          ><img
-            class="partner desaturated"
-            src="images/shared/partners/200/questoutfitters.webp"
-          /><span class="label">Quest Outfitters</span></a
-        >
-
-        <a href="https://www.adventurexpert.com/" target="_blank"
-          ><img
-            class="partner desaturated"
-            src="images/shared/partners/200/adventurexpert.webp"
-          /><span class="label">AdventurExpert</span></a
-        >
-
-        <a href="https://www.wawak.com/" target="_blank"
-          ><img
-            class="partner desaturated"
-            src="images/shared/partners/200/wawak.webp"
-          /><span class="label">Wawak</span></a
-        >
+        <Partners
+          partners={[
+            "ripstopbytheroll",
+            "discoveryfabrics",
+            "mozetsupplies",
+            "questoutfitters",
+            "adventurexpert",
+            "wawak",
+          ]}
+        />
       </div>
     </div>
   </section>
