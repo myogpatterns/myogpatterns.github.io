@@ -321,18 +321,9 @@ import PageLink from "@/components/PageLink.astro";
           >
           <h4>Pack Hardware</h4>
         </section>
-        <section>
-          <span class="icon"
-            ><a href="articles/zippers.html"
-              ><img
-                class="image icons"
-                src="images/index/zippers.jpg"
-                alt="zippers"
-              /></a
-            ></span
-          >
-          <h4>Zippers</h4>
-        </section>
+
+        <PageLink slug="zippers" image={import("@/images/index/zippers.jpg")} />
+
         <section>
           <span class="icon"
             ><a href="cricut.html"
@@ -345,22 +336,12 @@ import PageLink from "@/components/PageLink.astro";
           >
           <h4>Cricut Worth a Buy?</h4>
         </section>
-        <section>
-          <span class="icon"
-            ><a href="articles/3dCorners.html"
-              ><img
-                class="image icons"
-                src="images/index/3dCronersthumb.jpg"
-                alt="zippers"
-              /></a
-            ></span
-          >
-          <h4>Corners & Curves</h4>
-        </section>
+
         <PageLink
           slug="3d-corners"
           image={import("@/images/index/3dCronersthumb.jpg")}
         />
+
         <section>
           <span class="icon"
             ><a href="https://youtu.be/IA5X1dcTO0c" target="_blank"
