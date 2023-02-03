@@ -2,10 +2,9 @@
 export type Props = {
   title: string;
   description?: string;
-  showNav?: boolean;
 };
 
-let { title, description, showNav = true } = Astro.props;
+let { title, description } = Astro.props;
 description =
   description ||
   "Learn to Make Your Own Gear (MYOG). DIY sewing patterns for backpacks, technical apparel, and outdoor adventurers.";
