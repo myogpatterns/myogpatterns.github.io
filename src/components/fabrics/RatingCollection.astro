@@ -1,0 +1,28 @@
+---
+import Rating from "./Rating.astro";
+
+type Props = {
+  ratings?: Record<string, string | number>;
+};
+
+const { ratings } = Astro.props;
+---
+
+<div class="ratings-container">
+  <div class="ratings">
+    {
+      ratings &&
+        Object.entries(ratings).map(([character, rating]) => {
+          if (typeof rating === "string") {
+            return (
+              <div>
+                {character} {rating}
+              </div>
+            );
+          }
+          return <Rating {...{ character, rating }} />;
+        })
+    }
+  </div>
+  <slot />
+</div>

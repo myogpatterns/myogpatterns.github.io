@@ -1,0 +1,83 @@
+---
+import { Image } from "@astrojs/image/components";
+import { ripstopLink } from "@/ts/links";
+import RatingCollection from "./RatingCollection.astro";
+
+const partnerInfos = {
+  ripstopbytheroll: {
+    label: "RipstopbytheRoll",
+    image: import("@/images/shared/partners/200/RBTR.webp"),
+    linkFn: ripstopLink,
+  },
+  questoutfitters: {
+    label: "QuestOutfitters",
+    image: import("@/images/shared/partners/200/questoutfitters.webp"),
+    linkFn: (product: string) => `https://www.questoutfitters.com/${product}`,
+  },
+  adventurexpert: {
+    label: "AdventurExpert",
+    image: import("@/images/shared/partners/200/adventurexpert.webp"),
+    linkFn: (product: string) =>
+      `https://www.adventurexpert.com/product/${product}/`,
+  },
+  refasten: {
+    label: "ReFasten.ca",
+    image: import("@/images/shared/partners/200/refasten.webp"),
+    linkFn: (product: string) =>
+      `https://refasten.ca/collections/fabric/products/${product}/`,
+  },
+  amazon: {
+    label: "Amazon.com",
+    image: import("@/images/shared/partners/200/amazon.webp"),
+    linkFn: (product: string) => `https://amzn.to/${product}`,
+  },
+} as const;
+
+type PartnerKeys = keyof typeof partnerInfos;
+
+type Props = {
+  ratings?: Record<string, string | number>;
+  title: string;
+  image: any;
+  partners: Partial<Record<PartnerKeys, string>>;
+};
+
+const { ratings, title, partners, image } = Astro.props;
+---
+
+<section>
+  <header>
+    <a class="image left" style="outline: 0px;">
+      <Image
+        format="webp"
+        width={400}
+        aspectRatio="1:1"
+        src={image}
+        alt="fabric"
+      />
+    </a>
+  </header>
+
+  <div class="content">
+    <h3>{title}</h3>
+    <RatingCollection {ratings}>
+      <div class="partners">
+        {
+          Object.entries(partners).map(([name, product]) => {
+            const { linkFn, label, image } = partnerInfos[name as PartnerKeys];
+            return (
+              <a href={linkFn(product)} target="_blank" class="label">
+                <Image src={image} alt={label} />
+                <span class="label">{label}</span>
+              </a>
+            );
+          })
+        }
+      </div>
+    </RatingCollection>
+
+    <p>
+      <slot />
+    </p>
+  </div>
+</section>
