@@ -48,8 +48,6 @@ markers.sort(
 <script>
   import L from "leaflet";
   import type { PointExpression } from "leaflet";
-  import yellowIconUrl from "@/assets/images/marker-icon-2x-gold.png";
-  import blueIconUrl from "@/assets/images/marker-icon-2x-blue.png";
   import markers from "@/assets/db/vendormap.json";
 
   const options = {
@@ -66,8 +64,14 @@ markers.sort(
       '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
   }).addTo(map);
 
-  let yellowIcon = L.icon({ iconUrl: yellowIconUrl, ...options });
-  let blueIcon = L.icon({ iconUrl: blueIconUrl, ...options });
+  let yellowIcon = L.icon({
+    iconUrl: "assets/images/marker-icon-2x-gold.png",
+    ...options,
+  });
+  let blueIcon = L.icon({
+    iconUrl: "assets/images/marker-icon-2x-blue.png",
+    ...options,
+  });
 
   markers.forEach((marker) => {
     L.marker([marker.lat, marker.long], {
