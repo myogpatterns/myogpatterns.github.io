@@ -389,6 +389,18 @@ h6 {
   font-size: 0.7rem;
 }
 
+.little-headers h1 {
+  font-size: 2.25rem;
+}
+
+.little-headers h2 {
+  font-size: 1.5rem;
+}
+
+.little-headers h3 {
+  font-size: 1.1rem;
+}
+
 sub {
   font-size: 0.8rem;
   position: relative;

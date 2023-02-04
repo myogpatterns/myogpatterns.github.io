@@ -6,17 +6,11 @@ export type Props = {
 const { header } = Astro.props;
 ---
 
-<section>
+<section class="little-headers">
   <header>
-    <h2 style="font-size: 1.5rem;">{header}</h2>
+    <h2 style="">{header}</h2>
   </header>
-  <div class="content little-headers">
+  <div class="content">
     <slot />
   </div>
 </section>
-
-<style is:global>
-  .little-headers h3 {
-    font-size: 1.1rem;
-  }
-</style>
