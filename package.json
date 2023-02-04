@@ -13,12 +13,14 @@
   "dependencies": {
     "@astrojs/image": "^0.14.0",
     "@astrojs/mdx": "^0.16.0",
+    "@astrojs/svelte": "^2.0.1",
     "@fortawesome/fontawesome-free": "^6.2.1",
-    "astro": "^2.0.2",
+    "astro": "^2.0.6",
     "jquery": "^3.6.3",
     "leaflet": "^1.9.3",
     "rehype-external-links": "^2.0.1",
-    "sharp": "^0.31.3"
+    "sharp": "^0.31.3",
+    "svelte": "^3.55.1"
   },
   "devDependencies": {
     "@types/jquery": "^3.5.16",

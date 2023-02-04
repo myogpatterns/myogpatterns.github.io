@@ -8,22 +8,17 @@ import mdx from "@astrojs/mdx";
 import image from "@astrojs/image";
 
 // https://astro.build/config
+import svelte from "@astrojs/svelte";
+
+// https://astro.build/config
 export default defineConfig({
-  integrations: [
-    mdx(),
-    image({
-      serviceEntryPoint: "@astrojs/image/sharp",
-    }),
-  ],
+  integrations: [mdx(), image({
+    serviceEntryPoint: "@astrojs/image/sharp"
+  }), svelte()],
   markdown: {
-    rehypePlugins: [
-      [
-        rehypeExternalLinks,
-        {
-          target: "_blank",
-          rel: "noreferrer",
-        },
-      ],
-    ],
-  },
+    rehypePlugins: [[rehypeExternalLinks, {
+      target: "_blank",
+      rel: "noreferrer"
+    }]]
+  }
 });
