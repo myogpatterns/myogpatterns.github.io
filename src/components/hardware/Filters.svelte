@@ -3,7 +3,7 @@
   import ButtonGroup from "./ButtonGroup.svelte";
   import type { ButtonGroup as ButtonGroupType, ProductFilter } from "./types";
 
-  const ButtonGroups: ButtonGroupType[] = [
+  const buttonGroups: ButtonGroupType[] = [
     {
       key: "vendor",
       allLabel: "All",
@@ -36,7 +36,7 @@
   onMount(() => {
     //load filters from url
     var searchParams = new URLSearchParams(window.location.search);
-    filters = ButtonGroups.map((buttonGroup) => {
+    filters = buttonGroups.map((buttonGroup) => {
       const nameOrKey = buttonGroup.name ?? buttonGroup.key;
       const value = searchParams.get(nameOrKey);
       return !value ? null : { key: buttonGroup.key, value };
@@ -69,7 +69,7 @@
 </script>
 
 <div>
-  {#each ButtonGroups as buttonGroup, i}
+  {#each buttonGroups as buttonGroup, i}
     <ButtonGroup
       {buttonGroup}
       filter={filters[i]}

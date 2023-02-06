@@ -11,10 +11,13 @@ import image from "@astrojs/image";
 import svelte from "@astrojs/svelte";
 
 // https://astro.build/config
+import react from "@astrojs/react";
+
+// https://astro.build/config
 export default defineConfig({
   integrations: [mdx(), image({
     serviceEntryPoint: "@astrojs/image/sharp"
-  }), svelte()],
+  }), svelte(), react()],
   markdown: {
     rehypePlugins: [[rehypeExternalLinks, {
       target: "_blank",

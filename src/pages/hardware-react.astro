@@ -1,0 +1,13 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Disclosure from "@/components/Disclosure.astro";
+import { Hardware } from "@/components/hardwareReact/Hardware";
+import Section from "@/components/Section.astro";
+---
+
+<Layout title="Learn MYOG Hardware Picker">
+  <Section>
+    <Hardware client:load />
+    <Disclosure />
+  </Section>
+</Layout>

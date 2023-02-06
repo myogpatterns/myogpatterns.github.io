@@ -9,7 +9,7 @@
 
   onMount(async () => {
     const res = await fetch("/data/allProducts.json");
-    products = (await res.json()) as ProductType[];
+    products = await res.json();
     loading = false;
   });
 
@@ -30,7 +30,7 @@
   <div>{loading ? "Loading ..." : "No Products Match"}</div>
 {:else}
   <div id="card-shelf">
-    {#each filteredProducts as product (product.id)}
+    {#each filteredProducts as product (product.id + product.vendor)}
       <Product {product} />
     {/each}
   </div>
