@@ -1,0 +1,16 @@
+---
+export type Props = {
+  header: string;
+};
+
+const { header } = Astro.props;
+---
+
+<section class="little-headers">
+  <header>
+    <h2 style="">{header}</h2>
+  </header>
+  <div class="content">
+    <slot />
+  </div>
+</section>

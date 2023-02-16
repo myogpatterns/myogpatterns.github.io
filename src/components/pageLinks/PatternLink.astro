@@ -1,0 +1,29 @@
+---
+import { getEntryBySlug, CollectionEntry } from "astro:content";
+import { Image } from "@astrojs/image/components";
+
+interface Props {
+  slug: CollectionEntry<"pattern">["slug"];
+  image: any;
+}
+
+const { slug, image } = Astro.props;
+
+const { data, collection } = await getEntryBySlug("pattern", slug);
+---
+
+<section>
+  <!-- ACP -->
+  <span class="icon">
+    <a href={`/${collection}/${slug}`}>
+      <Image
+        format="webp"
+        width={200}
+        aspectRatio="1:1"
+        src={image}
+        alt={data.title}
+      />
+    </a>
+  </span>
+  <h4>{data.title || data.linkTitle}</h4>
+</section>

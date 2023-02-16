@@ -1,0 +1,81 @@
+---
+import { Image } from "@astrojs/image/components";
+import type { CropPosition } from "@astrojs/image/dist/loaders";
+
+type Props = {
+  pictures?: { picture: any; title: string; position?: CropPosition }[];
+  glob?: Record<string, () => any>;
+};
+
+let { pictures = [], glob } = Astro.props;
+
+if (glob) {
+  pictures = Object.entries(glob).map(([k, v]) => ({
+    picture: v(),
+    title: k.split("/").at(-1)?.replaceAll(".jpg", "") || "",
+  }));
+}
+
+for (const picture of pictures) {
+  picture.picture = await picture.picture;
+}
+---
+
+<div class="gallery style1 small">
+  <slot />
+
+  {
+    pictures.map(
+      ({ picture: { default: picture }, title, position = "centre" }) => (
+        <article>
+          <a href={picture.src} class="image">
+            <Image
+              title={title}
+              alt={title}
+              src={picture.src}
+              format="webp"
+              height={400}
+              aspectRatio="1:1"
+              fit="cover"
+              position={position}
+            />
+          </a>
+        </article>
+      )
+    )
+  }
+</div>
+
+<script>
+  import $ from "jquery";
+  import poptrox from "@/assets/poptrox";
+  poptrox($);
+  const $body = $("#body");
+
+  //@ts-ignore
+  $(".gallery").poptrox({
+    baseZIndex: 20000,
+
+    fadeSpeed: 300,
+    onPopupClose: function () {
+      $body.removeClass("modal-active");
+    },
+    onPopupOpen: function () {
+      $body.addClass("modal-active");
+    },
+    overlayColor: "#000000",
+    overlayOpacity: 0.8,
+    popupCloserText: "",
+    popupHeight: 150,
+    popupLoaderText: "",
+    popupSpeed: 300,
+    popupWidth: 150,
+    usePopupCaption: true,
+    usePopupCloser: false,
+    usePopupDefaultStyling: true,
+    usePopupForceClose: true,
+    usePopupLoader: true,
+    usePopupNav: true,
+    windowMargin: 50,
+  });
+</script>

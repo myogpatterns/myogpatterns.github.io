@@ -1,0 +1,444 @@
+---
+import Disclosure from "@/components/Disclosure.astro";
+import FabricHorizontal from "@/components/fabrics/FabricHorizontal.astro";
+import FabricVertical from "@/components/fabrics/FabricVertical.astro";
+import Layout from "@/layouts/Layout.astro";
+import { ripstopLink } from "@/ts/links";
+---
+
+<Layout title="Gear Fabric">
+  <section class="wrapper style1 align-center">
+    <div class="inner">
+      <header>
+        <h1>Technical Fabrics</h1>
+        <p>
+          Recommended fabrics and materials for outdoor gear and technical
+          apparel sewing projects
+        </p>
+      </header>
+
+      <ul class="icons">
+        <li><a href="#linings">Stuff Sacks and Linings</a></li>
+        <li><a href="#stretch">Mesh and Stretch Pockets</a></li>
+        <li><a href="#foam">Foam and Frame Sheets</a></li>
+        <li><a href="#rating">Rating System</a></li>
+      </ul>
+
+      <Disclosure />
+
+      <header>
+        <h2 id="pack">Pack Fabrics</h2>
+      </header>
+
+      <p>
+        Fabric selection for the main body of backpacks and bikepacking bags
+        often trades weight against durability and cost. Non-breathable coated
+        fabrics and laminates provide water resistance against inclement
+        weather, but most are not 100% waterproof. Fabrics woven with higher
+        denier threads feel more durable and help provide a more rigid
+        structure.
+        <br />
+        Fabric images were shot top-down from the same height for a consistent scale.
+      </p>
+
+      <div class="index align-left">
+        <FabricHorizontal
+          title="HyperD™ 300"
+          image={import("@/images/fabrics/hyperd300.jpg")}
+          partners={{
+            ripstopbytheroll: "hyperd-300-diamond-ripstop-polyester",
+          }}
+          ratings={{ "💪": 2, "💲": 1, "🧵": 3, "🪶": "3.9" }}
+        >
+          300D PU Coated Polyester with DWR face. Excellent beginner pack fabric
+          due to low cost, high sewability, and waterproofing. Finish has a
+          shiny diamond ripstop pattern in popular colorways. For additional
+          waterproofing, seal internal seams with
+          <a
+            href={ripstopLink("seam-grip-reg-sealer-and-adhesive")}
+            target="_blank">Seam Grip®</a
+          > or heat activated PU Seam Tape.
+        </FabricHorizontal>
+
+        <FabricHorizontal
+          title="Robic® Ripstop"
+          image={import("@/images/fabrics/robic.jpg")}
+          partners={{
+            ripstopbytheroll: "210d-robic-ripstop-nylon",
+          }}
+          ratings={{ "💪": 3, "💲": 1, "🧵": 3, "🪶": "4.4" }}
+        >
+          210D PU coated Nylon with DWR face. Strong Nylon 6 content, Robic has
+          excellent durability and water repellence. Robic sews great, resists
+          fraying, can be matched to 100D or 420D variants, and is easy on the
+          wallet. For additional waterproofing, seal internal seams with <a
+            href={ripstopLink("seam-grip-reg-sealer-and-adhesive")}
+            >Seam Grip®</a
+          > or heat activated PU Seam Tape.
+        </FabricHorizontal>
+
+        <FabricHorizontal
+          title="210D Gridstop"
+          image={import("@/images/fabrics/gridstop.jpg")}
+          partners={{
+            ripstopbytheroll: "210d-hdpe-gridstop",
+            adventurexpert: "dyneema-gridstop",
+          }}
+          ratings={{
+            "💪": 3,
+            "💲": 2,
+            "🧵": 2,
+            "🪶": "4.8",
+          }}
+        >
+          A modern classic pack fabric, Gridstop has an HDPE or UHMWPE (Dyneema)
+          reinforcing ripstop grid in high constrast white. 210D Gridstop is
+          high strength, waterproof with DWR and PU coating, yet can be very
+          difficult to cut often dulling scissors quickly.
+        </FabricHorizontal>
+
+        <FabricHorizontal
+          title="X-Pac® VX21"
+          image={import("@/images/fabrics/vx21.jpg")}
+          partners={{
+            ripstopbytheroll: "x-pac-vx21",
+            questoutfitters: "Coated_2.htm#X-PAC",
+            adventurexpert: "x-pac-vx21",
+          }}
+          ratings={{
+            "💪": 3,
+            "💲": 2,
+            "🧵": 1,
+            "🪶": "6.0",
+          }}
+        >
+          X-Pac VX line is a four-layer laminate with a nylon face,
+          waterproofing layer, x-ply, and 50D poly backer. It's stiff giving
+          packs rigid structure, but curls upon cutting, and needle punctures
+          compromise water resistance. There are multiple weights, colors, and
+          variants offered. VX21 is the most popular. RX15 is a variant without
+          the poly backer so it can be seam taped with <a
+            href={ripstopLink("dimension-polyant-pet-seam-seal-tape")}
+            >PET Seam Tape</a
+          >.
+        </FabricHorizontal>
+
+        <FabricHorizontal
+          title="ECOPAK™ EPX200"
+          image={import("@/images/fabrics/epx200.jpg")}
+          partners={{
+            ripstopbytheroll: "challenge-ecopak-epx200",
+            questoutfitters: "Coated_2.htm#ECOPAK",
+            adventurexpert: "ecopak-epx200",
+            refasten: "ecopak-epx200",
+          }}
+          ratings={{
+            "💪": 3,
+            "💲": 2,
+            "🧵": 2,
+            "🪶": "5.9",
+          }}
+        >
+          ECOPAK EPX is a 100% recycled laminate with PFC-free DWR. It's rigid
+          giving packs a bit of structure, has a square grid for efficient
+          pattern layouts, and is the x-grid is smooth for better abrasion
+          resistance. Needle punctures compromise water resistance. There are
+          multiple weights, colors, and variants offered. ECOPAK EPLX is a
+          variant that can be seam taped with <a
+            href={ripstopLink("dimension-polyant-pet-seam-seal-tape")}
+            >PET Seam Tape</a
+          >.
+        </FabricHorizontal>
+
+        <FabricHorizontal
+          title="ECOPAK™ ULTRA"
+          image={import("@/images/fabrics/ultra400.jpg")}
+          partners={{
+            ripstopbytheroll: "challenge-ultra-200",
+            adventurexpert: "ecopak-ultra-epl200",
+          }}
+          ratings={{
+            "💪": 3,
+            "💲": 3,
+            "🧵": 2,
+            "🪶": "3.5",
+          }}
+        >
+          Cuben fiber is so 2018. Challenge Ultra is the new cottage darling.
+          With a dyneema-like UHMWPE / polyester woven face and PET film backing
+          for waterproofing, Ultra 200 and 400 are very strong for their weight,
+          yet its long term durability and resistance to delamination is yet to
+          be seen. Ultra is sparsely available and in few colors. Seam tape with <a
+            href={ripstopLink("dimension-polyant-pet-seam-seal-tape")}
+            >PET Seam Tape</a
+          >.
+        </FabricHorizontal>
+      </div>
+      <hr />
+
+      <h2 id="linings">Stuff Sacks and Linings</h2>
+      <p>
+        For lightweight bags, stuff sacks, pack liners, pockets, etc durability
+        generally isn't a major concern. Weight and water proofness may be. A
+        color pop or bright interior are crucial. Coated and impregnated fabrics
+        are highly water resistent, but are not 100% waterproof. Ripstop grids
+        increase the tear resistance of these lightweight fabrics. Non-coated
+        variants are breathable and may be calendered to be downproof and
+        windproof.
+      </p>
+
+      <section class="items style3 medium">
+        <FabricVertical
+          title="1.1oz Silnylon"
+          image={import("@/images/fabrics/sil11.jpg")}
+          ratings={{
+            "💪": 2,
+            "💲": 1,
+            "🧵": 2,
+            "🪶": "1.2",
+          }}
+        >
+          While non-breathable, silnylon is strong and easy to wipe clean.
+          Numerous colors can be found and its very affordable. Similarly
+          silpoly is an impregnated polyester. Nylon is stronger, but silpoly is
+          more UV resistant and has less stretch making it better for tarps.
+        </FabricVertical>
+
+        <FabricVertical
+          title="1.9oz Coated Ripstop"
+          image={import("@/images/fabrics/sil19.jpg")}
+          ratings={{
+            "💪": 1,
+            "💲": 1,
+            "🧵": 3,
+            "🪶": "2.5",
+          }}
+        >
+          Lightweight, widely available, and low cost. PU coated on the
+          underside with a DWR on the face, coated ripstop is water repellant
+          and non-breathable. Thicker than 1.1 oz sil and less slippery so its
+          easier to sew but its not as easy to wipe clean.
+        </FabricVertical>
+
+        <FabricVertical
+          title="Hex70 XL - PU3000"
+          image={import("@/images/fabrics/hex70.jpg")}
+          ratings={{
+            "💪": 3,
+            "💲": 1,
+            "🧵": 3,
+            "🪶": "3.5",
+          }}
+        >
+          Higher strength and more durable than 1.9oz PU coated nylon, 2.2 Hex70
+          XL comes in coated and uncoated variants. PU coated is preferred for
+          most gear. An excellent fabric for many uses, the wide color range,
+          low cost, and extra width make it highly recommended.
+        </FabricVertical>
+      </section>
+      <!-- items -->
+      <hr />
+
+      <h2 id="stretch">Mesh and Stretch Pockets</h2>
+      <p>
+        Mesh pockets, stretch bottle pockets, padded back panels, and vest
+        straps. Fabrics are typically described to stretch in one direction
+        (2-way) or lenght and width (4-way). Varying percent stretch and
+        durability are important to selecting the right materials. Ordering
+        samples is a smart idea as sources and descriptions vary significantly.
+        These stretch wovens are generally a blend of either polyester or nylon
+        with elastane/spandex/lycra.
+      </p>
+
+      <section class="index align-left">
+        <FabricHorizontal
+          title="Lycra Mesh"
+          image={import("@/images/fabrics/lycra.jpg")}
+          partners={{
+            questoutfitters: "mesh_fabrics.htm#LYCRA%C2%A0%20MESH0",
+          }}
+          ratings={{
+            "💪": 1,
+            "💲": 2,
+            "🧵": 2,
+            "🪶": "5",
+          }}
+        >
+          Excellent for very stretchy pockets, Lycra mesh is a very lightweight,
+          tightly woven 4-way stretch. Its quite durable for the weight however
+          not the best choice for high abrasion areas like a bottom pocket.
+          Expect 50-80% stretch depending on weight. For higher abrasion, and
+          weight, look to Spandura or medium weight lycra mesh similar to
+          spandex for athletic wear.
+        </FabricHorizontal>
+
+        <FabricHorizontal
+          title="Duraweave"
+          image={import("@/images/fabrics/duraweave.jpg")}
+          partners={{
+            questoutfitters: "stretch_fabrics.htm#HEAVY%20WT%20LYCRA",
+            adventurexpert: "stretch-mesh-fabric",
+          }}
+          ratings={{
+            "💪": 3,
+            "💲": 2,
+            "🧵": 2,
+            "🪶": "9",
+          }}
+        >
+          Unlike spandex, Duraweave is very strong and has less stretch. These
+          stretch meshes are durable, maintain stretch well, and many are quite
+          abrasion resistant. 2-way and 4-way will stretch to about 20-30%
+          depending on lycra content.
+        </FabricHorizontal>
+
+        <FabricHorizontal
+          title="Dyneema Stretch Mesh"
+          image={import("@/images/fabrics/venom.jpg")}
+          partners={{
+            ripstopbytheroll: "venom-ul-stretch-mesh",
+          }}
+          ratings={{
+            "💪": 3,
+            "💲": 3,
+            "🧵": 2,
+            "🪶": "5",
+          }}
+        >
+          High tenacity nylon blended with Dyneema adds significant strength and
+          durability to this new wave of stretch mesh fabrics. Excellent choice
+          for bottom pockets or front pockets intended for rugged environments.
+          Downside is less stretch overall than heavy lycra options.
+        </FabricHorizontal>
+
+        <FabricHorizontal
+          title="3D Spacer Mesh"
+          image={import("@/images/fabrics/spacermesh.jpg")}
+          partners={{
+            ripstopbytheroll: "3d-spacer-mesh-1-8",
+            questoutfitters: "mesh_fabrics.htm#3-D%20SPACER%20MESH",
+            adventurexpert: "3d-spacer-mesh-fabric-3mm",
+            refasten: "spacer-mesh-1-4yd",
+          }}
+          ratings={{
+            "💪": 2,
+            "💲": 3,
+            "🧵": 3,
+            "🪶": "8+",
+          }}
+        >
+          For padded back panels and shoulders straps, 3D Spacer Mesh is one of
+          the few air mesh materials widely available to MYOGers. Typically
+          found in 3mm (1/8") or 6mm (1/4"). Breathable and padded, it can be
+          used either side facing skin. It sews well as its easy to compress and
+          has very minimal stretch. I prefer 3mm and often line with a PU coated
+          ripstop panel.
+        </FabricHorizontal>
+      </section>
+
+      <hr />
+      <h2 id="foam">Foam and Frame Sheets</h2>
+      <p>
+        Shoulder straps, hip belts, suspension back panels, and rigid
+        bikepacking bags are lined with foam. For load carrying backpacks, a
+        combination of foam and plastic frame sheet provide effective weight
+        transfer to a hip belt. Closed cell foam is desired as a denser more
+        durable foam that won't absorb water. Its easy to cut with a hobby knife
+        or rotary cutter and readily accessible to purchase online for cosplay
+        community. PE foam is used by the big brands and I'm still looking for a
+        source for low MOQ, small sheets for hobbyists.
+      </p>
+
+      <section class="index align-left">
+        <FabricHorizontal
+          title="EVA Foam"
+          image={import("@/images/fabrics/eva.webp")}
+          partners={{
+            amazon: "3b6k5U9",
+          }}
+        >
+          For padding hip belts, shoulders straps, and padded bags, EVA foam is
+          an excellent choice. As closed cell foam its available in many
+          thicknesses and densities. The generic cosplay foam is perfect for
+          pack making and easy to work with. 4-6mm thicknesses work well for
+          back panels and 6-10mm is perfect for padding strap and hip belts. If
+          your project requires sewing through the foam, be sure to check the
+          max height of your presser foot to ensure you choose the right size
+          foam!
+        </FabricHorizontal>
+
+        <FabricHorizontal
+          title="ABS Plastic"
+          image={import("@/images/fabrics/abs.jpg")}
+          partners={{
+            amazon: "3Bj3Qxz",
+          }}
+        >
+          For load carrying backpacks, weight transfer to a hip belt requires
+          some sort of back suspension. A plastic frame sheet with or without
+          metal stays is a lightweight option. ABS plastic is almost always
+          black with one side textured and one side smooth. Its easily cut with
+          woodworking tools or by scoring and snapping a hobby knife. I find
+          this 3-pack of 12x24 inch 1/16" thick sheets to be the most economical
+          option.
+        </FabricHorizontal>
+
+        <FabricHorizontal
+          title="HDPE Plastic"
+          image={import("@/images/fabrics/hdpe.jpg")}
+          partners={{
+            amazon: "3J9bL2o",
+          }}
+        >
+          HDPE plastic is another common option for plastic frame sheets. HDPE
+          is nearly always white, slightly translucent and extremely smooth and
+          slippery. Its easily cut with by scoring and snapping however melts
+          faster when using woodworking tools. A great source for HDPE is cheap
+          cutting boards from the discount stores. HDPE scraps can be recycled
+          alongside milk cartons.
+        </FabricHorizontal>
+      </section>
+
+      <section>
+        <header>
+          <h2 id="rating">Rating System</h2>
+        </header>
+        <div id="legend" class="box align-left" style="padding-left:8%;">
+          <p>
+            The following rating system is subjective and based on my experience
+            and research.
+          </p>
+          <ul class="alt">
+            <li>
+              💪 Strength aka durability. Abrasion resistance, tear strength,
+              seam strength, waterproofness, etc.
+            </li>
+            <li>
+              💲 Cost per yard. Some vendors offer 1/2 yard increments for small
+              projects. Most fabrics here are 60" wide.
+            </li>
+            <li>
+              🧵 Sewability. How easy is the fabric to work with e.g. fraying,
+              cutting, stitching, seam sealing, etc.
+            </li>
+            <li>
+              🪶 Weight. Approximate weight in ounce per square yard, sourced
+              from vendor research.
+            </li>
+          </ul>
+          <p>
+            For outdoor gear and apparel, use case and expected environment
+            drive the main design criteria. Weight often must be traded against
+            durability and cost so you should decide for yourself when fabric
+            weight is more important.
+          </p>
+        </div>
+        <p>
+          <a href="#" class="button small icon solid fa-angle-up">Back to top</a
+          >
+        </p>
+      </section>
+    </div>
+    <!-- inner -->
+  </section>
+</Layout>

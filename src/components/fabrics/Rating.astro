@@ -1,0 +1,15 @@
+---
+type Props = {
+  character: string;
+  rating: number;
+  outOf?: number;
+};
+
+const { character, rating, outOf = 3 } = Astro.props;
+
+const gray = outOf - rating;
+---
+
+<div>
+  {character.repeat(rating)}<span class="gray">{character.repeat(gray)}</span>
+</div>

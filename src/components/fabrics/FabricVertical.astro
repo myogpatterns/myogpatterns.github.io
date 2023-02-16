@@ -1,0 +1,32 @@
+---
+import RatingCollection from "./RatingCollection.astro";
+import { Image } from "@astrojs/image/components";
+
+type Props = {
+  ratings?: Record<string, string | number>;
+  title: string;
+  image: any;
+};
+
+const { ratings, image, title } = Astro.props;
+---
+
+<article>
+  <div class="inner">
+    <a class="image fit" style=" outline: 0px;">
+      <Image
+        format="webp"
+        width={400}
+        aspectRatio="1:1"
+        src={image}
+        alt="fabric"
+        style="width:80%; height:auto; margin:auto;"
+      />
+    </a>
+  </div>
+  <h3>{title}</h3>
+  <RatingCollection {ratings} />
+  <p>
+    <slot />
+  </p>
+</article>

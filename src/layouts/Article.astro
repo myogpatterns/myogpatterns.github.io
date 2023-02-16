@@ -1,0 +1,16 @@
+---
+import Section from "@/components/Section.astro";
+import Header from "@/components/Header.astro";
+import Layout from "./Layout.astro";
+
+const { frontmatter } = Astro.props;
+---
+
+<Layout {...frontmatter}>
+  <Section>
+    <Header header={frontmatter.title} tagline={frontmatter.tagline} />
+    <div class="index align-left">
+      <slot />
+    </div>
+  </Section>
+</Layout>

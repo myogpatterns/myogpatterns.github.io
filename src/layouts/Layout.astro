@@ -1,0 +1,70 @@
+---
+export type Props = {
+  title: string;
+  description?: string;
+};
+
+let { title, description } = Astro.props;
+description =
+  description ||
+  "Learn to Make Your Own Gear (MYOG). DIY sewing patterns for backpacks, technical apparel, and outdoor adventurers.";
+
+import "@/assets/css/main.css";
+import "@fortawesome/fontawesome-free/css/all.css";
+import Footer from "@/components/navigation/Footer.astro";
+import Header from "@/components/navigation/Header.astro";
+import Nav from "@/components/navigation/Nav.astro";
+import { getColors } from "@/ts/colors";
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>{title}</title>
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/images/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/images/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/images/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/images/site.webmanifest" />
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+    <meta name="description" content={description} />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript
+    >
+  </head>
+  <body class="is-preload">
+    <Header />
+
+    <div id="wrapper" class="divided">
+      <slot name="nav">
+        <Nav />
+      </slot>
+
+      <slot />
+    </div>
+
+    <Footer />
+  </body>
+</html>
+
+<style is:global define:vars={getColors()}></style>
+
+<script>
+  document.querySelector("body")?.classList.remove("is-preload");
+</script>

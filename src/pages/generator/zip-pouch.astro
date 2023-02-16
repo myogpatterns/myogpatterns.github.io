@@ -1,0 +1,325 @@
+---
+import LeftHeading from "@/components/LeftHeading.astro";
+import Section from "@/components/Section.astro";
+import Layout from "@/layouts/Layout.astro";
+---
+
+<Layout title="Zip Pouch">
+  <!-- Pattern Generator -->
+  <Section style="style2 little-headers">
+    <h1>Zip Pouch Pattern Generator</h1>
+    <div class="index align-left">
+      <LeftHeading header="Pattern Generator">
+        <span class="image left">
+          <img src="/images/zipsack/zipPouchPlan.png" alt="zip pouch plan" />
+        </span>
+        <p>
+          This pattern generator details the 2D fabric panel sized needed to
+          achieve desired 3D dimensions of a rectangular zip pouch. Referencing
+          the image, provide the desired dimensions for finished size pouch.
+        </p>
+
+        <form method="post" action="#">
+          <div class="fields">
+            <!-- Set Units -->
+            <div class="field third">
+              <label>Pattern Units</label>
+            </div>
+
+            <div class="field third">
+              <input
+                type="radio"
+                name="units"
+                class="dimension"
+                id="imperial"
+                value="0"
+                checked
+              />
+              <label for="imperial">Inches (in)</label>
+            </div>
+
+            <div class="field third">
+              <input
+                type="radio"
+                name="units"
+                class="dimension"
+                id="metric"
+                value="1"
+              />
+              <label for="metric">Centimeters (cm)</label>
+            </div>
+
+            <!-- Set Dimensions -->
+
+            <div class="field third">
+              <label for="length">Length</label>
+              <input
+                type="number"
+                name="length"
+                class="dimension"
+                id="length"
+                value=""
+              />
+            </div>
+            <div class="field third">
+              <label for="width">Width</label>
+              <input
+                type="number"
+                name="width"
+                class="dimension"
+                id="width"
+                value=""
+              />
+            </div>
+            <div class="field third">
+              <label for="height">Height</label>
+              <input
+                type="number"
+                name="height"
+                class="dimension"
+                id="height"
+                value=""
+              />
+            </div>
+          </div>
+
+          <!-- Button used for tab and force change -->
+          <div class="actions small">
+            <button class="button small" type="button">Generate</button>
+          </div>
+        </form>
+
+        <span class="image right">
+          <img
+            src="/images/zipsack/zipPouchPattern.png"
+            alt="zip pouch pattern"
+          />
+        </span>
+
+        <ul class="alt">
+          <li>
+            Seam Allowances: 3/8" (1 cm) typical with 1/2" (1.3 cm) Zipper
+            Allowance
+          </li>
+        </ul>
+        <li>
+          <strong>Fabric Width: <span class="patternWidth"></span></strong>
+        </li>
+        <li>
+          <strong>Fabric Height: <span class="patternHeight"></span></strong>
+        </li>
+      </LeftHeading>
+    </div>
+  </Section>
+
+  <!-- Zip pouch materials -->
+  <Section style="style1">
+    <h2>Material List</h2>
+
+    <div class="index align-left">
+      <LeftHeading header="Getting Started">
+        <ul>
+          <li>
+            One zipper atleast Fabric Height <span class="patternHeight"
+            ></span>. For more information on zippers, see <a
+              href="articles/zippers.html">Zippers Guide.</a
+            >
+          </li>
+          <li>One fabric panel to match the pattern dimensions.</li>
+        </ul>
+
+        <p>
+          There are tons of fabric options. Learn more about technical fabrics,
+          recommendations, and trusted vendors in our new <a href="fabrics.html"
+            >Fabrics Guide</a
+          >. Here are a few recommendations.
+        </p>
+        <span class="image right"
+          ><img
+            src="/images/zipsack/zipSackCompleted.jpg"
+            alt="Completed zip sack example"
+          /></span
+        >
+        <ul>
+          <li>
+            Cordura 500d or 210d Robic Nylon are great choices for durable, self
+            standing zip pouch.
+          </li>
+          <li>
+            HyperD 300 is water tight and comes in many bright colors. Example
+            is Moroccan Blue.
+          </li>
+          <li>
+            1.9oz PU Coated Nylon for lightweight, water resistant pouches with
+            many color options.
+          </li>
+          <li>
+            Patterned cotton have unlimited creative options and can be found at
+            local quilt shops.
+          </li>
+        </ul>
+      </LeftHeading>
+    </div>
+  </Section>
+
+  <!-- Zip pouch instructions -->
+  <Section style="style1">
+    <h2>Assembly Instructions</h2>
+
+    <div class="index align-left">
+      <LeftHeading header="Measure and Cut Fabric">
+        <span class="image right">
+          <img src="/images/zipsack/zipInstr1.png" alt="Pattern" />
+        </span>
+
+        <ol>
+          <li>
+            Using the generated <strong
+              >Fabric Width <span class="patternWidth"></span></strong
+            > and <strong
+              >Fabric Height <span class="patternHeight"></span></strong
+            >, measure and draw the dimensions on a fabric panel.
+          </li>
+          <li>Cut the fabric panel along the outer perimeter.</li>
+          <li>
+            Mark the 1/2 inch (1.3 cm) zipper allowance along the Fabric Height
+            edges.
+          </li>
+          <li>
+            Mark the 3/8 inch (1 cm) seam allowance along the Fabric Width
+            edges.
+          </li>
+        </ol>
+      </LeftHeading>
+
+      <LeftHeading header="Attach Zipper">
+        <span class="image right">
+          <img src="/images/zipsack/zipInstr2.png" alt="Pattern" />
+        </span>
+
+        <ol>
+          <li>
+            With the fabric panel wrong side facing up, align one edge of zipper
+            tape to Fabric Height edge and sew within the 1/2 inch zipper
+            allowance.
+          </li>
+          <li>
+            Align the opposite zipper tape along the other Fabric Height edge
+            and sew.
+          </li>
+          <li>Line up the Fabric Width edges and add the zipper pull.</li>
+          <li>
+            If using a closed end zipper, ensure Fabric Width edges align when
+            sewing the opposite zipper tape.
+          </li>
+        </ol>
+        <p>
+          With the zipper closed, you should have a cylinder with fabric's wrong
+          side out!
+        </p>
+      </LeftHeading>
+
+      <LeftHeading header="Close Zip Pouch Ends">
+        <span class="image right">
+          <img src="/images/zipsack/zipInstr3.png" alt="Pattern" />
+        </span>
+
+        <ol>
+          <li>
+            With wrong sides out, close zipper and lay flat. Ensure zipper is
+            parallel with edges. Zipper should be evenly spaced in the middle.
+          </li>
+          <li>
+            Lining up the bottom edge, sew one end closed with the 3/8 inch (1
+            cm) seam allowance. Being careful not to break your needle, sew over
+            the zipper.
+          </li>
+          <li>
+            Flip around, smooth out and ensure zipper is still parallel and
+            evenly spaced. Sew opposite end with 3/8" (1 cm) seam allseam
+            allseam allowance.
+          </li>
+          <li>
+            If you have long zipper tape, don't make the rookie move and sew
+            your zipper pull on the outside of the bag!
+          </li>
+          <li>Trim excess zipper tape off both ends.</li>
+          <li>
+            For bonus points, consider adding pull loops to the zipper ends.
+            Grosgrain ribbon or excess zipper tape work great. Make sure your
+            loops are sewn INSIDE the pouch!
+          </li>
+        </ol>
+        <p>
+          You should now have a flat zip pouch that you can open and close with
+          the zipper. In the next step, we'll give it some volume.
+        </p>
+      </LeftHeading>
+
+      <LeftHeading header="Square Up the Ends">
+        <span class="image right">
+          <img src="/images/zipsack/zipInstr4.png" alt="Pattern" />
+        </span>
+
+        <ol>
+          <li>
+            With wrong sides out, fold the sack so the zipper is pressed in half
+            along the long edge. From an end, this creates the shape shown -`{
+              ">"
+            }`
+          </li>
+          <li>
+            Take care to smooth out the corners so the ends are square and
+            symmetric.
+          </li>
+          <li>
+            Measure your desired width and height as shown. Again keep
+            everything square and symmetric.
+          </li>
+          <li>
+            Stitch two seams as shown along the dashed lines (5) and (6). Make
+            sure your seams are perpendicular to the seam from the previous
+            step.
+          </li>
+          <li>Repeat on the opposite end.</li>
+          <li>
+            Before trimming your corners, flip your sack right side out and
+            ensure your zipper runs evenly down the middle of pouch.
+          </li>
+        </ol>
+        <p>
+          If everything went to plan, you can now trim your corners. To prevent
+          fraying, take the time to bind your seams with bias tape or grosgrain
+          ribbon.
+        </p>
+        <span
+          >Congrats! You now have a functional zip pouch, hand made to your
+          exact dimensions!</span
+        >
+      </LeftHeading>
+    </div>
+  </Section>
+</Layout>
+
+<script>
+  import { init } from "@/ts/patternGenerators";
+
+  init(function (
+    isMetric: boolean,
+    fields: { width: number; height: number; length: number }
+  ) {
+    if (Object.values(fields).some((field) => field <= 0)) {
+      return;
+    }
+    let { width, height, length } = fields;
+
+    const { channelSa, generalSa } = isMetric
+      ? { channelSa: 1.3, generalSa: 1 }
+      : { channelSa: 0.5, generalSa: 0.375 };
+
+    return {
+      patternWidth: 2 * width + 2 * height + 2 * channelSa,
+      patternHeight: length + height + 2 * generalSa,
+    };
+  });
+</script>

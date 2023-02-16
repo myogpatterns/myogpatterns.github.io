@@ -1,0 +1,115 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import "leaflet/dist/leaflet.css";
+
+const flags = {
+  US: "🇺🇸",
+  AU: "🇦🇺",
+  CA: "🇨🇦",
+  DE: "🇩🇪",
+  FI: "🇫🇮",
+  GB: "🇬🇧",
+  PL: "🇵🇱",
+  SE: "🇸🇪",
+  SI: "🇸🇮",
+} as Record<string, string>;
+
+import markers from "@/assets/db/vendormap.json";
+markers.sort(
+  (a, b) => a.country.localeCompare(b.country) || a.name.localeCompare(b.name)
+);
+---
+
+<Layout
+  title="LearnMYOG Map"
+  description="Learn to Make Your Own Gear (MYOG) suppliers aroudn the globe. Your best resources for fabric and hardware to make DIY outdoor backpacks and apparel."
+>
+  <section id="main" class="wrapper style1 align-center">
+    <div class="inner">
+      <h1 style="display:none">MYOG Suppliers</h1>
+      <!-- map.js insert -->
+      <div id="map"></div>
+      <p class="major align-center">⭐️ LearnMYOG Recommended All-Stars</p>
+      <!-- map.js list insert -->
+      <ul id="store-shelf" class="align-left">
+        {
+          markers.map((marker) => (
+            <li class="no-deco">
+              {flags[marker.country] ?? "🏴‍☠️"} {marker.name}
+              {marker.friend ? "⭐️" : null}
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </section>
+</Layout>
+
+<script>
+  import L from "leaflet";
+  import type { PointExpression } from "leaflet";
+  import markers from "@/assets/db/vendormap.json";
+
+  const options = {
+    iconSize: [25, 41] as PointExpression,
+    iconAnchor: [10, 41] as PointExpression,
+    popupAnchor: [2, -40] as PointExpression,
+  };
+
+  const map = L.map("map", { worldCopyJump: true, center: [40, -53], zoom: 3 });
+
+  L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+    maxZoom: 9,
+    attribution:
+      '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+  }).addTo(map);
+
+  let yellowIcon = L.icon({
+    iconUrl: "assets/images/marker-icon-2x-gold.png",
+    ...options,
+  });
+  let blueIcon = L.icon({
+    iconUrl: "assets/images/marker-icon-2x-blue.png",
+    ...options,
+  });
+
+  markers.forEach((marker) => {
+    L.marker([marker.lat, marker.long], {
+      icon: marker.friend ? yellowIcon : blueIcon,
+    })
+      .addTo(map)
+      .bindPopup(
+        `<a href="${marker.website}" target="_blank">${
+          marker.friend ? "⭐️" : ""
+        } ${marker.name}</a>`
+      );
+  });
+</script>
+
+<style>
+  #map {
+    height: 400px;
+    z-index: 1;
+  }
+
+  #store-shelf {
+    column-count: 3;
+  }
+
+  .no-deco {
+    line-height: 2em;
+    list-style-type: none;
+  }
+  .no-deco a {
+    text-decoration: none;
+  }
+
+  @media screen and (max-width: 480px) {
+    #store-shelf {
+      column-count: 1;
+    }
+    #map {
+      height: 240px;
+    }
+  }
+</style>

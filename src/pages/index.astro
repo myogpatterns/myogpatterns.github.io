@@ -1,0 +1,395 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import ArticleLink from "@/components/pageLinks/ArticleLink.astro";
+import PatternLink from "@/components/pageLinks/PatternLink.astro";
+import Partners from "@/components/Partners.astro";
+import EmailSubscribe from "@/components/EmailSubscribe.astro";
+---
+
+<Layout title="Learn MYOG">
+  <!--Spotlight-->
+  <section
+    slot="nav"
+    class="spotlight style1 color8 invert orient-right content-align-center image-position-center"
+  >
+    <div class="content">
+      <h3>Trail Running Backpack Refresh!</h3>
+      <p>
+        Originally released in 2020, our Trail Running Backpack has become a
+        MYOG mainstay. Refreshed with new materials, improved instructions, and
+        your feedback there's no better time than now to make your first vest
+        pack!
+      </p>
+      <a href="trailRunningBackpack.html" class="button primary"
+        >Trail Running Backpack</a
+      >
+    </div>
+    <div class="image">
+      <img
+        src="images/trailRunBackpack/wing.jpg"
+        alt="Trail Running Backpack standard strap"
+      />
+    </div>
+  </section>
+
+  <!-- Items -->
+  <section id="main" class="wrapper style1 align-center">
+    <div class="inner">
+      <h2>Make Your Own Outdoor Gear</h2>
+      <h3>Sewing Patterns for Adventure Gear and Technical Apparel</h3>
+      <div class="items style3 medium">
+        <PatternLink
+          slug="alpha-camp-pants"
+          image={import("@/images/index/camp_pants2.jpg")}
+        />
+
+        <PatternLink
+          slug="alpha-raglan"
+          image={import("@/images/index/bala1.jpg")}
+        />
+
+        <section>
+          <!-- UL Windshell -->
+          <span class="icon"
+            ><a href="windshell.html"
+              ><img
+                class="image preview"
+                src="images/windshell2/coverart.jpg"
+                alt="UL wind shell"
+              /></a
+            ></span
+          >
+          <h4>UL Windshell</h4>
+        </section>
+        <section>
+          <!-- Trail Running Pack-->
+          <span class="icon"
+            ><a href="trailRunningBackpack.html"
+              ><img
+                class="image preview"
+                src="images/trailRunBackpack/trp6.jpg"
+                alt="trail running pack"
+              /></a
+            ></span
+          >
+          <h4>Trail Running Backpack</h4>
+        </section>
+        <section>
+          <!-- Chonky Sling -->
+          <span class="icon"
+            ><a href="chonkySling.html"
+              ><img
+                class="image preview"
+                src="images/index/chonkysling.jpg"
+                alt="chonky sling bag"
+              /></a
+            ></span
+          >
+          <h4>Chonky Sling</h4>
+        </section>
+        <section>
+          <!-- Fastpack-->
+          <span class="icon"
+            ><a href="fastpack.html"
+              ><img
+                class="image preview"
+                src="images/index/fastpackhero3.jpg"
+                alt="fastpack"
+              /></a
+            ></span
+          >
+          <h4>Fastpack</h4>
+        </section>
+        <section>
+          <!-- Pullover -->
+          <span class="icon"
+            ><a href="pulloverHoodie.html"
+              ><img
+                class="image preview"
+                src="images/index/pullover.jpg"
+                alt="pullover hoodie"
+              /></a
+            ></span
+          >
+          <h4>Everyday Fleece Pullover</h4>
+        </section>
+        <section>
+          <!-- DIAS -->
+          <span class="icon"
+            ><a href="dias.html"
+              ><img
+                class="image preview"
+                src="images/index/diashi2.jpg"
+                alt="Do It All Shorts"
+              /></a
+            ></span
+          >
+          <h4>DIAS</h4>
+        </section>
+        <section>
+          <!-- U-Zip -->
+          <span class="icon"
+            ><a href="uzip.html"
+              ><img
+                class="image preview"
+                src="images/index/uzip7.jpg"
+                alt="bag with u-shaped zipper"
+              /></a
+            ></span
+          >
+          <h4>U-Zip Bag</h4>
+        </section>
+        <section>
+          <!-- Frame Bags -->
+          <span class="icon"
+            ><a href="framebags.html"
+              ><img
+                class="image preview"
+                src="images/index/framebags.jpg"
+                alt="frame bags"
+              /></a
+            ></span
+          >
+          <h4>Bikepacking Frame Bag Set</h4>
+        </section>
+        <section>
+          <!-- Feed bag -->
+          <span class="icon"
+            ><a href="bpStemBag.html"
+              ><img
+                class="image preview"
+                src="images/index/stembag.jpg"
+                alt="feed bag"
+              /></a
+            ></span
+          >
+          <h4>Bikepacking Feed Bag</h4>
+        </section>
+        <section>
+          <!-- Running Belt -->
+          <span class="icon"
+            ><a href="runningBelt.html"
+              ><img
+                class="image preview"
+                src="images/index/runningbelt.jpg"
+                alt="running belt"
+              /></a
+            ></span
+          >
+          <h4>Running Belt</h4>
+        </section>
+        <section>
+          <!-- ED Fanny Pack -->
+          <span class="icon"
+            ><a href="edcFannyPack.html"
+              ><img
+                class="image preview"
+                src="images/index/edfannypack.jpg"
+                alt="fanny pack"
+              /></a
+            ></span
+          >
+          <h4>Everyday Fanny Pack</h4>
+        </section>
+        <section>
+          <!-- Totepack -->
+          <span class="icon"
+            ><a href="edTotepack.html"
+              ><img
+                class="image preview"
+                src="images/index/totepack.jpg"
+                alt="totepack"
+              /></a
+            ></span
+          >
+          <h4>Everyday Totepack</h4>
+        </section>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrapper style2 align-center">
+    <div class="inner">
+      <h3>Custom Pattern Generators</h3>
+      <!-- <p style="font-style: italic;">Outdoor gear sewing projects, custom pattern generators, and Make Your Own Gear tutorials</p> -->
+      <div class="items style3 small">
+        <section>
+          <span class="icon"
+            ><a href="cinchsack.html"
+              ><img
+                class="image preview"
+                src="images/index/cinchsack.jpg"
+                alt="cinch collar stuff sack"
+              /></a
+            ></span
+          >
+          <h4>Simple Cinch Sack</h4>
+        </section>
+        <section>
+          <span class="icon"
+            ><a href="rolltopsack.html"
+              ><img
+                class="image preview"
+                src="images/index/rolltop.jpg"
+                alt="roll-top storage bag"
+              /></a
+            ></span
+          >
+          <h4>Roll-Top Stuff Sack</h4>
+        </section>
+        <section>
+          <span class="icon"
+            ><a href="stuffsack.html"
+              ><img
+                class="image preview"
+                src="images/index/roundstuff.jpg"
+                alt="stuff sack"
+              /></a
+            ></span
+          >
+          <h4>Rounded Stuff Sack</h4>
+        </section>
+
+        <section>
+          <span class="icon"
+            ><a href="generator/zip-pouch"
+              ><img
+                class="image preview"
+                src="images/index/zipsack.jpg"
+                alt="zip sack"
+              /></a
+            ></span
+          >
+          <h4>Zip Pouch</h4>
+        </section>
+      </div>
+    </div>
+  </section>
+
+  <section
+    class="spotlight style1 color8 invert orient-left content-align-center image-position-center"
+  >
+    <div class="content">
+      <h3>Zero to Hero</h3>
+      <p>
+        From Day 1 to Gear Making Guru <br />
+        Ultimate Guide and Essential Tools
+      </p>
+      <a href="/zerotohero.html" class="button primary"
+        ><span class="icon solid fa-forward"></span> Show me the way!</a
+      >
+    </div>
+    <div class="image">
+      <img src="images/index/zero2hero.jpg" alt="sewist" />
+    </div>
+  </section>
+
+  <section class="wrapper style1 align-center">
+    <div class="inner">
+      <h3>Articles and Guides</h3>
+
+      <div class="items style3 small">
+        <section>
+          <span class="icon"
+            ><a href="zerotohero.html#tools"
+              ><img
+                class="image icons"
+                src="images/shared/products/HD1000.webp"
+                alt="sewing tools"
+              /></a
+            ></span
+          >
+          <h4>Essential Tools</h4>
+        </section>
+        <section>
+          <span class="icon"
+            ><a href="fabrics.html"
+              ><img
+                class="image icons"
+                src="images/index/fabrics.jpg"
+                alt="fabrics"
+              /></a
+            ></span
+          >
+          <h4>Technical Fabrics</h4>
+        </section>
+        <section>
+          <span class="icon"
+            ><a href="hardware.html"
+              ><img
+                class="image icons"
+                src="images/index/hardware.jpg"
+                alt="backpack hardware"
+              /></a
+            ></span
+          >
+          <h4>Pack Hardware</h4>
+        </section>
+
+        <ArticleLink
+          slug="zippers"
+          image={import("@/images/index/zippers.jpg")}
+        />
+
+        <section>
+          <span class="icon"
+            ><a href="cricut.html"
+              ><img
+                class="image icons"
+                src="images/shared/products/cricut-maker.webp"
+                alt="Cricut Maker"
+              /></a
+            ></span
+          >
+          <h4>Cricut Worth a Buy?</h4>
+        </section>
+
+        <ArticleLink
+          slug="3d-corners"
+          image={import("@/images/index/3dCronersthumb.jpg")}
+        />
+
+        <section>
+          <span class="icon"
+            ><a href="https://youtu.be/IA5X1dcTO0c" target="_blank"
+              ><img
+                class="image icons"
+                src="images/shared/partners/200/rotr2.webp"
+                alt="podcast episode"
+              /></a
+            ></span
+          >
+          <h4>Dispel Maker Fears, ep 42</h4>
+        </section>
+        <section>
+          <span class="icon"
+            ><a href="https://youtu.be/uqm3Dv6JbF0" target="_blank"
+              ><img
+                class="image icons"
+                src="images/shared/partners/200/rotr2.webp"
+                alt="podcast episode"
+              /></a
+            ></span
+          >
+          <h4>Sewing with Polartec, ep 58</h4>
+        </section>
+      </div>
+
+      <h3>Community Partners</h3>
+      <div class="partners">
+        <Partners
+          partners={[
+            "ripstopbytheroll",
+            "discoveryfabrics",
+            "mozetsupplies",
+            "questoutfitters",
+            "adventurexpert",
+            "wawak",
+          ]}
+        />
+      </div>
+    </div>
+  </section>
+
+  <EmailSubscribe />
+</Layout>
