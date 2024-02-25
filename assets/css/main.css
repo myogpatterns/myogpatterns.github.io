@@ -2881,6 +2881,15 @@ input, select, textarea {
 			top: 0.25rem;
 		}
 
+		.image.small {
+			margin: 0 1.5rem 1rem 0;
+			max-height: 10rem;
+		}
+
+		.image.small img {
+			width: 100%;
+		}
+
 		.image.fit {
 			display: block;
 			margin: 0 0 0.5rem 0; /*was 2rem on bottom*/

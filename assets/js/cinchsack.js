@@ -13,9 +13,9 @@ calculatorSetup(function () {
   }
   let [bottomLength, bottomWidth, height] = fields;
 
-  const { cordChannelHeight, hem, sA } = isMetric ?
-    { cordChannelHeight: 4, hem: 1, sA: 1 } :
-    { cordChannelHeight: 1.5, hem: 0.5, sA: 0.5 };
+  const { cordChannelHeight, hem, sA, cordLengthAdded } = isMetric ?
+    { cordChannelHeight: 4, hem: 1, sA: 1, cordLengthAdded: 15} :
+    { cordChannelHeight: 1.5, hem: 0.5, sA: 0.5, cordLengthAdded: 6};
 
   let patternHeight;
 
@@ -28,8 +28,10 @@ calculatorSetup(function () {
     patternHeight = height + (0.5 * bottomWidth) + (2 * sA);
   }
 
+  let patternLength = (2 * bottomLength) + (2 * bottomWidth) + (2 * sA)
+
   let outputFields = {
-    patternLength: (2 * bottomLength) + (2 * bottomWidth) + (2 * sA),
+    patternLength,
     patternHeight,
     channelLength: (2 * bottomLength) + (2 * bottomWidth) + (2 * hem),      //hem on each end
     channelHeight: (2 * cordChannelHeight) + (2 * sA),      // SA on top and bottom
@@ -37,7 +39,8 @@ calculatorSetup(function () {
     bottomWidth,
     halfBottomWidth: bottomWidth / 2,
     bottomLength,
+    cordLength: patternLength + cordLengthAdded,
   };
 
   setCalculatedValues(isMetric, outputFields);
-}, 'v0.1');
+}, 'v0.2');

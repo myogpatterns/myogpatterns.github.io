@@ -626,7 +626,7 @@ function setCalculatedValues (isMetric, obj) {
   for (let [name, value] of Object.entries(obj)) {
     let stringValue = isMetric ?
       value.toFixed(1) + ' cm' :
-      roundToEighthInch(value) + ' in';
+      roundToEighthInch(value) + ' in.';
 
     $('.' + name).html(stringValue);
   }
