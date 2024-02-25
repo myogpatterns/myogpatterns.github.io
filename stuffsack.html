@@ -2,14 +2,6 @@
 
 <html lang="en">
 	<head>
-		<!-- Google Tag Manager -->
-		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-		'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-		})(window,document,'script','dataLayer','GTM-NC2Q2HQ');</script>
-		<!-- End Google Tag Manager -->
-		
 		<title>LearnMYOG Stuff Sack</title>
 		<link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
 		<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
@@ -25,6 +17,8 @@
 		<script defer src="assets/js/header.js" type="text/javascript"></script>
 		<script defer src="assets/js/nav.js" type="text/javascript"></script>
 		<script defer src="assets/js/footer.js" type="text/javascript"></script>
+		<script defer src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    	<script defer src="https://cdnjs.cloudflare.com/ajax/libs/canvg/3.0.0/canvg.min.js"></script>
 		<!-- Global site tag (gtag.js) - Google Analytics GA4 -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=G-WP4C42S5VW"></script>
 		<script>
@@ -38,11 +32,6 @@
 	</head>
 	<body class="is-preload">
 
-	<!-- Google Tag Manager (noscript) -->
-	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NC2Q2HQ"
-	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-	<!-- End Google Tag Manager (noscript) -->
-
 	<!-- Wrapper -->
 		<div id="wrapper" class="divided">
 
@@ -55,26 +44,42 @@
 			</div>
 				
 			<!-- Pattern Generator -->
-			<section id="main" class="wrapper style2 align-center">
-				<div class="inner">
+			<section class="wrapper style2 align-center">
+				<div id="main" class="inner">
 					<header>
 						<h1>Stuff Sack Pattern Generator</h1>
-						<p>DIY Round Bottom Stuff Sack with Cinch Cord</p>
+						<p>Skill Building Round Bottom Stuff Sack with Cinch Cord</p>
 					</header>
+
+					<div class="gallery style1 small">
+						<article>
+							<a href="images\stuffsack\roundstuff.jpg" class="image">
+								<img src="images\stuffsack\roundstuff.jpg"  title="Small stuff sack made with this generator" />
+							</a>
+						</article>
+						<article>
+							<a href="images\stuffsack\stuffsack2.jpg" class="image">
+								<img src="images\stuffsack\stuffsack2.jpg"  title="Small stuff sack made with this generator" />
+							</a>
+						</article>
+						<article>
+							<a href="images\stuffsack\stuffsack3.jpg" class="image">
+								<img src="images\stuffsack\stuffsack3.jpg"  title="Measured cook kit for a perfect storage bag." />
+							</a>
+						</article>
+					</div>
 
 					<div class="index align-left">
 						<section>
 							<header>
 								<h3>Pattern Generator</h3>
-								
 							</header>
 
 							<div class="content">
-								<p><span class="image left"><img src="images/stuffsack/stuffSackPlan.png" alt="stuff sack plan" /></span>
-									This pattern generator is for custom-sized round bottom stuff sacks with a drawstring cinch. 
-									From your 3D dimensions, the generator does the math so you never waste fabric or time. 
-									Referencing the illustration, provide the desired dimensions for a finished stuff sack.<br> 
-									If this is your very first time sewing, I recommend starting with <a href="cinchsack.html">Cinch Sack</a>.
+								<span class="image left"><img src="images/stuffsack/round.jpg" alt="stuff sack plan" /></span>
+								<p>
+									Create custom-sized stuff sacks effortlessly without complex calculations or 3D modeling. Simply input your desired finished 3D stuff sack dimensions, and our generator will calculate precise 2D pattern panels.
+									If this is your very first time sewing, I recommend starting with <a href="cinchsack.html">Cinch Sack</a> as sewing the round bottom of this stuff sack can be challenging for beginners. 
 								</p> 	
 									
 								<form method="post" action="#">
@@ -114,17 +119,18 @@
 									</div>
 								</form>	
 
-								<span class="image right"><img src="images/stuffsack/stuffSackPattern.png" alt="stuff sack pattern" /></span>
+								<span class="image right"><img src="images/stuffsack/round0.jpg" alt="stuff sack pattern" /></span>
 								
-								<p>A standard <b>3/8 inch (1 cm) construction seam allowance</b> is included and used throughout.<br>
-									Cord Channel Allowance of 1.5" (4 cm) is provided. <br> See drawstring details below.</p>
+								<p>Our provided panel dimensions already include the seam allowances and an integrated drawstring Cord Channel allowance of 1.5" (4 cm).</p>
 
 								<ul class="alt">
-									<li><strong>Panel Width: <span class="patternWidth"></span></strong></li>
-									<li><strong>Panel Height: <span class="patternHeight"></span></strong></li>
-									<li><strong>Circle Radius: <span class="patternRadius"></span></strong></li>
+									<li><strong>Body Panel Length: <span class="patternWidth"></span></strong></li>
+									<li><strong>Body Panel Height: <span class="patternHeight"></span></strong></li>
+									<li><strong>Bottom Panel Radius: <span class="patternRadius"></span></strong></li>
 								</ul>
-								
+								<p>For Stuff Sacks with a 6.5 in. (16.5 cm) diameter or less, you can now download a PDF paper pattern generated to the exact Bottom Panel Radius. Give it a try!</p>
+
+									<button class="button small" onclick="exportToPDF()">Download</button>
 							</div>
 
 						</section>
@@ -132,96 +138,122 @@
 				</div>
 			</section>
 
-			<!-- Zip pouch materials -->
-			<section id="materials" class="wrapper style1 align-center">
+			<!-- Stuff sack materials -->
+			<section id="stuffSackInstructions" class="wrapper style1 align-center">
 				<div class="inner">
-					<h2>Material List</h2>
-					
+					<header>
+						<h2>Assembly Instructions</h2>
+						<p>Sew Smart, Start Simple: Embark on Your Sewing Adventure</p>
+					</header>
+
 					<div class="index align-left">
 						<section>
 							<header>
-								<h3>Getting Started</h3>
+								<h3>Materials</h3>
 							</header>
 							<div class="content">
-								<p>Learn about technical fabrics, recommendations, and trusted vendors in our new <a href="fabrics.html">Fabrics Guide</a>.<br>
-								Lighter weight materials such as 1.9oz ripstop nylon work best for drawstring channels.<br>
+								<p>For guidance on suitable technical fabrics, recommendations, and trusted vendors, refer to our <a href="fabrics.html">Fabrics Guide</a>. Please note that this is a beginner-friendly project, and it is intended for non-fray technical fabrics. Therefore, seam binding or seam finishing techniques are not included in the instructions.
 								</p>
-
-								<ul>
-									<li>One fabric circle cut to size</li>
-									<li>One fabric rectangular panel cut to size</li>
-									<li>Drawstring ~6 inches (15 cm) longer than <strong>Panel Width</strong></li>
-									<li>One cord lock that works with your drawstring. </li>
-								</ul>
+								<div class="table-wrapper">
+									<table>
+										<thead>
+											<tr>
+											<th>Materials</th>
+											<th>Links</th>
+											</tr>
+										</thead>
+										<tr>
+										  <td>Lightweight Coated Nylon such as<br>1.9oz PU Coated Nylon or 2.2oz Hex 70</td>
+										  <td><a href="https://ripstopbytheroll.com/collections/waterproof-nylon-fabric?rfsn=4608557.2d546b9" target="_blank"><img class="partner icon" src="/images/shared/partners/48/rbtr.png" alt="Ripstop by the Roll logo"></a></td>
+										</tr>
+										<tr>
+										  <td>Drawstring Cord</td>
+										  <td><a href="https://ripstopbytheroll.com/collections/non-spliceable-cordage/products/1-5-mm-mini-cord?rfsn=4608557.2d546b9" target="_blank"><img class="partner icon" src="/images/shared/partners/48/rbtr.png" alt="Ripstop by the Roll logo"></a></td>
+										</tr>
+										<tr>
+											<td>Cord Lock</td>
+											<td><a href="https://ripstopbytheroll.com/collections/plastic-cordlocks/products/micro-cordlock?rfsn=4608557.2d546b9" target="_blank"><img class="partner icon" src="/images/shared/partners/48/rbtr.png" alt="Ripstop by the Roll logo"></a></td>
+										</tr>
+										<tr>
+										  <td>Polyester Thread such as<br>Gutermann Sew-All or Gutermann MARA 70</td>
+										  <td><a href="https://ripstopbytheroll.com/collections/thread-tools-repair/products/gutermann-mara-70?rfsn=4608557.2d546b9" target="_blank"><img class="partner icon" src="/images/shared/partners/48/rbtr.png" alt="Ripstop by the Roll logo"></a></td>
+										</tr>
+										<tr>
+										  <td>Machine Needles such as<br>Schmetz Universal size 90/14</td>
+										  <td><a href="https://ripstopbytheroll.com/collections/thread-tools-repair/products/schmetz-universal-machine-needle?rfsn=4608557.2d546b9" target="_blank"><img class="partner icon" src="/images/shared/partners/48/rbtr.png" alt="Ripstop by the Roll logo"></a></td>
+										</tr>
+									  </table>
+									</div>
+									<p class="disclosure">Qualified purchases support LearnMYOG.com at no additional cost to you. See <a href="/about.html#disclosures">Disclosures</a> for more information.</p>
 							</div>
 						</section>
-					</div>
 
-				</div>
-			</section>
+						<section class="spotlight style1 content-align-center">
+							<div class="content">
+								<h3>Ultimate Beginner Guide</h3>
+								<p>From Day 1 to Gear Making Guru <br>
+									Detailed MYOG Guide and Essential Tools</p>
+								<a href="/zerotohero.html" class="button primary"><span class="icon solid fa-forward"></span> Zero to Hero Guide</a>
+							</div>
+							<div class="image">
+								<img src="images/index/zero2hero.jpg" alt="sewist" />
+							</div>
+						</section>
 
-			<!-- stuff sack instructions -->
-			<section id="stuffSackIstructions" class="wrapper style1 align-center">
-				<div class="inner">
-					<h2>Assembly Instructions</h2>
-
-					<div class="index align-left">
 						<section>
 							<header>
-								<h3>Circle Pattern</h3>
+								<h3>Bottom Pattern</h3>
 							</header>
 
 							<div class="content">
-									<span class="image right"><img src="images/stuffsack/ssInstr1.png" alt="Pattern"/></span> 
+									<span class="image right"><img src="images/stuffsack/round1.jpg" alt="Pattern"/></span>
+									
+
+									<p>For Stuff Sacks larger than 6.5 inches (16.5 cm) in diameter, follow the next steps to draft a paper pattern by hand. For smaller Stuff Sacks, simply download the paper pattern generated for you above.</p>
 								
 									<ol>
-										<li>For the circle, cut a square piece of paper with each side slightly larger than the <strong><span class="patternDiameter"></span> Diameter</strong>.</li>
-										<li>Fold this square in half and then in half again, along the other edge, making a smaller square.</li>
-										<li>Mark the generated <strong><span class="patternRadius"></span> Circle Radius</strong>, from the fold corner to draw symmetric arc as shown.</li>
-										<li>Cut and unfold your perfectly symmetric circle pattern.</li>
-										<li>Trace and cut your fabric along the outer perimeter.</li>
-										<li>Mark the 3/8 inch (1 cm) seam allowance along the inside edge.</li>
-										
+										<li>For the round Bottom Panel, cut a square piece of paper with a side length larger than <strong><span class="patternDiameter">input</span></strong></li>
+										<li>Fold this square in half, and then in half again making a smaller square.</li>
+										<li>From the folded corner draw the generated Bottom Panel Radius <strong><span class="patternRadius">measurement</span></strong> as shown.</li>
+										<li>Cut all four paper layers and unfold your perfectly symmetric circle pattern.</li>
 									</ol>
 							</div>
 						</section>
 
 						<section>
 							<header>
-								<h3>Body Panel</h3>
+								<h3>Fabric Panels</h3>
 							</header>
 
 							<div class="content">
-									<span class="image right"><img src="images/stuffsack/ssInstr2.png" alt="Pattern"/></span> 
+									<span class="image right"><img src="images/stuffsack/round0.jpg" alt="Pattern"/></span> 
+									<p>A <strong><span class="sA">Based on units selected</span></strong> seam allowance is already included in the pattern. Not seeing measurements? Generate pattern dimensions above.</p>
 								
 									<ol>
-										<li>Using the generated <strong><span class="patternWidth"></span> Fabric Width</strong> and <strong><span class="patternHeight"></span> Fabric Height</strong>, measure and draw the dimensions on a fabric panel.</li>
-										<li>Cut the fabric panel along the outer perimeter.</li>
-										<li>Mark the 1.5 inch (4 cm) channel allowance along one Fabric Width edge.</li>
-										<li>Mark the 3/8 inch (1 cm) seam allowance along each remaining edge.</li>
-														
+										<li>Cut one Body Panel from your fabric.<br>
+											Length: <strong><span class="patternWidth">input</span></strong> and Height: <strong><span class="patternHeight">input</span></strong></li>
+										<li>Cut one Bottom Panel from your fabric.</li>
+										<li>Cut one drawstring cord. <strong>Length: <span class="cordLength"></span></strong></li>
 									</ol>
-									<p>You should now have two fabric panels, a circle and a body.</p>
+									<p>To enhance clarity, we use light grey to represent the wrong side of the fabric and white to depict the right side in the illustrations. The <span style="color:red">red</span> dashed line illustrates the seam being sewn.</p>
 							</div>
 						</section>
 
 						<section>
 							<header>
-								<h3>Drawstring Channel</h3>
+								<h3>Cord Channel</h3>
 							</header>
 
 							<div class="content">
-									<span class="image right"><img src="images/stuffsack/ssInstr3.png" alt="Pattern"/></span> 
-								
-									<ol>
-										<li>With wrong side up, fold the corners to the channel allowance, as shown. Pins or wash-away tape helps.</li>
-										<li>Fold the top edge down to the channel allowance. In the illustration, the wrong side is light blue.</li>
-										<li>If your presser foot is narrow enough, insert the drawstring and stitch along the channel edge.</li>
-										<li>Optionally, stitch as close to the raw edge as possible and pull your drawstring thru later.</li>
-										<li>Depending on how quickly your fabric frays, you may consider overcasting the raw edge with a zigzag stitch.</li>
-														
-									</ol>
-									<p>Your channel should look like the illustration, quite loose around the drawstring.</p>
+								<span class="image right"><img src="images/stuffsack/round2.jpg" alt="Cord Channel corner folds"/>
+								<img src="images/stuffsack/round3.jpg" alt="Cord channel stitch line"></span> 
+							
+								<ol>
+									<li>On the wrong side of Body Panel, mark a line down <strong>1 1/2 in. (4cm)</strong> from the topd edge as a guide line for the Cord Channel.</li>
+									<li>To the wrong side, fold the top corners down to meet the guide line. Finger press to crease.</li>
+									<li>Fold the remaining top edge down to the guide line.</li>
+									<li>Sew the fold at <strong>1/8" (3mm)</strong> from raw edge to leave ample room for a drawstring.</li>
+								</ol>
 							</div>
 						</section>
 
@@ -229,54 +261,66 @@
 							<header>
 								<h3>Sewing the Circle</h3>
 							</header>
-
+							
 							<div class="content">
-									<span class="image right"><img src="images/stuffsack/ssInstr4.png" alt="Pattern"/></span> 
-								
-									<ol>
-										<li>Contrary to many online tutorials, it's better to sew the circle now to avoid puckering later.</li>
-										<li>This is by far the toughest part of the project, so take your time. A short stitch length makes sewing curves easier.</li>
-										<li>With right sides touching, align the circle's <strong>center line</strong> to the body's left edge seam allowance.</li>
-										<li>The bottom of the circle should be touching the bottom edge of the body panel.</li>
-										<li>If your diameter is large enough, pin or staple the body to the circle's perimeter within the seam allowance.</li>
-										<li>Follow your circle's seam allowance as you sew. Go slow, use a short stitch length. Make sure the edges are even as you progress.</li>
-										<li>As you reach your starting point, stop before stitching over the body panels vertical seam allowance.</li>
-									</ol>
-									<p>Phew, you're past the crux. Circles take a lot of patience and practice.</p>
+								<span class="image right"><img src="images/stuffsack/round4a.jpg" alt="Joining the round bottom"/></span> 
+
+								<p>To achieve clean circles when sewing, it's crucial to maintain precise seam allowances. While my preferred assembly order may seem unorthodox, it has been proven effective in minimizing puckering. </p>
+								<p>	📌 This step is notably challenging, so be patient and take your time. Using a shorter stitch length, about 2-2.5 mm, can aid in sewing smoother curves.</p>
+
+								<ol>
+									<li>Align the right sides of the fabric together, placing the outer edge of the round Bottom Panel against the edge of the Body Panel opposite the cord channel. Leave approximately <strong>1 inch (25mm)</strong> of space from the corner of the Bottom Panel, ensuring enough seam allowance for later closure of the side.</li>
+									<li>Employ a seam guide to maintain accuracy while sewing. Sew the round Bottom Panel to the Body Panel with a <strong><span class="sA">3/8"</span></strong> seam allowance in a continuous, straight motion. As you stitch, rotate the Bottom Panel to ensure smooth fabric movement through the machine. Proceed at a slow pace, ensuring the edges remain aligned and even throughout the process.</li>
+									<li>As you near your starting point stop short to avoid stitching over the seam allowance for later closure of the side. This small gap will be closed in later to avoid puckering.</li>
+								</ol>
+								<p>Don't sweat it your first try. Sewing circles takes a lot of patience and practice.</p>
 							</div>
 						</section>
 
 						<section>
 							<header>
-								<h3>Body Seam</h3>
+								<h3>Closing the Side</h3>
 							</header>
 
 							<div class="content">
-									<span class="image right"><img src="images/stuffsack/ssInstr5.png" alt="Pattern"/></span> 
-								
+								<span class="image right"><img src="images/stuffsack/round5.jpg" alt="Sewing the side seam"/><img src="images/stuffsack/round6.jpg" alt="Closing the gap"></span> 
+							
+								<ol>
+									<li>Because we stitched the circle first, the vertical seam allowances may not meet perfectly together. No worries!</li>
+									<li>Press your stuff sack flat against the machine table so you can close the side seam.</li>
+									<li>Being careful not to catch Bottom, sew towards cord channel with a <strong><span class="sA">3/8"</span></strong> seam allowance.</li>
+									<li>Stop and backstitch once you reach cord channel. Be careful not to sew your cord channel openings shut!</li>
+									<li>With the side seam closed, inspect the gap in Bottom. If necessary, sew it closed while smoothing the fabric to avoid puckering.</li>
+								</ol>
+								<p>📌 As you become more confident and accurate in your sewing, try sewing the side seam first. Then sew the round Bottom to the Body.</p> 
+							</div>
+						</section>
+						
+						<section>
+							<header>
+								<h3>Finishing Up</h3>
+							</header>
+
+							<div class="content">
+									<span class="image right"><img src="images/stuffsack/roundstuff.jpg" alt="sample stuff sack"/></span> 
 									<ol>
-										<li>Because we stitched the circle first, the vertical seam allowances may be a bit uneven. No worries!</li>
-										<li>Press your stuff sack flat against a table with the open seam along an edge.</li>
-										<li>Start or stop at the red "x" drawn in the illustration.</li>
-										<li>Either way, sew the body seam closed, reinforcing the channel opening.</li>
-										<li>If your seams fray, consider edge binding or look into French Seams next time.</li>
-										<li>Pull your drawstring through and add your cord lock!</li>				
+										<li>Turn your Stuff Sack right side out!</li>
+										<li>To reinforce the Cord Channel opening where it meets Body Panel, sew a small bartack about <strong><span class="sA">3/8"</span></strong> long.</li>
+										<li>Attach a safety pin to one end of the drawstring cord and thread it through the opening in the cord channel.</li>
+										<li>Once the cord is all the way through, add the cord lock and tie the free ends of the drawstring together to secure.</li>
+										<li>Your Stuff Sack is now ready to use! Simply pull the drawstring to close the sack and carry your belongings with ease.</li>			
 									</ol>
-									<h4>👏 Congrats on making your own custom stuff sack!</h4>
+									<h4>👏 Congrats on making your own custom Round Bottom Stuff Sack!</h4>
 									<p>Sewing round bottom stuff sacks is tougher than it appears huh?!<br>
 									If you want to try an easier style, check out the <a href="cinchsack.html">Cinch Sack</a>!</p>
 							</div>
 						</section>
-						
 					</div>
 				</div>
 			</section>
-			
-			<!-- Footer -->
-			<footer-template></footer-template>
-
 		</div>
-
+			<!-- Footer -->
+		<footer-template></footer-template>
 		<!-- HTML Template Scripts -->
 		<script defer src="assets/js/jquery.scrollex.min.js"></script>
 		<script defer src="assets/js/jquery.scrolly.min.js"></script>
@@ -285,7 +329,14 @@
 		<script defer src="assets/js/breakpoints.min.js"></script>
 		<script defer src="assets/js/util.js"></script>
 		<script defer src="assets/js/main.js"></script>
+		<script defer src="assets/js/exportToPDF.js"></script>
 		<script defer>
+			function exportToPDF() {
+				const diameterInput = parseFloat(document.getElementById('diameter').value).toFixed(2);
+				// Export the circle to PDF
+				exportToPDFCircle(diameterInput);
+    		}
+
 			window.addEventListener('load', function () {
 				const pgtitle = document.location.href.match(/[^\/]+$/)[0] //get page name e.g. map.html
 				try {

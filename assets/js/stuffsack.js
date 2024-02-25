@@ -12,17 +12,20 @@ calculatorSetup(function () {
   }
   let [diameter, height] = fields;
 
-  const { channelSa, generalSa } = isMetric ?
-    { channelSa: 4, generalSa: 1 } :
-    { channelSa: 1.5, generalSa: 0.375 };
+  const { channelSa, sA, cordLengthAdded } = isMetric ?
+    { channelSa: 4, sA: 1, cordLengthAdded: 15 } :
+    { channelSa: 1.5, sA: 0.375, cordLengthAdded: 6 };
 
-  let patternDiameter = diameter + (2 * generalSa);
+  let patternDiameter = diameter + (2 * sA);
+  let patternWidth = (Math.PI * diameter) + (2 * sA);
 
   let outputFields = {
     patternDiameter,
     patternRadius: (patternDiameter) / 2,
-    patternWidth: (Math.PI * diameter) + (2 * generalSa),
-    patternHeight: height + generalSa + (0.5 * diameter) + channelSa,
+    patternWidth,
+    sA,
+    patternHeight: height + sA + (0.5 * diameter) + channelSa,
+    cordLength: patternWidth + cordLengthAdded,
   };
 
   setCalculatedValues(isMetric, outputFields);
