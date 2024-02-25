@@ -13,13 +13,17 @@ calculatorSetup(function () {
   }
   let [width, height, length] = fields;
 
-  const { channelSa, generalSa } = isMetric ?
-    { channelSa: 1.3, generalSa: 1 } :
-    { channelSa: 0.5, generalSa: 0.375 };
+  const { channelSa, sA } = isMetric ?
+    { channelSa: 1.3, sA: 1 } :
+    { channelSa: 0.5, sA: 0.375 };
 
   let outputFields = {
     patternWidth: (2 * width) + (2 * height) + (2 * channelSa),
-    patternHeight: length + height + (2 * generalSa),
+    patternHeight: length + height + (2 * sA),
+    sA,
+    halfBottomHeight: height / 2,
+    width,
+    height,
   };
 
   setCalculatedValues(isMetric, outputFields);
