@@ -8567,7 +8567,23 @@ input, select, textarea {
 	.index > * {
 		border-top-color: rgba(0, 0, 0, 0.2);
 	}
-
+/* Badge */
+.badge {
+	position: absolute;
+	font-size: smaller;
+	font-weight: 400;
+	padding: 1em .8em;
+	top: -5%;
+	bottom: calc(100% - 1em);
+	left: calc(100% / 2 + 2.5em);
+	color: #eeeeee;
+	background-color: var(--magenta-dye); 
+	border: 2px solid white;
+	border-radius: .5rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
 /* Partners */ 
 /* Ratings */
 	.ratings-container {
