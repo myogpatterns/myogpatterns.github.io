@@ -1,0 +1,31 @@
+
+
+
+
+
+
+<h3>Join the Waitlist</h3>
+<p>Be the trailblazer and get a VIP pass to the release of our upcoming pattern, the Porter Pony 20L Backpack! Join the exclusive waitlist now and be the first to hear when the pattern launches. But here's the inside scoop: Porter Pony is currently undergoing active review and testing by our amazing community members. Your email is precious to us and will not be shared – it's our secret club for dedicated makers! 🤫 Don't miss out – secure your spot on the waitlist!</p>
+<a href="#" class="button primary icon solid fa-envelope" target="_blank" style="font-size: 100%">Join the Waitlist</a>
+
+
+Get Notified When the PackLite Hat Pattern Launches
+Interested in getting your hands on the new PackLite Hat pattern? Join the no-commitment waitlist today! You’ll receive no more than three emails—just the essentials to keep you in the loop and notify you when the pattern is ready.
+
+Join the Waitlist
+
+Be the first to know and secure your copy—no spam, just updates!
+
+
+
+
+
+<section>
+<header><h3>Pattern Reviewers</h3></header>
+<div class="content">
+									
+<p>Ready to be a part of this exciting pattern development? Apply now to actively participate in both Phase 1, providing an editorial review of the pattern instructions, and Phase 2, completing the pattern test and sharing detailed feedback and outcomes.</p>
+
+<a href="#" class="button  icon solid" target="_blank" style="font-size: 100%">👉 Apply Here 👈</a>
+</div>
+</section>
