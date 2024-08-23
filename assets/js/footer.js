@@ -59,7 +59,7 @@ class Footer extends HTMLElement {
                         <a href="/about.html#faq">FAQ</a> &emsp; 
                         <a href="/about.html#disclosures">Disclosures</a>  
                     </section>
-                    <p>&copy; 2020-2023 LearnMYOG. All rights reserved.</p>
+                    <p>&copy; 2020-2024 LearnMYOG. All rights reserved.</p>
                 </div>
             </footer>
         `;

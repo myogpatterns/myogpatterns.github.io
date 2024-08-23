@@ -3276,7 +3276,7 @@ input, select, textarea {
 		color: rgba(0, 0, 0, 0.75);
 	}
 
-	article.youtube {
+	.youtube {
 		display: -moz-flex;
 		display: -webkit-flex;
 		display: -ms-flex;
@@ -3293,12 +3293,12 @@ input, select, textarea {
 	}
 	/* article.youtube img {} */
 
-	article.youtube img,
-	article.youtube .play-button {
+	.youtube img,
+	.youtube .play-button {
 		cursor: pointer;
 	}
 
-	article.youtube .play-button {
+	.youtube .play-button {
 		width: 70px;
 		height: 50px;
 		background-color: rgb(40, 40, 40);
@@ -3306,29 +3306,29 @@ input, select, textarea {
 		opacity: 0.7;
 		border-radius: 10px;
 	}
-		article.youtube .play-button:before {
+		.youtube .play-button:before {
 			content: "";
 			border-style: solid;
 			border-width: 10px 0 10px 20.0px;
 			border-color: transparent transparent transparent #fff;
 		}
 	
-	article.youtube .play-button,
-	article.youtube .play-button:before {
+	.youtube .play-button,
+	.youtube .play-button:before {
 		position: absolute;
 	}
-	article.youtube .play-button,
-	article.youtube .play-button:before {
+	.youtube .play-button,
+	.youtube .play-button:before {
 		top: 50%;
 		left: 50%;
 		transform: translate3d( -50%, -50%, 0 );
 	}
-	article.youtube a:hover ~ .play-button,
-	article.youtube .play-button:hover  {
+	.youtube a:hover ~ .play-button,
+	.youtube .play-button:hover  {
 		opacity: .8;
 		background-color:red;
 	}
-	article.youtube .caption { 
+	.youtube .caption { 
 		opacity: 1;
 		z-index: 1;
 		font-size: .9rem;
