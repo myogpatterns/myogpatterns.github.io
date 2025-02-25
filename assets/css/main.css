@@ -2904,6 +2904,8 @@ input, select, textarea {
 			display: block;
 			margin: 0 0 3rem 0;
 			width: 100%;
+			height: 30rem;
+			object-fit: cover;
 		}
 
 			.image.main img {
@@ -2923,6 +2925,17 @@ input, select, textarea {
 			margin: 0 0 0 0;
 		}
 			.image.preview img {
+				width: 100%;
+			}
+
+		.image.medium-tall {
+			display: block;
+			margin: 0 0 1rem 0;
+			height: 16rem;
+			width: 100%;
+			object-fit: contain;
+		}
+			.image.medium-tall img {
 				width: 100%;
 			}
 
