@@ -2952,6 +2952,10 @@ input, select, textarea {
 		display: block;
 		border-radius: 4px;
 	}
+	.thumbnail.landscape {
+		aspect-ratio:2/1;
+		object-fit:cover;
+	}
 
 	.thumbnail.desaturated {
 		filter: saturate(0%) opacity(55%);
