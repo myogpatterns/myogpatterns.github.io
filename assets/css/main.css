@@ -2938,6 +2938,10 @@ input, select, textarea {
 			.image.medium-tall img {
 				width: 100%;
 			}
+		.image.square {
+			aspect-ratio: 1/1;
+			object-fit: cover;
+		}
 
 /* Video Thumbnail */
 
