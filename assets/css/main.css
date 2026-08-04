@@ -3320,12 +3320,22 @@ input, select, textarea {
 	}
 
 	.youtube .play-button {
+		position: absolute;
+    	top: 50%;
+    	left: 50%;
+    	transform: translate3d(-50%, -50%, 0); /* Centers the button in the container */
+
 		width: 70px;
 		height: 50px;
 		background-color: rgb(40, 40, 40);
 		z-index: 1;
 		opacity: 0.7;
 		border-radius: 10px;
+
+		/* Use Flexbox internally to center the play triangle */
+		display: flex;
+		align-items: center;
+		justify-content: center;
 	}
 		.youtube .play-button:before {
 			content: "";
@@ -3334,16 +3344,16 @@ input, select, textarea {
 			border-color: transparent transparent transparent #fff;
 		}
 	
-	.youtube .play-button,
+	/* .youtube .play-button,
 	.youtube .play-button:before {
 		position: absolute;
-	}
-	.youtube .play-button,
+	} */
+	/* .youtube .play-button,
 	.youtube .play-button:before {
 		top: 50%;
 		left: 50%;
 		transform: translate3d( -50%, -50%, 0 );
-	}
+	} */
 	.youtube a:hover ~ .play-button,
 	.youtube .play-button:hover  {
 		opacity: .8;
