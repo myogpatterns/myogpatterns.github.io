@@ -1,0 +1,78 @@
+# LearnMYOG
+
+LearnMYOG (learnmyog.com) is a free resource for DIY outdoor gear makers. It publishes sewing patterns and step-by-step tutorials for making your own ultralight backpacks, technical apparel, rainwear, and adventure gear, plus guidance on fabrics, zippers, hardware, and construction techniques.
+
+## Key pages
+- / — Home: pattern library and featured makes
+- /about.html — About LearnMYOG
+- /zerotohero.html — Beginner's guide to making your own outdoor gear
+- /fabrics.html — Technical fabrics for packs, pockets & linings
+- /hardware.html — Hardware picker
+- /map.html — Site map
+- /gallery.html — Maker gallery
+
+## Patterns
+- /about.html — LearnMYOG About
+- /alphaBeanies.html — LearnMYOG Alpha Beanies
+- /alphaCampPants.html — LearnMYOG Alpha Camp Pants
+- /alphaRaglan.html — LearnMYOG Alpha Raglan Hoodie
+- /anorak.html — LearnMYOG Oversized Anorak
+- /bifoldWallet.html — LearnMYOG Bifold Wallet
+- /bpStemBag.html — Free Bike Stem Bag Sewing Pattern | LearnMYOG
+- /chonkySling.html — LearnMYOG Chonky Sling
+- /cinchsack.html — LearnMYOG Cinch Sack
+- /cricut.html — LearnMYOG Digital Cutting
+- /dias.html — LearnMYOG DIAS
+- /doppKit.html — LearnMYOG Dopp Kit
+- /edTotepack.html — LearnMYOG Totepack
+- /edcFannyPack.html — Free Fanny Pack Sewing Pattern for Everyday Carry | LearnMYOG
+- /fabrics.html — Technical Fabrics for MYOG: Packs, Pockets & Linings | LearnMYOG
+- /fastpack.html — LearnMYOG Fastpack
+- /framebags.html — LearnMYOG Top Tube Bags
+- /gallery.html — LearnMYOG Gallery
+- /hardware.html — LearnMYOG Hardware Picker
+- /hipPack.html — LearnMYOG Hip Pack
+- /index.html — LearnMYOG
+- /map.html — LearnMYOG Map
+- /packlitebelt.html — LearnMYOG Packlite Belt
+- /packlitehat.html — LearnMYOG Packlite Hat
+- /packlitevest.html — LearnMYOG Packlite Vest
+- /porter.html — LearnMYOG Porter Duffle
+- /porterPony.html — LearnMYOG Porter Pony 20L Backpack
+- /pulloverHoodie.html — LearnMYOG Pullover Hoodie
+- /rolltopsack.html — LearnMYOG Roll Top Stuff Sack
+- /runningBelt.html — LearnMYOG Running Belt
+- /shoulderzp.html — LearnMYOG Shoulder Strap Zip Pocket
+- /simpleSleeve.html — LearnMYOG Simple Card Sleeve
+- /stuffsack.html — LearnMYOG Stuff Sack
+- /sunhoodie.html — LearnMYOG Skyline Sun Hoodie
+- /techPouch.html — LearnMYOG Tech Pouch
+- /trailRunningBackpack.html — LearnMYOG Trail Running Backpack
+- /uzip.html — LearnMYOG U-Zip Bag
+- /windshell.html — LearnMYOG UL Windshell
+- /zerotohero.html — Learn MYOG: A Beginner's Guide to Making Your Own Outdoor Gear
+- /zpinstructions.html — Custom Zipper Pouch Pattern Generator + Sewing Instructions | LearnMYOG
+
+## Tutorials (articles/)
+- /articles/3dCorners.html — How to Sew 3D Boxed Corners and Tight Curves | LearnMYOG
+- /articles/alphaRaglanHoodiePockets.html — Adding Pockets to the Alpha Raglan Hoodie
+- /articles/bondedSeams.html — LearnMYOG Bonded Seams at Home
+- /articles/bondedZipPouch.html — LearnMYOG Bonded Zipper Pouch
+- /articles/diasTailoring.html — LearnMYOG DIAS Mods for Curvier Fit
+- /articles/patternReview.html — LearnMYOG Pattern Review Handbook
+- /articles/sewingKnitFabrics.html — LearnMYOG Sewing Knits Tips & Tricks
+- /articles/sewingUltralightFabrics.html — Sewing Ultralight Fabrics: Ripstop Nylon & Rainwear Tips | LearnMYOG
+- /articles/zippers.html — Learn MYOG with Zippers
+
+## Most popular patterns (GA4 landing pages, Aug 2 - Oct 30, 2026)
+Top landing pages by traffic:
+- / — Home
+- /zpinstructions.html — Custom Zipper Pouch generator
+- /bpStemBag.html — Bike Stem Bag
+- /rolltopsack.html — Roll Top Stuff Sack
+- /zerotohero.html — Beginner's guide
+- /index.html — Home alias
+- /alphaRaglan.html — Alpha Raglan Hoodie
+- /edcFannyPack.html — Fanny pack
+- /anorak.html — Oversized Anorak
+- /stuffsack.html — Stuff Sack
