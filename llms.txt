@@ -24,8 +24,8 @@ LearnMYOG (learnmyog.com) is a free resource for DIY outdoor gear makers. It pub
 - /cricut.html — LearnMYOG Digital Cutting
 - /dias.html — LearnMYOG DIAS
 - /doppKit.html — LearnMYOG Dopp Kit
-- /edTotepack.html — LearnMYOG Totepack
 - /edcFannyPack.html — Free Fanny Pack Sewing Pattern for Everyday Carry | LearnMYOG
+- /edTotepack.html — LearnMYOG Totepack
 - /fabrics.html — Technical Fabrics for MYOG: Packs, Pockets & Linings | LearnMYOG
 - /fastpack.html — LearnMYOG Fastpack
 - /framebags.html — LearnMYOG Top Tube Bags
