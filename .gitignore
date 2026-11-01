@@ -2,6 +2,12 @@
 *.svg
 .DS_Store
 
+### Skills - tracked in private repo ###
+.agents/skills*
+.agents/skills/analysis*
+.agents/skills/data*
+.kilo
+
 # Created by https://www.gitignore.io/api/git,windows,notepadpp,visualstudiocode,python
 # Edit at https://www.gitignore.io/?templates=git,windows,notepadpp,visualstudiocode,python
 
